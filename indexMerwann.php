@@ -10,11 +10,11 @@
 
     <div class="logo"></div>
 	
-	<div class="element-menuHaut"><a href="">Catalogue</a></div>
+	<div class="element-menuHaut"><a href="">Catalogue</a> | </div>
 
-    <div class="element-menuHaut"><a href="">Offres aux particuliers</a></div>
+    <div class="element-menuHaut"><a href="">Offres aux particuliers</a> | </div>
 
-    <div class="element-menuHaut"><a href="">Réseau d'entreprise</a></div>
+    <div class="element-menuHaut"><a href="">Réseau d'entreprise</a> | </div>
 
 </div>
 
