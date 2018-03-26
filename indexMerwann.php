@@ -8,11 +8,13 @@
 <body>
 <div id="conteneur">
 
-    <div class="element">Elément 1</div>
+    <div class="logo"></div>
+	
+	<div class="element"><a href="">Page 1</a></div>
 
-    <div class="element">Elément 2</div>
+    <div class="element"><a href="">Page 2</a></div>
 
-    <div class="element">Elément 3</div>
+    <div class="element"><a href="">Page 3</a></div>
 
 </div>
 </body>

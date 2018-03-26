@@ -17,7 +17,27 @@ body {
 	margin: auto;
     flex-wrap: nowrap;
 	justify-content: center;
+	border: 3px #19202b solid;
+	background-color: rgba(25,32,46,0.5);
+	border-radius: 10px 5px 10px 5px;
+	padding: 7px;
 
+}
+
+a {
+     text-decoration: none;
+     color: #ffffff;
+}
+
+ a:hover {
+     text-decoration: none;
+     color: #ffffff;
+	 background-color: #131821;
+}
+
+ a:visited {
+     text-decoration: none;
+     color: #ffffff;
 }
 
 .element {
