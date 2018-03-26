@@ -1,0 +1,6 @@
+http://www.phpformatter.com/
+https://www.cleancss.com/css-beautify/
+http://htmlformatter.com/
+
+Sites pour indenter votre code PHP/HTML/CSS !
+Cela permettra de créer du code plus propre et plus facile à lire sans s'efforcer.
