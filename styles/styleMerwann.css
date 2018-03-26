@@ -1,11 +1,12 @@
-body {
-	background-image: url("../../img/background.jpg");
-	font-family: "CaviarDreams.ttf", Arial, Helvetica, sans-serif;
-	color: #ffffff;
+@font-face {
+     font-family: 'CaviarDreams';
+     src: url('./fonts/CaviarDreams.ttf');
 }
 
-@font-face {
-    src: url('../../styles/fonts/caviar_dreams/CaviarDreams.ttf');
+body {
+	background-image: url("../../img/background.jpg");
+	font-family : 'CaviarDreams';
+	color: #ffffff;
 }
 
 #conteneur
