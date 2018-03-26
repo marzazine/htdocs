@@ -1,14 +1,18 @@
 body {
 	background-image: url("../../img/background.jpg");
+	font-family: "CaviarDreams.ttf", Arial, Helvetica, sans-serif;
 	color: #ffffff;
 }
 
-
+@font-face {
+    src: url('../../styles/fonts/caviar_dreams/CaviarDreams.ttf');
+}
 
 #conteneur
 
 {
     display: flex;
+	margin: auto;
     flex-wrap: nowrap;
 	justify-content: center;
 
