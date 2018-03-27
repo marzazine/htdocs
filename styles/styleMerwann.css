@@ -57,7 +57,7 @@ body {
 	background-image: url(../../img/nav-bottom-bg.png);
 	box-shadow: 0 4px 2px -2px black;
     margin: 0px;
-    padding: 3px;
+    padding: 8px;
 
 }
 
@@ -67,10 +67,17 @@ a {
      color: #ffffff;
 }
 
+a#basLien:hover {
+	 text-decoration: none;
+     color: #ffffff;
+	 border-bottom: 5px #8acbff solid;
+
+}
  a:hover {
      text-decoration: none;
      color: #ffffff;
-	 background-color: #112537;
+	 border-bottom: 5px #354FD3 solid;
+	 
 }
 
  a:visited {
@@ -79,9 +86,10 @@ a {
 }
 
 .element-menuHaut {
-		padding: 5px;
+		padding: 10px;
+		margin: 0;
 }
 
 .element-sousMenuHaut {
-		padding: 5px;
+		padding-right: 15px;
 }
