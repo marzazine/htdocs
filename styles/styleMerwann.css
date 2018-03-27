@@ -99,11 +99,11 @@ a#basLien:hover {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 3px;
   position: absolute;
   right: 10px;
-  width: 280px;
+  width: 240px;
   transition: all 0.5s;
   cursor: pointer;
 }
