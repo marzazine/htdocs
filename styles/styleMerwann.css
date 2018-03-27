@@ -10,12 +10,13 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	font-family : 'Montserrat';
-	font-size: 1.3em;
+	font-size: 1.2em;
 	color: #ffffff;
 	text-shadow: 2px 2px 4px #ffffff;
     margin: 0px;
     padding: 0px;
 }
+
 .element-logo {
 	position: absolute;
 	top: 0;
@@ -29,7 +30,6 @@ body {
 	left: 70px;
 	
 }
-
 
 #menuHaut
 
@@ -60,7 +60,6 @@ body {
     padding: 8px;
 
 }
-
 
 a {
      text-decoration: none;
@@ -93,3 +92,44 @@ a#basLien:hover {
 .element-sousMenuHaut {
 		padding-right: 15px;
 }
+.button {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 3px;
+  position: absolute;
+  right: 10px;
+  width: 280px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 20px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
