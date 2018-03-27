@@ -23,7 +23,9 @@ body {
 	background-color: rgba(33,78,118,0.7);
 	box-shadow: 0 4px 2px -2px black;
 	border-radius: 10px 5px 10px 5px;
-	padding: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin-bottom: 10px;
 
 }
