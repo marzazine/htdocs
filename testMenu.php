@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/testMenu.css">
 </head>
 
-<script type="text/javascript" src="monscript.js">
+<script type="text/javascript">
 fHover = function() {
 	var sfEls = document.getElementById("nav").getElementsByTagName("LI");
 	for (var i=0; i<sfEls.length; i++) {
@@ -20,27 +20,28 @@ fHover = function() {
 if (window.attachEvent) window.attachEvent("onload", sfHover);
 </script>
 
+<div id="menuHaut">
 <ul id="nav">
-<li><a href="/traduction/deroulants#">Squaliformes</a>
+<li><a href="#">Catalogue</a>
 	<ul>
-		<li><a href="/traduction/deroulants#">Echinorhinidés</a></li>
-		<li><a href="/traduction/deroulants#">Oxynotidés</a></li>
-		<li><a href="/traduction/deroulants#">Squalidés</a></li>
+		<li><a href="#">Mobiles</a></li>
+		<li><a href="#">Accessoires</a></li>
+		<li><a href="#">Autres</a></li>
 	</ul>
 </li>
 
-<li><a href="/traduction/deroulants#">Orectolobiformes</a>
+<li><a href="#">Offres aux particuliers</a>
 	<ul>
-		<li><a href="/traduction/deroulants#">Parascylliidés</a></li>
-		<li><a href="/traduction/deroulants#">Brachaeluridés</a></li>
-		<li><a href="/traduction/deroulants#">Orectolobidés</a></li>
-		<li><a href="/traduction/deroulants#">Stégostomatidés</a></li>
-		<li><a href="/traduction/deroulants#">Hémiscylliidés</a></li>
+		<li><a href="#">Forfaits</a></li>
+		<li><a href="#">Internet</a></li>
+		<li><a href="#">TV</a></li>
 	</ul>
 </li>
+
 
 <!-- etc. -->
 
 </ul>
+</div>
 
 </html>
