@@ -8,3 +8,9 @@ Cela permettra de créer du code plus propre et plus facile à lire sans s'efforce
 https://htmlcolorcodes.com/fr/
 
 Site code couleur HTML / CSS
+
+Exportation BD :
+
+-Ajouter une instruction CREATE DATABASE / USE
+-Ajouter une instruction DROP TABLE / VIEW / PROCEDURE / FUNCTION / EVENT / TRIGGER*
+-

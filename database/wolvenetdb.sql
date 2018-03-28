@@ -1,20 +1,22 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.4
--- http://www.phpmyadmin.net
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
 --
--- Client :  127.0.0.1
--- Généré le :  Ven 23 Mars 2018 à 16:08
--- Version du serveur :  5.6.15-log
--- Version de PHP :  5.5.8
+-- Hôte : 127.0.0.1
+-- Généré le :  mer. 28 mars 2018 à 14:47
+-- Version du serveur :  10.1.31-MariaDB
+-- Version de PHP :  7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de données :  `wolvenetdb`
@@ -29,14 +31,13 @@ USE `wolvenetdb`;
 --
 
 DROP TABLE IF EXISTS `abonner`;
-CREATE TABLE IF NOT EXISTS `abonner` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `idFor` int(11) NOT NULL,
-  `idCli` int(11) NOT NULL,
-  `idMo` int(11) NOT NULL,
-  `idOff` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+CREATE TABLE `abonner` (
+  `id` int(11) NOT NULL,
+  `idFor` tinyint(11) NOT NULL,
+  `idCli` tinyint(11) NOT NULL,
+  `idMo` tinyint(11) NOT NULL,
+  `idOff` tinyint(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -45,21 +46,20 @@ CREATE TABLE IF NOT EXISTS `abonner` (
 --
 
 DROP TABLE IF EXISTS `clients`;
-CREATE TABLE IF NOT EXISTS `clients` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `pseudoCli` text COLLATE utf8_bin NOT NULL,
-  `prenCli` varchar(100) COLLATE utf8_bin NOT NULL,
-  `nomCli` varchar(100) COLLATE utf8_bin NOT NULL,
-  `mailCli` varchar(100) COLLATE utf8_bin NOT NULL,
+CREATE TABLE `clients` (
+  `id` int(11) NOT NULL,
+  `pseudoCli` char(100) COLLATE utf8_bin NOT NULL,
+  `prenCli` char(100) COLLATE utf8_bin NOT NULL,
+  `nomCli` char(100) COLLATE utf8_bin NOT NULL,
+  `mailCli` char(100) COLLATE utf8_bin NOT NULL,
   `mdpCli` varchar(256) COLLATE utf8_bin NOT NULL,
-  `telCli` varchar(10) COLLATE utf8_bin NOT NULL,
-  `fixeCli` text COLLATE utf8_bin NOT NULL,
-  `villeCli` varchar(100) COLLATE utf8_bin NOT NULL,
-  `adresseCli` text COLLATE utf8_bin NOT NULL,
-  `cpCli` int(11) NOT NULL,
-  `sexeCli` set('homme','femme','inconnu') COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+  `telCli` char(10) COLLATE utf8_bin NOT NULL,
+  `fixeCli` char(10) COLLATE utf8_bin NOT NULL,
+  `villeCli` char(100) COLLATE utf8_bin NOT NULL,
+  `adresseCli` char(100) COLLATE utf8_bin NOT NULL,
+  `cpCli` tinyint(11) NOT NULL,
+  `sexeCli` set('homme','femme','inconnu') COLLATE utf8_bin NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -68,13 +68,12 @@ CREATE TABLE IF NOT EXISTS `clients` (
 --
 
 DROP TABLE IF EXISTS `forfaits`;
-CREATE TABLE IF NOT EXISTS `forfaits` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nomFor` text COLLATE utf8_bin NOT NULL,
+CREATE TABLE `forfaits` (
+  `id` int(11) NOT NULL,
+  `nomFor` char(100) COLLATE utf8_bin NOT NULL,
   `descFor` text COLLATE utf8_bin NOT NULL,
-  `prixbaseFor` decimal(10,2) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+  `prixbaseFor` decimal(10,2) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -83,22 +82,23 @@ CREATE TABLE IF NOT EXISTS `forfaits` (
 --
 
 DROP TABLE IF EXISTS `mobiles`;
-CREATE TABLE IF NOT EXISTS `mobiles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `marqueMo` text COLLATE utf8_bin NOT NULL,
-  `modeleMo` text COLLATE utf8_bin NOT NULL,
-  `refMo` text COLLATE utf8_bin NOT NULL,
+CREATE TABLE `mobiles` (
+  `id` int(11) NOT NULL,
+  `marqueMo` char(100) COLLATE utf8_bin NOT NULL,
+  `modeleMo` char(100) COLLATE utf8_bin NOT NULL,
+  `refMo` char(100) COLLATE utf8_bin NOT NULL,
   `prixbaseMo` decimal(10,2) NOT NULL,
   `anneeMo` year(4) NOT NULL,
   `descMo` text COLLATE utf8_bin NOT NULL,
-  `garantieMo` text COLLATE utf8_bin NOT NULL,
-  `poidsMo` text COLLATE utf8_bin NOT NULL,
-  `dimenMo` text COLLATE utf8_bin NOT NULL,
+  `garantieMo` set('Aucune','6 mois','12 mois','24 mois') COLLATE utf8_bin NOT NULL,
+  `longeurMo` smallint(6) NOT NULL,
+  `largeurMo` smallint(6) NOT NULL,
+  `hauteurMob` smallint(6) NOT NULL,
+  `poidsMo` smallint(6) NOT NULL,
   `optionsMo` text COLLATE utf8_bin NOT NULL,
-  `capaciteMo` text COLLATE utf8_bin NOT NULL,
-  `promoMo` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+  `capaciteMo` smallint(6) NOT NULL,
+  `promoMo` tinyint(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -107,14 +107,82 @@ CREATE TABLE IF NOT EXISTS `mobiles` (
 --
 
 DROP TABLE IF EXISTS `offres`;
-CREATE TABLE IF NOT EXISTS `offres` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nomOffre` text COLLATE utf8_bin NOT NULL,
+CREATE TABLE `offres` (
+  `id` int(11) NOT NULL,
+  `nomOffre` enum('0','1') COLLATE utf8_bin NOT NULL,
   `descOffre` text COLLATE utf8_bin NOT NULL,
   `prixbaseOffre` decimal(10,2) NOT NULL,
-  `dureeOffre` text COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+  `dureeOffre` text COLLATE utf8_bin NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `abonner`
+--
+ALTER TABLE `abonner`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `clients`
+--
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `forfaits`
+--
+ALTER TABLE `forfaits`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `mobiles`
+--
+ALTER TABLE `mobiles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `offres`
+--
+ALTER TABLE `offres`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `abonner`
+--
+ALTER TABLE `abonner`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `clients`
+--
+ALTER TABLE `clients`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `forfaits`
+--
+ALTER TABLE `forfaits`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `mobiles`
+--
+ALTER TABLE `mobiles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `offres`
+--
+ALTER TABLE `offres`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
