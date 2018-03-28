@@ -9,6 +9,16 @@
      src: url('./fonts/Ubuntu/Ubuntu-Bold.ttf');
 }
 
+@font-face {
+     font-family: 'Ubuntu-Light';
+     src: url('./fonts/Ubuntu/Ubuntu-Light.ttf');
+}
+
+@font-face {
+     font-family: 'Ubuntu-Medium';
+     src: url('./fonts/Ubuntu/Ubuntu-Medium.ttf');
+}
+
 body {
 	background-image: url("../../img/backgroundtest.png");
 	background-color: #0A1423;
