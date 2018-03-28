@@ -1,0 +1,143 @@
+@font-face {
+     font-family: 'Montserrat';
+     src: url('./fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+body {
+	background-image: url("../../img/backgroundtest.png");
+	background-color: #0A1423;
+	background-attachment: fixed;
+	background-size: cover;
+    margin: 0;
+	background-repeat: no-repeat;
+	font-family : 'Montserrat';
+	font-size: 1.2em;
+	color: #ffffff;
+	text-shadow: 2px 2px 4px #ffffff;
+    margin: 0px;
+    padding: 0px;
+}
+.cadre {
+  border-width:1px;
+  border-color:black;
+}
+.element-logo {
+	position: absolute;
+	top: 0;
+	left: 5px;
+	
+}
+
+.element-logo2 {
+	position: absolute;
+	top: 0;
+	left: 70px;
+	
+}
+
+#menuHaut
+
+{
+    display: flex;
+	margin: auto;
+    flex-wrap: nowrap;
+	justify-content: center;
+	border: 3px #19202b solid;
+	background-image: url(../../img/nav-bg.jpg);
+	box-shadow: 0 4px 2px -2px black;
+    margin: 0px;
+    padding: 15px;
+
+}
+
+#sousMenuHaut
+
+{
+    display: flex;
+	margin: auto;
+    flex-wrap: nowrap;
+	justify-content: center;
+	border: 3px #19202b solid;
+	background-image: url(../../img/nav-bottom-bg.png);
+	box-shadow: 0 4px 2px -2px black;
+    margin: 0px;
+    padding: 8px;
+
+}
+
+a {
+     text-decoration: none;
+     color: #ffffff;
+}
+
+a#basLien:hover {
+	 text-decoration: none;
+     color: #ffffff;
+	 border-bottom: 5px #8acbff solid;
+
+}
+ a:hover {
+     text-decoration: none;
+     color: #ffffff;
+	 border-bottom: 5px #354FD3 solid;
+	 
+}
+
+ a:visited {
+     text-decoration: none;
+     color: #ffffff;
+}
+
+.element-menuHaut {
+		padding: 10px;
+		margin: 0;
+}
+
+.element-sousMenuHaut {
+		padding-right: 15px;
+}
+.button {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  padding: 3px;
+  position: absolute;
+  right: 10px;
+  width: 240px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 20px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.cadre {
+  width: 50px;
+
+{
