@@ -12,7 +12,8 @@ include 'includes/top.php';
 	   
 	   <div id="boutonEnvoyer"><input type="submit" value="Envoyer" /></div>
 	   
-	   <span class="noGuest">Pas encore client chez nous ? <a href="register.php">Inscrivez vous</a> !</span>
+	   <span class="noGuest">Pas encore client chez nous ? <a href="register.php">Inscrivez vous</a> !</span><br />
+	   <span class="forgotPass"><a href="passwordrecup">Mot de passe oublié ?</a></span>
 </form>
 
 </div>
