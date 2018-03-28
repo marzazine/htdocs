@@ -64,7 +64,6 @@ body {
 	border: 3px #19202b solid;
 	background-image: url(../../img/nav-bg.jpg);
 	box-shadow: 0 4px 2px -2px black;
-    margin-bottom: 50px;
     padding: 15px;
 
 }
@@ -120,6 +119,12 @@ a#basLien:hover {
 .element-menuHaut {
 		padding: 10px;
 		margin: 0;
+}
+
+.iphoneX {
+		position: absolute;
+		top : 15;
+		right: 20px;
 }
 
 .element-sousMenuHaut {
