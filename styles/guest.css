@@ -1,5 +1,5 @@
 #section {
-	background-color: #19202b; 
+	background-color: rgba(25,32,43,0.3); 
 	border: 3px #3d5af1 solid;
 	border-top: 3px #31a7de solid;
 	padding-top: 10px;
@@ -14,7 +14,7 @@
 }
 
 #sectionTitre{
-	background-color: #3d5af1;
+	background-color: rgba(61,90,241,0.7);
 	border: 3px #3d5af1 solid;
 	border-radius: 10px 10px 0px 0px;
 	width: 560px;
