@@ -4,6 +4,11 @@
      src: url('./fonts/Montserrat/Montserrat-Regular.ttf');
 }
 
+@font-face {
+     font-family: 'Ubuntu-Bold';
+     src: url('./fonts/Ubuntu/Ubuntu-Bold.ttf');
+}
+
 body {
 	background-image: url("../../img/backgroundtest.png");
 	background-color: #0A1423;
@@ -26,11 +31,27 @@ body {
 	
 }
 
+
 .element-logo2 {
 	position: absolute;
 	top: 0;
 	left: 70px;
 	
+}
+
+.element-bandeau {
+	border: 3px rgba(255,255,255,0.1) solid;
+	border-radius: 10px;
+	padding-bottom: 80px;
+	padding-left: 60px;
+	padding-right: 60px;
+	background-color: rgba(255,255,255,0.2);
+	position: absolute;
+	top: 200px;
+	left: 150px;
+	font-family: 'Ubuntu-Bold';
+	text-shadow: none;
+	font-size: 1.2em;
 }
 
 #menuHaut
@@ -104,6 +125,7 @@ a#basLien:hover {
 .element-sousMenuHaut {
 		padding-right: 15px;
 }
+
 .button {
   display: inline-block;
   border-radius: 3px;
@@ -145,3 +167,46 @@ a#basLien:hover {
   right: 0;
 }
 
+.button2 {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #900C3F;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  padding: 3px;
+  position: absolute;
+  left: 100px;
+  top: 40px;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 40px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 20px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
