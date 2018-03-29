@@ -35,7 +35,7 @@
 }
 
 .nosOffresForfaitBloc:hover {
-	background-color: #478aeb;
+	background-color: rgba(71, 138, 235, 0.5);
 	border: 1px #36527b solid;
 	box-shadow: 6px 6px 12px black;
 	width: 250px;
