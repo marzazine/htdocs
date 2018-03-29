@@ -284,3 +284,35 @@ a#basLien:hover {
   opacity: 1;
   right: 0;
 }
+
+#cadre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 350px;
+
+}
+
+.element {
+  background-color: white;
+  margin: auto;
+  width: 300px;
+  margin-left: 120px;
+  color: #000000;
+
+
+
+}
+.element {
+  background-color: white;
+  width: 300px;
+  margin: auto;
+
+}
+
+.element {
+  background-color: white;
+  margin-right: 120px;
+  width: 300px;
+
+}
