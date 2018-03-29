@@ -20,6 +20,14 @@ include 'includes/top.php';
 <div id="nosOffresForfaitCadre">
 <span class="nosOffresForfaitCadre-texteTitre">Forfaits avec mobile</span>
 <span class="nosOffresForfaitCadre-texte">Un forfait <strong>complet</strong> et un mobile à prix bon marché. </span>
+<span class="imgMobile"><img src="/img/mobile-mini.png"></span>
+
+</div>
+
+<div id="nosOffresForfaitCadre">
+<span class="nosOffresForfaitCadre-texteTitre">Forfaits sans mobile</span>
+<span class="nosOffresForfaitCadre-texte">Profitez de nos derniers modèles et bénéficiez de nos avantages.</span>
+<span class="imgMobile"><img src="/img/mobile-mini.png"></span>
 
 </div>
 
