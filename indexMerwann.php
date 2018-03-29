@@ -15,7 +15,13 @@ include 'includes/top.php';
 	<button class="button3" style="vertical-align:middle" onclick="javascript:location.href='offersMerwann.php'"><span class="iphoneXtexte">à partir de 1€* </span></button>
 </div>
 
-<span class="nosOffresTitre">Nos offres</span>
+<div id="nosOffresTitre">Nos offres</div>
+
+<div id="nosOffresForfaitCadre">
+<span class="nosOffresForfaitCadre-texteTitre">Forfaits avec mobile</span>
+<span class="nosOffresForfaitCadre-texte">Un forfait <strong>complet</strong> et un mobile à prix bon marché. </span>
+
+</div>
 
 
 
