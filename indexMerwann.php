@@ -17,19 +17,23 @@ include 'includes/top.php';
 
 <div id="nosOffresTitre">Nos offres</div>
 
-<div id="nosOffresForfaitCadre">
-<span class="nosOffresForfaitCadre-texteTitre">Forfaits avec mobile</span>
-<span class="nosOffresForfaitCadre-texte">Un forfait <strong>complet</strong> et un mobile à prix bon marché. </span>
-<span class="imgMobile"><img src="/img/mobile-mini.png"></span>
+<div id="nosOffresForfaitConteneur">
+
+	<div class="nosOffresForfaitBloc">
+		<span class="ForfaitTitre">Forfaits avec mobiles</span>
+		<span class="blocTexte">Un forfait complet adapté à vos besoins et un mobile à prix bon marché !</span>
+		<div id="imgMobile"><img src="/img/mobile-mini.png"></div>
+	</div>
+	
+	<div class="nosOffresForfaitBloc">
+	<span class="ForfaitTitre">Forfaits sans mobile</span>
+	<span class="blocTexte">La liberté du sans engagement avec la qualité de service de Wolvenet.</span>
+	<div id="imgSimcard"><img src="/img/simcard-mini.png"></div></div>
 
 </div>
 
-<div id="nosOffresForfaitCadre">
-<span class="nosOffresForfaitCadre-texteTitre">Forfaits sans mobile</span>
-<span class="nosOffresForfaitCadre-texte">Profitez de nos derniers modèles et bénéficiez de nos avantages.</span>
-<span class="imgMobile"><img src="/img/mobile-mini.png"></span>
 
-</div>
+
 
 
 
