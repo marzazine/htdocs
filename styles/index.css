@@ -7,12 +7,13 @@
 	font-family: 'Ubuntu-Bold';
 	text-shadow: none;
 	padding-top: 20px;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 }
 
 #nosOffresForfaitConteneur {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	text-align: center;
 
 }
@@ -54,10 +55,9 @@
 	color: #52e5fc;
 	font-size: 1em;
 	font-family: 'Ubuntu-Bold';
-	margin-bottom: 10px;
 	text-shadow: none;
 	display: block;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .blocTexte  {
@@ -66,7 +66,7 @@
 	text-shadow: none;
 }
 
-#imgMobile {
+#imgMobileForfait {
 	margin-top: 15px;
 	width: 0;
 	height: 0;
@@ -78,4 +78,182 @@
 	width: 0;
 	height: 0;
 	margin-left: 90px;
+}
+
+#imgInternet {
+	margin-top: 55px;
+	width: 0;
+	height: 0;
+	margin-left: 100px;
+}
+
+#imgMobile {
+	margin-top: 45px;
+	width: 0;
+	height: 0;
+	margin-left: 100px;
+}
+
+.button-Mobiles {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 105px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-Mobiles span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-Mobiles span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-Mobiles:hover span {
+  padding-right: 20px;
+}
+
+.button-Mobiles:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-ForfaitMobile {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 112px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-ForfaitMobile span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-ForfaitMobile span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-ForfaitMobile:hover span {
+  padding-right: 20px;
+}
+
+.button-ForfaitMobile:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-Internet {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 96px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-Internet span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-Internet span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-Internet:hover span {
+  padding-right: 20px;
+}
+
+.button-Internet:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-Forfait {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 96px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-Forfait span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-Forfait span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-Forfait:hover span {
+  padding-right: 20px;
+}
+
+.button-Forfait:hover span:after {
+  opacity: 1;
+  right: 0;
 }
