@@ -15,6 +15,8 @@ include 'includes/top.php';
 	<button class="button3" style="vertical-align:middle" onclick="javascript:location.href='offersMerwann.php'"><span class="iphoneXtexte">à partir de 1€* </span></button>
 </div>
 
+<span class="nosOffresTitre">Nos offres</span>
+
 
 
 </body>

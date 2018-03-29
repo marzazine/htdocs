@@ -4,6 +4,7 @@
 	<title>WolveNet France || Télécom & Internet</title>
 	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
 	<link rel="stylesheet" type="text/css" href="../styles/guest.css">
+	<link rel="stylesheet" type="text/css" href="../styles/index.css">
 	<link rel="stylesheet" type="text/css" href="../e/e.css">
 	<link rel="icon" type="image/png" href="../img/favicon.png" />
 	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" /><![endif]-->

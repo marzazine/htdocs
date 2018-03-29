@@ -82,6 +82,7 @@ body {
 	
 	display: flex;
 	height: 160px;
+	margin-bottom: 150px;
 	flex-direction: column;
     justify-content: center;
 	padding-top: 130px;
@@ -293,4 +294,9 @@ a#basLien:hover {
 .button3:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+#nosOffresTitre {
+	margin: auto;
+	color: #000000;
 }
