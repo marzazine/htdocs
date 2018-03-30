@@ -13,4 +13,6 @@ Exportation BD :
 
 -Ajouter une instruction CREATE DATABASE / USE
 -Ajouter une instruction DROP TABLE / VIEW / PROCEDURE / FUNCTION / EVENT / TRIGGER*
--
+
+To do list : 
+https://trello.com/b/vtHyIPGw/wolvenet
