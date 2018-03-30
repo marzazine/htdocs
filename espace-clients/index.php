@@ -1,5 +1,5 @@
 <?php
-include 'includes/top.php';
+include '../includes/top.php';
 ?>
 
 <body>
