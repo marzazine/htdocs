@@ -143,6 +143,14 @@
 	margin-left: 100px;
 }
 
+#imgNetflix {
+	margin-top: 5px;
+	margin-bottom: 24px;
+	width: 0;
+	height: 0;
+	margin-left: 55px;
+}
+
 .button-Mobiles {
   display: inline-block;
   border-radius: 3px;
@@ -359,3 +367,4 @@
   opacity: 1;
   right: 0;
 }
+

@@ -61,6 +61,13 @@ include 'includes/top.php';
                 <button class="button-BonsPlans" style="vertical-align:middle" onclick="javascript:location.href='#'"><span>J'en profite </span></button>
             </div>
 			
+			<div class="blocPromo">
+                <span class="TitreBlocPromo">Netflix</span>
+                <span class="blocTexte">Regardez des films et des séries TV Netflix en ligne sur tous vos écrans. </span>
+                <div id="imgNetflix"><img src="/img/netflix-mini.png"></div>
+                <button class="button-BonsPlans" style="vertical-align:middle" onclick="javascript:location.href='#'"><span>J'en profite </span></button>
+            </div>
+			
 		</div>
     </body>
 
