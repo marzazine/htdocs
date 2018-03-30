@@ -20,6 +20,6 @@
     <div class="element-menuHaut"><a href="">Offres aux particuliers</a></div>
 
     <div class="element-menuHaut"><a href="">Réseau d'entreprise</a></div>
-	<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='guest.php'"><span>Espace clients </span></button></div>
+	<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/'"><span>Espace clients </span></button></div>
 
 </div>
