@@ -17,9 +17,11 @@
 	
 	<div class="element-menuHaut"><a href="/catalogue/">Catalogue</a></div>
 
-    <div class="element-menuHaut"><a href="">Offres aux particuliers</a></div>
+    <div class="element-menuHaut"><a href="/offres-aux-particuliers/">Offres aux particuliers</a></div>
 
-    <div class="element-menuHaut"><a href="">Réseau d'entreprise</a></div>
+    <div class="element-menuHaut"><a href="/offres-aux-entreprises/">Réseau d'entreprise</a></div>
+
+    <div class="element-menuHaut"><a href="/assistance/">Assistance</a></div>
 	<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/'"><span>Espace clients </span></button></div>
 
 </div>
