@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>WolveNet France || Télécom & Internet</title>
+	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
 	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
 	<link rel="stylesheet" type="text/css" href="../styles/guest.css">
 	<link rel="stylesheet" type="text/css" href="../styles/index.css">
@@ -15,7 +15,7 @@
     <div class="element-logo"><a href="indexMerwann.php"><img src="/img/wolf-mini.png"></a></div>
 	<div class="element-logo2"><img src="/img/logoecrit-mini.png"></div>
 	
-	<div class="element-menuHaut"><a href="productsMerwann.php">Catalogue</a></div>
+	<div class="element-menuHaut"><a href="/catalogue/">Catalogue</a></div>
 
     <div class="element-menuHaut"><a href="">Offres aux particuliers</a></div>
 
