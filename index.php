@@ -1,3 +1,3 @@
 <?php
-header ('Location: indexMerwann.php');
+header ('Location: indexMerwann.php'); 
 ?>
