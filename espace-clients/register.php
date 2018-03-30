@@ -17,26 +17,22 @@ if (isset($_POST['forminscription']))
 		$cp= htmlspecialchars($_POST['cpCli']);
 		$sexe= htmlspecialchars($_POST['sexeCli']);
 
+		$pseudolength = strlen($pseudo);
+		if($pseudolength <= 255)
+		{
+			
+		}
+		else
+		{
+			$erreur = "Le mot de passe est trop long"
+		}
+
+
 	}
 	else
 	{
 		$erreur = "Les champs ne sont pas tous complétés"
 	}
 }
-
-$id=$_POST['id'];
-$pseudoCli=$_POST['pseudoCli'] ;
-$pren=$_POST['prenCli'];
-$nom=$_POST['nomCli'];
-$mail=$_POST['mailCli'];
-$mdp=$_POST['mdpCli'];
-$tel=$_POST['telCli'];
-$fixe=$_POST['fixeCli'];
-$ville=$_POST['villeCli'];
-$adrs=$_POST['adresseCli'];
-$cp=$_POST['cpCli'];
-$sexe=$_POST['sexeCli'];
-
-
 
  ?>
