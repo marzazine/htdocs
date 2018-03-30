@@ -1,4 +1,4 @@
-#nosOffresTitre {
+#TitreAvConteneur {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -10,7 +10,7 @@
 	padding-bottom: 20px;
 }
 
-#nosOffresForfaitConteneur {
+#conteneur {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -18,7 +18,7 @@
 
 }
 
-.nosOffresForfaitBloc {
+.bloc {
 	border: 1px #36527b solid;
 	box-shadow: 6px 6px 12px black;
 	width: 250px;
@@ -34,9 +34,25 @@
 	margin-right: 20px;
 }
 
-.nosOffresForfaitBloc:hover {
+.bloc:hover {
 	background-color: rgba(71, 138, 235, 0.5);
 	border: 1px #36527b solid;
+	box-shadow: 18px 18px 18px black;
+	width: 250px;
+	height: 250px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 70px;
+	border-radius: 10px;
+	margin-bottom: 40px;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.blocPromo {
+	border: 1px #801744 solid;
 	box-shadow: 6px 6px 12px black;
 	width: 250px;
 	height: 250px;
@@ -51,8 +67,34 @@
 	margin-right: 20px;
 }
 
-.ForfaitTitre  {
+.blocPromo:hover {
+	background-color: rgba(214, 37, 112, 0.5);
+	border: 1px #801744 solid;
+	box-shadow: 18px 18px 18px black;
+	width: 250px;
+	height: 250px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 70px;
+	border-radius: 10px;
+	margin-bottom: 40px;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.TitreBloc  {
 	color: #52e5fc;
+	font-size: 1em;
+	font-family: 'Ubuntu-Bold';
+	text-shadow: none;
+	display: block;
+    margin-bottom: 20px;
+}
+
+.TitreBlocPromo  {
+	color: #d62570;
 	font-size: 1em;
 	font-family: 'Ubuntu-Bold';
 	text-shadow: none;
@@ -89,6 +131,13 @@
 
 #imgMobile {
 	margin-top: 45px;
+	width: 0;
+	height: 0;
+	margin-left: 100px;
+}
+
+#imgSpotify {
+	margin-top: 5px;
 	width: 0;
 	height: 0;
 	margin-left: 100px;
@@ -254,6 +303,59 @@
 }
 
 .button-Forfait:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#bonsPlansTitre {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5em;
+	font-family: 'Ubuntu-Bold';
+	text-shadow: none;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.button-BonsPlans {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #d62570;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 96px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-BonsPlans span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-BonsPlans span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-BonsPlans:hover span {
+  padding-right: 20px;
+}
+
+.button-BonsPlans:hover span:after {
   opacity: 1;
   right: 0;
 }
