@@ -8,7 +8,7 @@ if(isset($_POST) and !empty($_POST['pass']) and !empty($_POST['email'])){
  
  
 $email = ($_POST['email']);
-$pass = ($_POST['pass']);
+$pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
  
 // Vérification des identifiants
 $req = $pdo->prepare('SELECT * FROM clients WHERE mailCli = :email AND mdpCli = :mdp');
