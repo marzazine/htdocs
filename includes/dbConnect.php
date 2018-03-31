@@ -3,7 +3,7 @@
 try
 {
 
-    $pdo = new PDO('mysql:host=localhost;dbname=wolvenetdb', 'root', '');
+    $pdo = new PDO("mysql:host=localhost;dbname=wolvenetdb;charset=UTF8", 'root', '');
 
 }
 
