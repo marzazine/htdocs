@@ -12,6 +12,7 @@ include '../includes/top.php';
 	   <div id="labelForm"><label for="prenom">Votre prénom : </label><input type="text" name="prenom" id="prenom" required /><br /><br /></div>
 	   <div id="labelForm"><label for="email">Votre adresse e-mail : </label><input type="email" name="email" id="email" required /><br /><br /></div>
 	   <div id="labelForm"><label for="pass">Créer un mot de passe : </label><input type="password" name="pass" id="pass" required /><br /><br /></div>
+	   <div id="labelForm"><label for="passconfirm">Confirmez votre mot de passe :</label><input type="password" name="passconfirm" id="passconfirm" required /><br /><br /></div>
 	   <div id="labelForm"><label for="codePostal">Votre code postal : </label><input type="text" name="codePostal" id="codePostal" maxlength="6" required /><br /><br /></div>
 	   <div id="labelForm"><label for="ville">Votre ville :</label><input type="text" name="ville" id="ville" required /><br /><br /></div>
 	   <div id="labelForm"><label for="adresse">Votre adresse postale :</label><input type="text" name="adresse" id="adresse" required /><br /><br /></div>

@@ -1,16 +1,11 @@
 <?php
 require_once('../includes/dbConnect.php');
 
-if (isset($_POST['nouveauClient'])); {
-    
-    // Valeurs qui doivent être obligatoirement remplies
-    if (!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['email']) AND !empty($_POST['pass']) AND !empty($_POST['codePostal']) AND !empty($_POST['ville']) AND !empty($_POST['adresse'])); {
-        
-        // Récupération des valeurs du formulaire
-        $nomCli     = htmlspecialchars($_POST['nom']);
+		$nomCli     = htmlspecialchars($_POST['nom']);
         $prenCli    = htmlspecialchars($_POST['prenom']);
         $mailCli    = htmlspecialchars($_POST['email']);
         $mdpCli     = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+		$passconfirm    = htmlspecialchars($_POST['passconfirm']);
         $telCli     = htmlspecialchars($_POST['tel']);
         $fixeCli    = htmlspecialchars($_POST['telFixe']);
         $villeCli   = htmlspecialchars($_POST['ville']);
@@ -44,6 +39,18 @@ if (isset($_POST['nouveauClient'])); {
                     break;
             }
         }
+
+if (isset($_POST['nouveauClient'])); {
+    
+    // Valeurs qui doivent être obligatoirement remplies
+    if (!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['email']) AND !empty($_POST['pass']) AND !empty($_POST['passconfirm']) AND !empty($_POST['codePostal']) AND !empty($_POST['ville']) AND !empty($_POST['adresse'])); {
+		
+		if ($_POST['pass'] != $_POST['passconfirm']) {
+                    echo "<script>alert('Les mots de passes saisis sont différents, veuillez réessayer.');</script>";
+                }
+				
+				else {
+    
         
         // Préparation requête SQL
         $req = $pdo->prepare('INSERT INTO clients(prenCli, nomCli, mailCli, mdpCli, telCli, fixeCli, villeCli, adresseCli, cpCli, sexeCli) VALUES (:prenom, :nom, :email, :pass, :tel, :telFixe, :ville, :adresse, :codePostal, :sexe)');
@@ -69,8 +76,8 @@ if (isset($_POST['nouveauClient'])); {
 		echo "Bien enregistré !";
 		exit();
 
-	}
-
+	} 
+  }
 }
 
 ?>
