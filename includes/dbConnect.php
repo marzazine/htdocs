@@ -1,16 +1,20 @@
-<?php
-$serveur = "127.0.0.1";
-$base = "wolvenetdb";
-$user = "root";
-$pass = "";
+<?php 
 
+try
+{
 
-$mysqli = new mysqli($serveur, $user, $pass, $base);
+    $pdo = new PDO('mysql:host=localhost;dbname=wolvenetdb', 'root', '');
 
-$mysqli->set_charset("utf8");
-
-if ($mysqli->connect_error) {
-    die('Erreur de connexion ('.$mysqli->connect_errno.')'. $mysqli->connect_error);
 }
 
-?> 
+catch(Exception $e)
+
+{
+
+    echo 'Erreur : '.$e->getMessage().'<br />';
+
+    echo 'N° : '.$e->getCode();
+
+}
+
+?>
