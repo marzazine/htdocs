@@ -7,17 +7,16 @@ if (isset($_POST['nouveauClient'])); {
     if (!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['email']) AND !empty($_POST['pass']) AND !empty($_POST['codePostal']) AND !empty($_POST['ville']) AND !empty($_POST['adresse'])); {
         
         // Récupération des valeurs du formulaire
-        $nomCli     = $_POST['nom'];
-        $prenCli    = $_POST['prenom'];
-        $mailCli    = $_POST['email'];
-        $mdpCli     = $_POST['pass'];
-        $mdpCli     = password_hash($mdpCli, PASSWORD_DEFAULT);
-        $telCli     = $_POST['tel'];
-        $fixeCli    = $_POST['telFixe'];
-        $villeCli   = $_POST['ville'];
-        $adresseCli = $_POST['adresse'];
-        $cpCli      = $_POST['codePostal'];
-        $sexeCli    = $_POST['sexe'];
+        $nomCli     = htmlspecialchars($_POST['nom']);
+        $prenCli    = htmlspecialchars($_POST['prenom']);
+        $mailCli    = htmlspecialchars($_POST['email']);
+        $mdpCli     = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+        $telCli     = htmlspecialchars($_POST['tel']);
+        $fixeCli    = htmlspecialchars($_POST['telFixe']);
+        $villeCli   = htmlspecialchars($_POST['ville']);
+        $adresseCli = htmlspecialchars($_POST['adresse']);
+        $cpCli      = htmlspecialchars($_POST['codePostal']);
+        $sexeCli    = htmlspecialchars($_POST['sexe']);
         
         // Attribution du pseudo du client en minuscule
         $nomCli    = mb_strtolower($nomCli);
