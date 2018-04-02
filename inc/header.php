@@ -10,6 +10,7 @@ if (session_status() == PHP_SESSION_NONE) {
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
 	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
 	<link rel="stylesheet" type="text/css" href="../styles/guest.css">
+	<link rel="stylesheet" type="text/css" href="../styles/form.css">
 	<link rel="stylesheet" type="text/css" href="../styles/index.css">
 	<link rel="stylesheet" type="text/css" href="../e/e.css">
 	<link rel="icon" type="image/png" href="../img/favicon.png" />
