@@ -35,7 +35,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <?php if(isset($_SESSION['flash'])): ?>
     <?php foreach ($_SESSION['flash'] as $type => $message): ?>
-        <div class="alert alert-<?= $type; ?>">
+        <div class="alert-<?= $type; ?>">
             <?= $message; ?>
         </div>
     <?php endforeach; ?>
