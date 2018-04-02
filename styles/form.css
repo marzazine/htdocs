@@ -1,0 +1,136 @@
+#section {
+	background-color: rgba(25,32,43,0.3); 
+	border: 3px #3d5af1 solid;
+	border-top: 3px #31a7de solid;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border-radius: 0px 0px 10px 10px;
+	width: 500px;
+	margin: auto;
+	text-align: center;
+	box-shadow: 6px 6px 12px black;
+	text-shadow: none;
+}
+
+#sectionTitre{
+	background-color: rgba(61,90,241,0.7);
+	border: 3px #3d5af1 solid;
+	border-radius: 10px 10px 0px 0px;
+	width: 480px;
+	padding: 10px;
+	margin: auto;
+	margin-top: 30px;
+	text-align: center;
+
+}
+
+.titreForm {
+	font-size: 1.3em;
+	font-family: 'Ubuntu-Bold';
+	text-shadow: none;
+	text-align: center;
+	border-bottom: 5px #19202b solid;
+	
+}
+
+.button {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  padding: 3px;
+  position: absolute;
+  right: 10px;
+  width: 240px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 20px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#boutonEnvoyer {
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+.noGuest {
+	font-size: 0.8em;
+	font-family: 'Ubuntu-Medium';
+	text-shadow: none;
+}
+
+.forgotPass {
+	font-size: 0.8em;
+	font-family: 'Ubuntu-Medium';
+	text-shadow: none;
+}
+
+.alert-succes{
+	display: flex;
+	margin: auto;
+    flex-wrap: nowrap;
+	justify-content: center;
+	border: 3px #19202b solid;
+	background-color: #56fd31;
+	box-shadow: 0 4px 2px -2px black;
+    margin: 0px;
+    padding: 8px;
+}
+
+.alert-danger{
+	display: flex;
+	margin: auto;
+    flex-wrap: nowrap;
+	justify-content: center;
+	border: 3px #19202b solid;
+	background-color: #f12222;
+	box-shadow: 0 4px 2px -2px black;
+    margin: 0px;
+    padding: 8px;
+}
+
+label
+{
+	display: block;
+	width: 300px;
+	float: left;
+}
+
+#label0 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	background-color: #284063;
+}
+
+#label1 {
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+}
