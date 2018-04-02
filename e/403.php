@@ -1,3 +1,1 @@
-<?php
-include '../includes/top.php';
-?>
+<?php require '../inc/header.php'; ?>

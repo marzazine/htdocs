@@ -1,6 +1,4 @@
-<?php
-include '../includes/top.php';
-?>
+<?php require '../inc/header.php'; ?>
 
 <div id="sousMenuHaut">
 
@@ -14,7 +12,4 @@ include '../includes/top.php';
 </div>
 
 
-
-</body>
-
-</html>
+<?php require '../inc/footer.php'; ?>
