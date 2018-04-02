@@ -62,7 +62,7 @@ if(empty(!$_POST)){
 
     $codepostal_length = strlen($_POST['codepostal']);
 
-    if(empty($_POST['codepostal']) || !preg_match('/^[0-9]+$/', $_POST['codepostal']) || $codepostal_length > 5) {
+    if(empty($_POST['codepostal']) || !preg_match('/^[0-9]+$/', $_POST['codepostal']) || $codepostal_length != 5) {
 
         $errors['codepostal'] = "Le code postal saisi n'est pas valide.";
     }
@@ -74,14 +74,14 @@ if(empty(!$_POST)){
 
     $numportable_length = strlen($_POST['numportable']);
 
-    if (!preg_match('/^[0-9]+$/', $_POST['numportable']) || $numportable_length > 10) {
+    if (preg_match('/^[a-zA-Z]+$/', $_POST['numportable']) || $numportable_length > 10) {
 
         $errors['numportable'] = "Le numéro de portable saisi n'est pas valide.";
     }
 
     $numfixe_length = strlen($_POST['numfixe']);
 
-    if (!preg_match('/^[0-9]+$/', $_POST['numfixe']) || $numfixe_length > 10) {
+    if (preg_match('/^[a-zA-Z]+$/', $_POST['numfixe']) || $numfixe_length > 10) {
 
         $errors['numfixe'] = "Le numéro de téléphone fixe saisi n'est pas valide.";
     }
@@ -97,14 +97,16 @@ if(empty(!$_POST)){
     }
 
     if (empty($errors)){
-        $req = $pdo->prepare("INSERT INTO clients SET prenCli = ?, nomCli = ?, mailCli = ?, dateinscriptionCli = NOW(), mdpCli = ?, confirmation_token = ?, ipCli = ?, telCli = ?, fixeCli = ?, villeCli = ?, adresseCli = ?, cpCli = ?, sexeCli = ?");
+        $req = $pdo->prepare("INSERT INTO clients SET pseudoCli = ?, prenCli = ?, nomCli = ?, mailCli = ?, dateinscriptionCli = NOW(), mdpCli = ?, confirmation_token = ?, ipCli = ?, telCli = ?, fixeCli = ?, villeCli = ?, adresseCli = ?, cpCli = ?, sexeCli = ?");
 
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $token = token(60);
-
-        $req->execute([$_POST['prenom'], $_POST['nomdefamille'], $_POST['mail'], $password, $token, $_SERVER['REMOTE_ADDR'], $_POST['numportable'], $_POST['numfixe'], $_POST['ville'], $_POST['adressepostale'], $_POST['codepostal'], $_POST['sexe']]);
+        $pseudo = strtolower($_POST['nomdefamille']).".".strtolower($_POST['prenom']);
 
         $client_id = $pdo->lastInsertId(); // Dernier ID généré par PDO
+        $req->execute([$pseudo, $_POST['prenom'], $_POST['nomdefamille'], $_POST['mail'], $password, $token, $_SERVER['REMOTE_ADDR'], $_POST['numportable'], $_POST['numfixe'], $_POST['ville'], $_POST['adressepostale'], $_POST['codepostal'], $_POST['sexe']]);
+
+        
 
         echo("Votre compte a bien été créé. <br/> Voici votre lien : <br />  <a>http://localhost/espace_clients/confirm.php?id=$client_id&token=$token</a>");
 
