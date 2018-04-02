@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
@@ -25,3 +31,12 @@
 	<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/'"><span>Espace clients </span></button></div>
 
 </div>
+
+<?php if(isset($_SESSION['flash'])): ?>
+    <?php foreach ($_SESSION['flash'] as $type => $message): ?>
+        <div class="alert alert-<?= $type; ?>">
+            <?= $message; ?>
+        </div>
+    <?php endforeach; ?>
+    <?php unset($_SESSION['flash']); ?>
+<?php endif; ?>
