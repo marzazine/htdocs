@@ -124,3 +124,16 @@ li {
 	list-style-type: none; 
 	margin: 5px;
 }
+
+.champ-obligatoire {
+	color: #ff1300;
+	text-shadow: none;
+	font-size: 0.8em;
+}
+
+.champ-obligatoire-tip {
+	color: #ff1300;
+	text-shadow: none;
+	font-size: 0.6em;
+	margin-left: 850px;
+}
