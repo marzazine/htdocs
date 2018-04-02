@@ -5,8 +5,9 @@
 	padding-top: 10px;
 	padding-bottom: 20px;
 	border-radius: 0px 0px 10px 10px;
-	width: 500px;
+	width: 1000px;
 	margin: auto;
+	margin-top: 0px;
 	text-align: center;
 	box-shadow: 6px 6px 12px black;
 	text-shadow: none;
@@ -16,7 +17,7 @@
 	background-color: rgba(61,90,241,0.7);
 	border: 3px #3d5af1 solid;
 	border-radius: 10px 10px 0px 0px;
-	width: 480px;
+	width: 980px;
 	padding: 10px;
 	margin: auto;
 	margin-top: 30px;
@@ -118,7 +119,7 @@
 label
 {
 	display: block;
-	width: 300px;
+	width: 600px;
 	float: left;
 }
 
@@ -132,5 +133,6 @@ label
 #label1 {
 	padding-top: 5px;
 	padding-left: 5px;
+	background-color: #253aa7;
 	padding-bottom: 5px;
 }
