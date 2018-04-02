@@ -64,18 +64,26 @@ if(empty(!$_POST)){
 
 <?php endif; ?>
 
-<h1>S'inscrire</h1>
+<body>
+<div id="sectionTitre"><span class="titreForm">S'inscrire</span></div>
+<div id="section">
 
 <form action="" method="POST">
-
+	
+	<div id="label">
     <label for="">Votre adresse mail : </label>
     <input type="text" name="mail" /><br /><br />
-
+	</div>
+	
+	<div id="label">
     <label for="">Votre mot de passe : </label>
     <input type="password" name="password" /><br /><br />
-
+	</div>
+	
+	<div id="label">
     <label for="">Confirmez votre mot de passe : </label>
     <input type="password" name="password_confirm" /><br /><br />
+	</div>
 
 
     <br /><button type="submit">Envoyer</button>
