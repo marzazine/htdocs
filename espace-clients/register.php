@@ -70,6 +70,16 @@ if(empty(!$_POST)){
         $errors['ville'] = "La ville saisie n'est pas valide. ";
     }
 
+    if (!preg_match('/^[0-9]+$/', $_POST['numportable'])) {
+
+        $errors['numportable'] = "Le numéro de portable saisi n'est pas valide.";
+    }
+
+    if (!preg_match('/^[0-9]+$/', $_POST['numfixe'])) {
+
+        $errors['numfixe'] = "Le numéro de téléphone fixe saisi n'est pas valide.";
+    }
+
     if(empty($_POST['datenaissance'])){
 
         $errors['datenaissance'] = "Veuillez saisir une date de naissance complète.";
@@ -147,12 +157,12 @@ if(empty(!$_POST)){
 
     <div id="label0">
     <label for="telephone">Votre numéro de téléphone : </label>
-    <input type="text" name="numportable" placeholder="Numéro de téléphone" maxlength="10" /><br /><br />
+    <input type="tel" name="numportable" placeholder="Numéro de téléphone" maxlength="10" /><br /><br />
     </div>
 
     <div id="label1">
     <label for="telephonefixe">Votre numéro de téléphone fixe : </label>
-    <input type="text" name="numfixe" placeholder="Numéro de fixe" maxlength="10"/><br /><br />
+    <input type="tel" name="numfixe" placeholder="Numéro de fixe" maxlength="10"/><br /><br />
     </div>
 
     <div id="label0">
