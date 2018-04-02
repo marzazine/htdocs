@@ -12,17 +12,17 @@ if(empty(!$_POST)){
 
     if(empty($_POST['nomdefamille']) || !preg_match('/^[a-zA-Z]+$/', $_POST['nomdefamille'])) {
 
-        $errors['nomdefamille'] = "Erreur lors de la saisie de votre nom de famille.";
+        $errors['nomdefamille'] = "Le nom de famille saisi n'est pas valide.";
     }
 
     if(empty($_POST['prenom']) || !preg_match('/^[a-zA-Z]+$/', $_POST['prenom'])) {
 
-        $errors['prenom'] = "Erreur lors de la saisie de votre prénom.";
+        $errors['prenom'] = "Le prénom saisi n'est pas valide.";
     }
 
     if(empty($_POST['mail']) || !filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)){
 
-        $errors['mail'] = "L'adresse mail n'est pas valide.";
+        $errors['mail'] = "L'adresse e-mail saisie n'est pas valide.";
 
     } else {
         $req = $pdo->prepare('SELECT id FROM clients WHERE mailCli = ?');
@@ -38,7 +38,7 @@ if(empty(!$_POST)){
 
     if(empty($_POST['password'])){
 
-        $errors['password'] = "Le mot de passe n'est pas valide";
+        $errors['password'] = "Le mot de passe saisi n'est pas valide";
     }
 
     if($_POST['password'] != $_POST['password_confirm']) {
@@ -48,7 +48,7 @@ if(empty(!$_POST)){
 
     if(empty($_POST['adressepostale'])){
 
-        $errors['adressepostale'] = "Vous n'avez pas saisi d'adresse postale ! ";
+        $errors['adressepostale'] = "L'adresse postale saisie n'est pas valide. ";
     } else {
         $req = $pdo->prepare('SELECT id FROM clients WHERE adresseCli = ?');
         $req->execute([$_POST['adressepostale']]);
@@ -56,28 +56,28 @@ if(empty(!$_POST)){
 
         if($adressefound){
 
-            $errors['adressepostale'] = "Cette adresse postale a déjà été saisie par quelq'un auparavant.";
+            $errors['adressepostale'] = "Cette adresse postale existe déjà.";
         }
     }
 
-    if(empty($_POST['codepostal'])){
+    if(empty($_POST['codepostal']) || !preg_match('/^[0-9]+$/', $_POST['nomdefamille'])) {
 
-        $errors['codepostal'] = "Vous n'avez pas saisi de code postal ! ";
+        $errors['codepostal'] = "Le code postal saisi n'est pas valide.";
     }
 
     if(empty($_POST['ville'])){
 
-        $errors['ville'] = "Vous n'avez pas saisi votre ville. ";
+        $errors['ville'] = "La ville saisie n'est pas valide. ";
     }
 
     if(empty($_POST['datenaissance'])){
 
-        $errors['datenaissance'] = "Vous n'avez pas saisi votre date de naissance. ";
+        $errors['datenaissance'] = "Veuillez saisir une date de naissance complète.";
     }
 
     if(empty($_POST['sexe'])){
 
-        $errors['sexe'] = "Vous n'avez pas indiqué votre sexe. ";
+        $errors['sexe'] = "Le sexe saisi n'est pas valide.";
     }
 
     if (empty($errors)){
@@ -104,43 +104,44 @@ if(empty(!$_POST)){
 
 <?php if (!empty($errors)): ?>
 
-    <p>Erreur dans le formulaire</p>
+    <div class="form-error">
+        <span class="form-error-title">Erreur dans le formulaire</span><br />
 <ul>
     <?php foreach ($errors as $error): ?>
-        <li><?= $error; ?></li>
+       <li><?= $error; ?></li>
     <?php endforeach; ?>
 </ul>
-
+</div>
 <?php endif; ?>
 
 <body>
-<div id="sectionTitre"><span class="titreForm">S'inscrire</span></div>
+<div id="sectionTitre"><span class="titreForm">Formulaire nouveau client Wolvenet</span></div>
 <div id="section">
 
 <form action="" method="POST">
 	
 	<div id="label1">
-    <label for="nomdefamille">Votre nom de famille : </label>
+    <label for="nomdefamille">Votre nom de famille<span class="champ-obligatoire">*</span> : </label>
     <input type="text" name="nomdefamille" placeholder="Nom de famille" maxlength="100" /><br /><br />
     </div>
 
     <div id="label0">
-    <label for="prenom">Votre prénom : </label>
+    <label for="prenom">Votre prénom<span class="champ-obligatoire">*</span> : </label>
     <input type="text" name="prenom" placeholder="Prénom" maxlength="100" /><br /><br />
     </div>
 
     <div id="label1">
-    <label for="email">Votre adresse e-mail : </label>
+    <label for="email">Votre adresse e-mail<span class="champ-obligatoire">*</span> : </label>
     <input type="text" name="mail" placeholder="Adresse e-mail" maxlength="100" /><br /><br />
 	</div>
 	
 	<div id="label0">
-    <label for="mdp">Votre mot de passe : </label>
+    <label for="mdp">Votre mot de passe<span class="champ-obligatoire">*</span> : </label>
     <input type="password" name="password" placeholder="Mot de passe" maxlength="256"/><br /><br />
 	</div>
 	
 	<div id="label1">
-    <label for="mdpconfirm">Confirmez votre mot de passe : </label>
+    <label for="mdpconfirm">Confirmez votre mot de passe<span class="champ-obligatoire">*</span> : </label>
     <input type="password" name="password_confirm"  placeholder="Retapez votre mot de passe" maxlength="256"/><br /><br />
 	</div>
 
@@ -155,27 +156,27 @@ if(empty(!$_POST)){
     </div>
 
     <div id="label0">
-    <label for="adresse">Votre adresse postale : </label>
+    <label for="adresse">Votre adresse postale<span class="champ-obligatoire">*</span> : </label>
     <input type="text" name="adressepostale" placeholder="Adresse postale"/><br /><br />
     </div>
 
     <div id="label1">
-    <label for="cp">Votre code postal : </label>
+    <label for="cp">Votre code postal<span class="champ-obligatoire">*</span> : </label>
     <input type="text" name="codepostal" placeholder="Code postal" maxlength="5"/><br /><br />
     </div>
 
     <div id="label0">
-    <label for="ville">Votre ville : </label>
+    <label for="ville">Votre ville<span class="champ-obligatoire">*</span> : </label>
     <input type="text" name="ville" placeholder="Ville" maxlength="100"/><br /><br />
     </div>
 
     <div id="label1">
-    <label for="datenaissance">Votre date de naissance : </label>
+    <label for="datenaissance">Votre date de naissance<span class="champ-obligatoire">*</span> : </label>
     <input type="date" name="datenaissance"/><br /><br />
     </div>
 
     <div id="label0">
-    <label for="sexe">Vous êtes : </label>
+    <label for="sexe">Vous êtes<span class="champ-obligatoire">*</span> : </label>
     <select name="sexe">
 
            <option value="homme">Homme</option>
@@ -187,7 +188,8 @@ if(empty(!$_POST)){
     </div>
 
 
-    <br /><button type="submit">Envoyer</button>
+    <br /><button type="submit">Envoyer</button><br />
+    <span class="champ-obligatoire-tip">* : Champs obligatoires</span>
 </form>
 
 
