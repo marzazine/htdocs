@@ -60,7 +60,9 @@ if(empty(!$_POST)){
         }
     }
 
-    if(empty($_POST['codepostal']) || !preg_match('/^[0-9]+$/', $_POST['nomdefamille'])) {
+    $codepostal_length = strlen($_POST['codepostal']);
+
+    if(empty($_POST['codepostal']) || !preg_match('/^[0-9]+$/', $_POST['codepostal']) || $codepostal_length > 5) {
 
         $errors['codepostal'] = "Le code postal saisi n'est pas valide.";
     }
@@ -70,12 +72,16 @@ if(empty(!$_POST)){
         $errors['ville'] = "La ville saisie n'est pas valide. ";
     }
 
-    if (!preg_match('/^[0-9]+$/', $_POST['numportable'])) {
+    $numportable_length = strlen($_POST['numportable']);
+
+    if (!preg_match('/^[0-9]+$/', $_POST['numportable']) || $numportable_length > 10) {
 
         $errors['numportable'] = "Le numéro de portable saisi n'est pas valide.";
     }
 
-    if (!preg_match('/^[0-9]+$/', $_POST['numfixe'])) {
+    $numfixe_length = strlen($_POST['numfixe']);
+
+    if (!preg_match('/^[0-9]+$/', $_POST['numfixe']) || $numfixe_length > 10) {
 
         $errors['numfixe'] = "Le numéro de téléphone fixe saisi n'est pas valide.";
     }
@@ -189,9 +195,9 @@ if(empty(!$_POST)){
     <label for="sexe">Vous êtes<span class="champ-obligatoire">*</span> : </label>
     <select name="sexe">
 
-           <option value="homme">Homme</option>
+           <option value="homme">Un homme</option>
 
-           <option value="femme">Femme</option>
+           <option value="femme">Une femme</option>
 
            <option value="autre">Autre</option>
     </select>
