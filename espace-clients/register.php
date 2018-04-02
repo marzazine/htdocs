@@ -108,7 +108,7 @@ if(empty(!$_POST)){
 
         
 
-        echo("Votre compte a bien été créé. <br/> Voici votre lien : <br />  <a>http://localhost/espace_clients/confirm.php?id=$client_id&token=$token</a>");
+        die("Votre compte a bien été créé. <br/> Voici votre lien : <br />  <a>http://localhost/espace_clients/confirm.php?id=$client_id&token=$token</a>");
 
         $_SESSION['flash']['succes'] = "Votre compte a bien été créé.";
 
