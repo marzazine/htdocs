@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 28 mars 2018 à 14:47
--- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  7.2.3
+-- Généré le :  lun. 02 avr. 2018 à 22:11
+-- Version du serveur :  10.1.30-MariaDB
+-- Version de PHP :  7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,10 +33,10 @@ USE `wolvenetdb`;
 DROP TABLE IF EXISTS `abonner`;
 CREATE TABLE `abonner` (
   `id` int(11) NOT NULL,
-  `idFor` tinyint(11) NOT NULL,
-  `idCli` tinyint(11) NOT NULL,
-  `idMo` tinyint(11) NOT NULL,
-  `idOff` tinyint(11) NOT NULL
+  `idFor` int(11) NOT NULL,
+  `idCli` int(11) NOT NULL,
+  `idMo` int(11) NOT NULL,
+  `idOff` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -48,17 +48,21 @@ CREATE TABLE `abonner` (
 DROP TABLE IF EXISTS `clients`;
 CREATE TABLE `clients` (
   `id` int(11) NOT NULL,
-  `pseudoCli` char(100) COLLATE utf8_bin NOT NULL,
-  `prenCli` char(100) COLLATE utf8_bin NOT NULL,
-  `nomCli` char(100) COLLATE utf8_bin NOT NULL,
-  `mailCli` char(100) COLLATE utf8_bin NOT NULL,
+  `pseudoCli` text COLLATE utf8_bin NOT NULL,
+  `prenCli` varchar(100) COLLATE utf8_bin NOT NULL,
+  `nomCli` varchar(100) COLLATE utf8_bin NOT NULL,
+  `mailCli` varchar(100) COLLATE utf8_bin NOT NULL,
   `mdpCli` varchar(256) COLLATE utf8_bin NOT NULL,
-  `telCli` char(10) COLLATE utf8_bin NOT NULL,
-  `fixeCli` char(10) COLLATE utf8_bin NOT NULL,
-  `villeCli` char(100) COLLATE utf8_bin NOT NULL,
-  `adresseCli` char(100) COLLATE utf8_bin NOT NULL,
-  `cpCli` tinyint(11) NOT NULL,
-  `sexeCli` set('homme','femme','inconnu') COLLATE utf8_bin NOT NULL
+  `confirmation_token` varchar(60) COLLATE utf8_bin DEFAULT NULL,
+  `confirmed_at` date DEFAULT NULL,
+  `ipCli` varchar(15) COLLATE utf8_bin NOT NULL,
+  `telCli` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `fixeCli` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `villeCli` varchar(100) COLLATE utf8_bin NOT NULL,
+  `adresseCli` text COLLATE utf8_bin NOT NULL,
+  `cpCli` int(11) NOT NULL,
+  `sexeCli` set('homme','femme','inconnu') COLLATE utf8_bin NOT NULL,
+  `dateinscriptionCli` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -70,7 +74,7 @@ CREATE TABLE `clients` (
 DROP TABLE IF EXISTS `forfaits`;
 CREATE TABLE `forfaits` (
   `id` int(11) NOT NULL,
-  `nomFor` char(100) COLLATE utf8_bin NOT NULL,
+  `nomFor` text COLLATE utf8_bin NOT NULL,
   `descFor` text COLLATE utf8_bin NOT NULL,
   `prixbaseFor` decimal(10,2) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
@@ -84,19 +88,17 @@ CREATE TABLE `forfaits` (
 DROP TABLE IF EXISTS `mobiles`;
 CREATE TABLE `mobiles` (
   `id` int(11) NOT NULL,
-  `marqueMo` char(100) COLLATE utf8_bin NOT NULL,
-  `modeleMo` char(100) COLLATE utf8_bin NOT NULL,
-  `refMo` char(100) COLLATE utf8_bin NOT NULL,
+  `marqueMo` text COLLATE utf8_bin NOT NULL,
+  `modeleMo` text COLLATE utf8_bin NOT NULL,
+  `refMo` text COLLATE utf8_bin NOT NULL,
   `prixbaseMo` decimal(10,2) NOT NULL,
   `anneeMo` year(4) NOT NULL,
   `descMo` text COLLATE utf8_bin NOT NULL,
-  `garantieMo` set('Aucune','6 mois','12 mois','24 mois') COLLATE utf8_bin NOT NULL,
-  `longeurMo` smallint(6) NOT NULL,
-  `largeurMo` smallint(6) NOT NULL,
-  `hauteurMob` smallint(6) NOT NULL,
-  `poidsMo` smallint(6) NOT NULL,
+  `garantieMo` text COLLATE utf8_bin NOT NULL,
+  `poidsMo` text COLLATE utf8_bin NOT NULL,
+  `dimenMo` text COLLATE utf8_bin NOT NULL,
   `optionsMo` text COLLATE utf8_bin NOT NULL,
-  `capaciteMo` smallint(6) NOT NULL,
+  `capaciteMo` text COLLATE utf8_bin NOT NULL,
   `promoMo` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -109,7 +111,7 @@ CREATE TABLE `mobiles` (
 DROP TABLE IF EXISTS `offres`;
 CREATE TABLE `offres` (
   `id` int(11) NOT NULL,
-  `nomOffre` enum('0','1') COLLATE utf8_bin NOT NULL,
+  `nomOffre` text COLLATE utf8_bin NOT NULL,
   `descOffre` text COLLATE utf8_bin NOT NULL,
   `prixbaseOffre` decimal(10,2) NOT NULL,
   `dureeOffre` text COLLATE utf8_bin NOT NULL
