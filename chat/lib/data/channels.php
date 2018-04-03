@@ -11,5 +11,6 @@
 $channels = array();
 
 // Sample channel list:
-$channels[0] = 'Salon public';
-$channels[1] = 'Salon privé';
+$channels[0] = 'Assistance';
+$channels[1] = 'Privé';
+$channels[2] = 'Salon WolveTeam';

@@ -20,20 +20,20 @@ $users[0]['channels'] = array(0);
 // Sample admin user:
 $users[1] = array();
 $users[1]['userRole'] = AJAX_CHAT_ADMIN;
-$users[1]['userName'] = 'WolveTeam';
+$users[1]['userName'] = 'Merwann';
 $users[1]['password'] = 'merwannleplusbeau';
 $users[1]['channels'] = array(0,1);
 
-// Sample moderator user:
+// Modérateur 1
 $users[2] = array();
 $users[2]['userRole'] = AJAX_CHAT_MODERATOR;
-$users[2]['userName'] = 'Modérateur';
-$users[2]['password'] = 'Modérateur';
+$users[2]['userName'] = 'Mathias';
+$users[2]['password'] = 'mathiasmasselon';
 $users[2]['channels'] = array(0,1);
 
-// Sample registered user:
+// Modérateur 2
 $users[3] = array();
-$users[3]['userRole'] = AJAX_CHAT_USER;
-$users[3]['userName'] = 'client';
-$users[3]['password'] = 'client';
+$users[3]['userRole'] = AJAX_CHAT_MODERATOR;
+$users[3]['userName'] = 'Noam';
+$users[3]['password'] = 'noamchalaane';
 $users[3]['channels'] = array(0,1);
