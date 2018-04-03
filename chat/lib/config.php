@@ -43,7 +43,7 @@ $config['dbTableNames']['invitations']	= 'ajax_chat_invitations';
 
 // Available languages:
 $config['langAvailable'] = array(
-	'ar','bg','ca','cy','cz','da','de','el','en','es','et','fa','fi','fr','gl','he','hr','hu','in','it','ja','ka','kr','mk','nl','nl-be','no','pl','pt-br','pt-pt','ro','ru','sk','sl','sr','sv','th','tr','uk','zh','zh-tw'
+	'fr'
 );
 // Default language:
 $config['langDefault'] = 'en';
@@ -57,9 +57,9 @@ $config['langNames'] = array(
 );
 
 // Available styles:
-$config['styleAvailable'] = array('beige','black','grey','Oxygen','Lithium','Sulfur','Cobalt','Mercury','Uranium','Pine','Plum','prosilver','Core','MyBB','vBulletin','XenForo');
+$config['styleAvailable'] = array('XenForo');
 // Default style:
-$config['styleDefault'] = 'prosilver';
+$config['styleDefault'] = 'XenForo';
 
 // The encoding used for the XHTML content:
 $config['contentEncoding'] = 'UTF-8';
@@ -146,7 +146,7 @@ $config['allowUserMessageDelete'] = true;
 // The userID used for ChatBot messages:
 $config['chatBotID'] = 2147483647;
 // The userName used for ChatBot messages
-$config['chatBotName'] = 'ChatBot';
+$config['chatBotName'] = 'WolvenetBot';
 
 // Minutes until a user is declared inactive (last status update) - the minimum is 2 minutes:
 $config['inactiveTimeout'] = 2;

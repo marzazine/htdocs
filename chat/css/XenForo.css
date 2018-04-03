@@ -128,6 +128,8 @@
 }
 .ajax-chat h1, .ajax-chat a {
 	color: #60A0DC;
+	font-size: 1.3em;
+	width: 450px;
 }
 #loginContent #errorContainer {
 	color: red;
