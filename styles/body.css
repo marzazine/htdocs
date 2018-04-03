@@ -1,0 +1,37 @@
+#cadre-page {
+	background-color: rgba(25,32,43,0.3); 
+	border: 3px #3d5af1 solid;
+	border-radius: 0px 0px 10px 10px;
+	width: 1000px;
+	margin: auto;
+	text-align: center;
+	box-shadow: 6px 6px 12px black;
+	text-shadow: none;
+	margin-bottom: 40px;
+}
+
+#cadre-titre{
+	background-color: rgba(61,90,241,0.7);
+	border: 3px #3d5af1 solid;
+	border-radius: 10px 10px 0px 0px;
+	width: 980px;
+	padding: 10px;
+	margin: auto;
+	margin-top: 30px;
+	text-align: center;
+
+}
+
+.titre-body {
+	font-size: 1.3em;
+	font-family: 'Ubuntu-Bold';
+	text-shadow: none;
+	text-align: center;
+	border-bottom: 5px #19202b solid;
+	
+}
+
+.texte-body {
+	text-shadow: none;
+	font-size: 0.8em;
+}
