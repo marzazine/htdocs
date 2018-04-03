@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 02 avr. 2018 à 22:11
+-- Généré le :  mar. 03 avr. 2018 à 21:28
 -- Version du serveur :  10.1.30-MariaDB
 -- Version de PHP :  7.2.2
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `wolvenetdb`
 --
-CREATE DATABASE IF NOT EXISTS `wolvenetdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
-USE `wolvenetdb`;
 
 -- --------------------------------------------------------
 
@@ -30,7 +28,6 @@ USE `wolvenetdb`;
 -- Structure de la table `abonner`
 --
 
-DROP TABLE IF EXISTS `abonner`;
 CREATE TABLE `abonner` (
   `id` int(11) NOT NULL,
   `idFor` int(11) NOT NULL,
@@ -42,10 +39,66 @@ CREATE TABLE `abonner` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `ajax_chat_bans`
+--
+
+CREATE TABLE `ajax_chat_bans` (
+  `userID` int(10) UNSIGNED NOT NULL,
+  `userName` varchar(64) COLLATE utf8_bin NOT NULL,
+  `dateTime` datetime NOT NULL,
+  `ip` varbinary(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ajax_chat_invitations`
+--
+
+CREATE TABLE `ajax_chat_invitations` (
+  `userID` int(10) UNSIGNED NOT NULL,
+  `channel` int(10) UNSIGNED NOT NULL,
+  `dateTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ajax_chat_messages`
+--
+
+CREATE TABLE `ajax_chat_messages` (
+  `id` int(11) NOT NULL,
+  `userID` int(10) UNSIGNED NOT NULL,
+  `userName` varchar(64) COLLATE utf8_bin NOT NULL,
+  `userRole` int(1) NOT NULL,
+  `channel` int(10) UNSIGNED NOT NULL,
+  `dateTime` datetime NOT NULL,
+  `ip` varbinary(16) NOT NULL,
+  `text` text COLLATE utf8_bin
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `ajax_chat_online`
+--
+
+CREATE TABLE `ajax_chat_online` (
+  `userID` int(10) UNSIGNED NOT NULL,
+  `userName` varchar(64) COLLATE utf8_bin NOT NULL,
+  `userRole` int(1) NOT NULL,
+  `channel` int(10) UNSIGNED NOT NULL,
+  `dateTime` datetime NOT NULL,
+  `ip` varbinary(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `clients`
 --
 
-DROP TABLE IF EXISTS `clients`;
 CREATE TABLE `clients` (
   `id` int(11) NOT NULL,
   `pseudoCli` text COLLATE utf8_bin NOT NULL,
@@ -71,7 +124,6 @@ CREATE TABLE `clients` (
 -- Structure de la table `forfaits`
 --
 
-DROP TABLE IF EXISTS `forfaits`;
 CREATE TABLE `forfaits` (
   `id` int(11) NOT NULL,
   `nomFor` text COLLATE utf8_bin NOT NULL,
@@ -85,7 +137,6 @@ CREATE TABLE `forfaits` (
 -- Structure de la table `mobiles`
 --
 
-DROP TABLE IF EXISTS `mobiles`;
 CREATE TABLE `mobiles` (
   `id` int(11) NOT NULL,
   `marqueMo` text COLLATE utf8_bin NOT NULL,
@@ -108,7 +159,6 @@ CREATE TABLE `mobiles` (
 -- Structure de la table `offres`
 --
 
-DROP TABLE IF EXISTS `offres`;
 CREATE TABLE `offres` (
   `id` int(11) NOT NULL,
   `nomOffre` text COLLATE utf8_bin NOT NULL,
@@ -126,6 +176,36 @@ CREATE TABLE `offres` (
 --
 ALTER TABLE `abonner`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `ajax_chat_bans`
+--
+ALTER TABLE `ajax_chat_bans`
+  ADD PRIMARY KEY (`userID`),
+  ADD KEY `userName` (`userName`),
+  ADD KEY `dateTime` (`dateTime`);
+
+--
+-- Index pour la table `ajax_chat_invitations`
+--
+ALTER TABLE `ajax_chat_invitations`
+  ADD PRIMARY KEY (`userID`,`channel`),
+  ADD KEY `dateTime` (`dateTime`);
+
+--
+-- Index pour la table `ajax_chat_messages`
+--
+ALTER TABLE `ajax_chat_messages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `message_condition` (`id`,`channel`,`dateTime`),
+  ADD KEY `dateTime` (`dateTime`);
+
+--
+-- Index pour la table `ajax_chat_online`
+--
+ALTER TABLE `ajax_chat_online`
+  ADD PRIMARY KEY (`userID`),
+  ADD KEY `userName` (`userName`);
 
 --
 -- Index pour la table `clients`
@@ -159,6 +239,12 @@ ALTER TABLE `offres`
 -- AUTO_INCREMENT pour la table `abonner`
 --
 ALTER TABLE `abonner`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `ajax_chat_messages`
+--
+ALTER TABLE `ajax_chat_messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
