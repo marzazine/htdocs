@@ -15,7 +15,7 @@
 <div id="cadre-page">
 	<span class="texte-body">
 	Sur cette page retrouvez l'intégralité de notre catalogue spécialement élaboré pour vous.<br />
-	Vous y trouverez des mobiles, des téléphones fixes et des accessoires pour vous appareils.
+	Vous y trouverez des mobiles, des téléphones fixes et des accessoires pour vos appareils.
 	</span>
 </div>
 
