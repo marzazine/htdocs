@@ -10,6 +10,8 @@ if (session_status() == PHP_SESSION_NONE) {
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
 	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
 	<link rel="stylesheet" type="text/css" href="../e/e.css">
+
+	<link rel="shortcut icon" type="image/x-png" href="../img/favicon.png" />
 	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" /><![endif]-->
 </head>
 
