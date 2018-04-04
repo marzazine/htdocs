@@ -1,7 +1,7 @@
 <?php require ('../inc/header.php'); ?>
 <?php 
 
-if(!empty($_POST) && !empty($_POST['mail']) && !empty($_POST['password'])){
+if(!empty($_POST) || !empty($_POST['mail']) || !empty($_POST['password'])){
 	require_once '../inc/functions.php';
 	require_once '../inc/db.php';
 
@@ -20,7 +20,7 @@ if(!empty($_POST) && !empty($_POST['mail']) && !empty($_POST['password'])){
 
 	} else {
 		
-		$_SESSION['flash']['danger'] = 'Adresse mail ou mot de passe incorrect.';
+		$errors = "Adresse mail ou mot de passe incorrect.";
 
 	}
 }
@@ -28,6 +28,17 @@ if(!empty($_POST) && !empty($_POST['mail']) && !empty($_POST['password'])){
 ?>
 
 <body>
+
+	<?php if (!empty($errors)): ?>
+
+    <div class="form-error">
+        <span class="form-error-title">Erreur dans le formulaire</span><br />
+<ul>
+       <li><?= $errors; ?></li>
+</ul>
+</div>
+<?php endif; ?>
+
 <div id="sectionTitre"><span class="titreForm">Connexion à votre espace client</span></div>
 <div id="section">
 
