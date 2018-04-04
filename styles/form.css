@@ -45,29 +45,6 @@
 	text-shadow: none;
 }
 
-.alert-succes{
-	display: flex;
-	margin: auto;
-    flex-wrap: nowrap;
-	justify-content: center;
-	border: 3px #19202b solid;
-	background-color: #24d019;
-	box-shadow: 0 4px 2px -2px black;
-    margin: 0px;
-    padding: 8px;
-}
-
-.alert-danger{
-	display: flex;
-	margin: auto;
-    flex-wrap: nowrap;
-	justify-content: center;
-	border: 3px #19202b solid;
-	background-color: #f12222;
-	box-shadow: 0 4px 2px -2px black;
-    margin: 0px;
-    padding: 8px;
-}
 
 label
 {
