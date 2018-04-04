@@ -8,12 +8,8 @@ if (session_status() == PHP_SESSION_NONE) {
 <html>
 <head>
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
-	<link rel="stylesheet" type="text/css" href="../styles/body.css">
-	<link rel="stylesheet" type="text/css" href="../styles/menu.css">
-		<link rel="stylesheet" type="text/css" href="../styles/index.css">
-	<link rel="stylesheet" type="text/css" href="../styles/form.css">
+	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
 	<link rel="stylesheet" type="text/css" href="../e/e.css">
-	<link rel="icon" type="image/png" href="../img/favicon.png" />
 	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" /><![endif]-->
 </head>
 
