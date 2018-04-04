@@ -1,6 +1,31 @@
-<?php require ('../inc/functions.php'); ?>
 <?php require ('../inc/header.php'); ?>
-<?php debug($_SESSION); ?>
+<?php 
+
+if(!empty($_POST) && !empty($_POST['mail']) && !empty($_POST['password'])){
+	require_once '../inc/functions.php';
+	require_once '../inc/db.php';
+
+	$req = $pdo->prepare('SELECT * FROM clients WHERE (mailCli = :mail) AND confirmed_at IS NOT NULL');
+	$req->execute(['mail' => $_POST['mail']]);
+
+	$user = $req->fetch();
+
+	if(password_verify($_POST['password'], $user->mdpCli)) {
+
+		session_start();
+		$_SESSION['auth'] = $user;
+		$_SESSION['flash']['succes'] = 'Vous êtes connecté';
+		header('Location: account.php');
+		exit();
+
+	} else {
+		
+		$_SESSION['flash']['danger'] = 'Adresse mail ou mot de passe incorrect.';
+
+	}
+}
+
+?>
 
 <body>
 <div id="sectionTitre"><span class="titreForm">Connexion à votre espace client</span></div>
