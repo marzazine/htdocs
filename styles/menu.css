@@ -24,7 +24,7 @@
 	border: 3px #19202b solid;
 	background-image: url(../../img/nav-bg.jpg);
 	box-shadow: 0 4px 2px -2px black;
-  padding-bottom: 25px;
+  padding-bottom: 35px;
   padding-top: 10px;
 
 }
@@ -116,6 +116,7 @@
   width: 240px;
   transition: all 0.5s;
   cursor: pointer;
+  margin-top: 5px;
 }
 
 .button-deco span {
