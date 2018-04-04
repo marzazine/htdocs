@@ -1,3 +1,63 @@
+
+@font-face {
+     font-family: 'Montserrat';
+     src: url('./fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+     font-family: 'Ubuntu-Bold';
+     src: url('./fonts/Ubuntu/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+     font-family: 'Ubuntu-Light';
+     src: url('./fonts/Ubuntu/Ubuntu-Light.ttf');
+}
+
+@font-face {
+     font-family: 'Ubuntu-Medium';
+     src: url('./fonts/Ubuntu/Ubuntu-Medium.ttf');
+}
+
+body {
+	background-image: url("../../img/backgroundtest.png");
+	background-color: #0A1423;
+	background-attachment: fixed;
+	background-size: cover;
+    margin: 0;
+	background-repeat: no-repeat;
+	font-family : 'Montserrat';
+	font-size: 1.2em;
+	color: #ffffff;
+	text-shadow: 2px 2px 4px #ffffff;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+a {
+     text-decoration: none;
+     color: #ffffff;
+}
+
+a#basLien:hover {
+	 text-decoration: none;
+     color: #ffffff;
+	 border-bottom: 5px #8acbff solid;
+
+}
+ a:hover {
+     text-decoration: none;
+     color: #ffffff;
+	 border-bottom: 5px #354FD3 solid;
+	 
+}
+
+ a:visited {
+     text-decoration: none;
+     color: #ffffff;
+}
+
 #cadre-page {
 	background-color: rgba(25,32,43,0.3); 
 	border: 3px #3d5af1 solid;

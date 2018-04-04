@@ -8,11 +8,10 @@ if (session_status() == PHP_SESSION_NONE) {
 <html>
 <head>
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
-	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
-	<link rel="stylesheet" type="text/css" href="../styles/guest.css">
-	<link rel="stylesheet" type="text/css" href="../styles/form.css">
-	<link rel="stylesheet" type="text/css" href="../styles/index.css">
 	<link rel="stylesheet" type="text/css" href="../styles/body.css">
+	<link rel="stylesheet" type="text/css" href="../styles/menu.css">
+		<link rel="stylesheet" type="text/css" href="../styles/index.css">
+	<link rel="stylesheet" type="text/css" href="../styles/form.css">
 	<link rel="stylesheet" type="text/css" href="../e/e.css">
 	<link rel="icon" type="image/png" href="../img/favicon.png" />
 	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" /><![endif]-->
@@ -30,8 +29,20 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="element-menuHaut"><a href="/offres-aux-entreprises/">Réseau d'entreprise</a></div>
 
     <div class="element-menuHaut"><a href="/assistance/">Assistance</a></div>
-	<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/'"><span>Espace clients </span></button></div>
+	
 
+	<?php if(isset($_SESSION['auth'])): ?>
+
+		<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/account.php'"><span>Mon espace </span></button></div>
+
+		<div class="element-sousMenuHaut"><button class="button-deco" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/logout.php'"><span>Déconnexion </span></button></div>
+
+	<?php else: ?>
+		<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/login.php'"><span>Connexion espace clients </span></button></div>
+
+		<div class="element-sousMenuHaut"><button class="button-deco" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/register.php'"><span>Inscription </span></button></div>
+
+	<?php endif; ?>
 </div>
 
 <?php if(isset($_SESSION['flash'])): ?>
