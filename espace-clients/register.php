@@ -99,18 +99,22 @@ if(empty(!$_POST)){
     if (empty($errors)){
         $req = $pdo->prepare("INSERT INTO clients SET pseudoCli = ?, prenCli = ?, nomCli = ?, mailCli = ?, dateinscriptionCli = NOW(), mdpCli = ?, confirmation_token = ?, ipCli = ?, telCli = ?, fixeCli = ?, villeCli = ?, adresseCli = ?, cpCli = ?, sexeCli = ?");
 
+        $prenom = ucfirst($_POST['prenom']);
+        $nom = ucfirst($_POST['nomdefamille']);
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $token = token(60);
         $pseudo = strtolower($_POST['nomdefamille']).".".strtolower($_POST['prenom']);
 
         $client_id = $pdo->lastInsertId(); // Dernier ID généré par PDO
-        $req->execute([$pseudo, $_POST['prenom'], $_POST['nomdefamille'], $_POST['mail'], $password, $token, $_SERVER['REMOTE_ADDR'], $_POST['numportable'], $_POST['numfixe'], $_POST['ville'], $_POST['adressepostale'], $_POST['codepostal'], $_POST['sexe']]);
+        $req->execute([$pseudo, $prenom, $nom, $_POST['mail'], $password, $token, $_SERVER['REMOTE_ADDR'], $_POST['numportable'], $_POST['numfixe'], $_POST['ville'], $_POST['adressepostale'], $_POST['codepostal'], $_POST['sexe']]);
 
         
 
-        die("Votre compte a bien été créé. <br/> Voici votre lien : <br />  <a>http://localhost/espace_clients/confirm.php?id=$client_id&token=$token</a>");
+        echo("Votre compte a bien été créé. <br/> Voici votre lien : <br />  <a>http://localhost/espace_clients/confirm.php?id=$client_id&token=$token</a>");
 
         $_SESSION['flash']['succes'] = "Votre compte a bien été créé.";
+
+        header('Location: login.php');
 
         exit();
     }
