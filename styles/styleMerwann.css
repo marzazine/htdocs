@@ -93,9 +93,14 @@ a#basLien:hover {
 	
 }
 
-.texte-body {
+.texte-petit {
 	text-shadow: none;
-	font-size: 0.8em;
+	font-size: 0.75em;
+}
+
+.texte-normal {
+  text-shadow: none;
+  font-size: 0.9em;
 }
 
 .section-bloc-general{
@@ -103,19 +108,19 @@ a#basLien:hover {
   margin-right: auto;
   margin-top: 50px;
   width: 45%;
-  border: 6px #FFFFFF solid;
+  border: 4px #FFFFFF solid;
   border-radius: 2px;
 
 }
 
 .section-bloc-contenu {
-    padding: 5px;
+    padding: 8px;
     background-color: #182128;
 }
 
 .section-titre {
   background-color: #3d5af1;
-  padding: 3px;
+  padding: 5px;
 }
 
 
