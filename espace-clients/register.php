@@ -210,7 +210,7 @@ if(empty(!$_POST)){
     </div>
 
 
-    <br /><button type="submit">Envoyer</button><br />
+    <br /><button class="button-submit" type="submit"><span>Envoyer </span></button><br />
     <span class="champ-obligatoire-tip">* : Champs obligatoires</span>
 </form>
 
