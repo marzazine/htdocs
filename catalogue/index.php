@@ -11,12 +11,14 @@
 
 </div>
 
-<div id="section-titre"><span class="titre-section">Catalogue</span></div>
-<div id="section-bloc">
+<div class="section-bloc-general">
+<div class="section-titre"><span class="titre-section">Catalogue</span></div>
+<div class="section-bloc-contenu">
 	<span class="texte-body">
 	Sur cette page retrouvez l'intégralité de notre catalogue spécialement élaboré pour vous.<br />
 	Vous y trouverez des mobiles, des téléphones fixes et des accessoires pour vos appareils.
 	</span>
+</div>
 </div>
 
 <?php require '../inc/footer.php'; ?>

@@ -98,10 +98,25 @@ a#basLien:hover {
 	font-size: 0.8em;
 }
 
-.section-bloc{
-	     
+.section-bloc-general{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 45%;
+  border: 6px #FFFFFF solid;
+  border-radius: 2px;
+
 }
 
+.section-bloc-contenu {
+    padding: 5px;
+    background-color: #182128;
+}
+
+.section-titre {
+  background-color: #3d5af1;
+  padding: 3px;
+}
 
 
 
