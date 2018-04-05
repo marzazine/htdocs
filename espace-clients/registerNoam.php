@@ -3,7 +3,7 @@
 $bdd = new PDO('msql: host=127.0.0.1; dbname=wolvenetdb', 'root' , '');
 if (isset($_POST['forminscription']));
 {
-	if(!empty($_POST['id'])) AND  (!empty($_POST['pseudoCli'])) !empty($_POST['prenCli']) AND (!empty($_POST['nomCli'])) AND (!empty($_POST['mailCli'])) AND (!empty($_POST['mdpCli'])) AND (!empty($_POST['telCli'])) AND (!empty($_POST['fixeCli'])) AND (!empty($_POST['villeCli'])) AND (!empty($_POST['adresseCli'])) AND (!empty($_POST['cpCli'])) AND (!empty($_POST['sexeCli']));
+	if(!empty($_POST['id']) AND ) !empty($_POST['pseudoCli']) !empty($_POST['prenCli']) AND !empty($_POST['nomCli']) AND !empty($_POST['mailCli']) AND !empty($_POST['mdpCli']) AND !empty($_POST['telCli']) AND !empty($_POST['fixeCli']) AND !empty($_POST['villeCli']) AND !empty($_POST['adresseCli']) AND !empty($_POST['cpCli']) AND !empty($_POST['sexeCli']);
 	{
 		$pseudo = htmlspecialchars($_POST['pseudoCli']);
 		$pren = htmlspecialchars($_POST['prenCli']);
@@ -35,30 +35,4 @@ if (isset($_POST['forminscription']));
 	}
 }
 
-?>
-
-<html>
-	<head>
-	<head/>
-<body>
-	<div align="center">
-		<h2> Inscription </h2>
-		<br /><br />
-		<form method="POST" action="">
-			<table>
-				<tr>
-					<td>
-			<label for="pseudoCli">
-				Identifiant :</label>
-			        </td>
-			        <td>
-				<input type="text"
-				placeholder="votre Identifiant" id="pseudoCli" name="pseudoCli" />
-					</td>
-				</tr>
-			</table>
-		</form>
-	</div>
-
-
-
+ ?>

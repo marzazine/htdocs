@@ -11,8 +11,8 @@
 
 </div>
 
-<div id="cadre-titre"><span class="titre-body">Catalogue</span></div>
-<div id="cadre-page">
+<div id="section-titre"><span class="titre-body">Catalogue</span></div>
+<div id="section-bloc">
 	<span class="texte-body">
 	Sur cette page retrouvez l'intégralité de notre catalogue spécialement élaboré pour vous.<br />
 	Vous y trouverez des mobiles, des téléphones fixes et des accessoires pour vos appareils.
