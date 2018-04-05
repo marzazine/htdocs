@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 03 avr. 2018 à 21:28
+-- Généré le :  jeu. 05 avr. 2018 à 13:46
 -- Version du serveur :  10.1.30-MariaDB
 -- Version de PHP :  7.2.2
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `wolvenetdb`
 --
+CREATE DATABASE IF NOT EXISTS `wolvenetdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `wolvenetdb`;
 
 -- --------------------------------------------------------
 
@@ -28,12 +30,14 @@ SET time_zone = "+00:00";
 -- Structure de la table `abonner`
 --
 
-CREATE TABLE `abonner` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `abonner`;
+CREATE TABLE IF NOT EXISTS `abonner` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `idFor` int(11) NOT NULL,
   `idCli` int(11) NOT NULL,
   `idMo` int(11) NOT NULL,
-  `idOff` int(11) NOT NULL
+  `idOff` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -42,11 +46,15 @@ CREATE TABLE `abonner` (
 -- Structure de la table `ajax_chat_bans`
 --
 
-CREATE TABLE `ajax_chat_bans` (
+DROP TABLE IF EXISTS `ajax_chat_bans`;
+CREATE TABLE IF NOT EXISTS `ajax_chat_bans` (
   `userID` int(10) UNSIGNED NOT NULL,
   `userName` varchar(64) COLLATE utf8_bin NOT NULL,
   `dateTime` datetime NOT NULL,
-  `ip` varbinary(16) NOT NULL
+  `ip` varbinary(16) NOT NULL,
+  PRIMARY KEY (`userID`),
+  KEY `userName` (`userName`),
+  KEY `dateTime` (`dateTime`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -55,10 +63,13 @@ CREATE TABLE `ajax_chat_bans` (
 -- Structure de la table `ajax_chat_invitations`
 --
 
-CREATE TABLE `ajax_chat_invitations` (
+DROP TABLE IF EXISTS `ajax_chat_invitations`;
+CREATE TABLE IF NOT EXISTS `ajax_chat_invitations` (
   `userID` int(10) UNSIGNED NOT NULL,
   `channel` int(10) UNSIGNED NOT NULL,
-  `dateTime` datetime NOT NULL
+  `dateTime` datetime NOT NULL,
+  PRIMARY KEY (`userID`,`channel`),
+  KEY `dateTime` (`dateTime`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -67,16 +78,32 @@ CREATE TABLE `ajax_chat_invitations` (
 -- Structure de la table `ajax_chat_messages`
 --
 
-CREATE TABLE `ajax_chat_messages` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `ajax_chat_messages`;
+CREATE TABLE IF NOT EXISTS `ajax_chat_messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `userID` int(10) UNSIGNED NOT NULL,
   `userName` varchar(64) COLLATE utf8_bin NOT NULL,
   `userRole` int(1) NOT NULL,
   `channel` int(10) UNSIGNED NOT NULL,
   `dateTime` datetime NOT NULL,
   `ip` varbinary(16) NOT NULL,
-  `text` text COLLATE utf8_bin
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `text` text COLLATE utf8_bin,
+  PRIMARY KEY (`id`),
+  KEY `message_condition` (`id`,`channel`,`dateTime`),
+  KEY `dateTime` (`dateTime`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `ajax_chat_messages`
+--
+
+INSERT INTO `ajax_chat_messages` (`id`, `userID`, `userName`, `userRole`, `channel`, `dateTime`, `ip`, `text`) VALUES
+(1, 2147483647, 'WolvenetBot', 4, 0, '2018-04-04 19:10:58', 0x7f000001, '/login (128245)'),
+(2, 420728245, '(128245)', 0, 0, '2018-04-04 19:11:10', 0x7f000001, 'Bonjour'),
+(3, 420728245, '(128245)', 0, 0, '2018-04-04 19:11:19', 0x7f000001, 'je me prÃ©sente je suis marzazine'),
+(4, 2147483647, 'WolvenetBot', 4, 0, '2018-04-05 13:43:17', 0x7f000001, '/login (522457)'),
+(5, 2147483647, 'WolvenetBot', 4, 0, '2018-04-05 13:43:23', 0x7f000001, '/logout (128245) Timeout'),
+(6, 460022457, '(522457)', 0, 0, '2018-04-05 13:43:40', 0x7f000001, 'wesh le zin');
 
 -- --------------------------------------------------------
 
@@ -84,14 +111,24 @@ CREATE TABLE `ajax_chat_messages` (
 -- Structure de la table `ajax_chat_online`
 --
 
-CREATE TABLE `ajax_chat_online` (
+DROP TABLE IF EXISTS `ajax_chat_online`;
+CREATE TABLE IF NOT EXISTS `ajax_chat_online` (
   `userID` int(10) UNSIGNED NOT NULL,
   `userName` varchar(64) COLLATE utf8_bin NOT NULL,
   `userRole` int(1) NOT NULL,
   `channel` int(10) UNSIGNED NOT NULL,
   `dateTime` datetime NOT NULL,
-  `ip` varbinary(16) NOT NULL
+  `ip` varbinary(16) NOT NULL,
+  PRIMARY KEY (`userID`),
+  KEY `userName` (`userName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `ajax_chat_online`
+--
+
+INSERT INTO `ajax_chat_online` (`userID`, `userName`, `userRole`, `channel`, `dateTime`, `ip`) VALUES
+(460022457, '(522457)', 0, 0, '2018-04-05 13:44:15', 0x7f000001);
 
 -- --------------------------------------------------------
 
@@ -99,8 +136,9 @@ CREATE TABLE `ajax_chat_online` (
 -- Structure de la table `clients`
 --
 
-CREATE TABLE `clients` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `clients`;
+CREATE TABLE IF NOT EXISTS `clients` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `pseudoCli` text COLLATE utf8_bin NOT NULL,
   `prenCli` varchar(100) COLLATE utf8_bin NOT NULL,
   `nomCli` varchar(100) COLLATE utf8_bin NOT NULL,
@@ -115,7 +153,8 @@ CREATE TABLE `clients` (
   `adresseCli` text COLLATE utf8_bin NOT NULL,
   `cpCli` int(11) NOT NULL,
   `sexeCli` set('homme','femme','inconnu') COLLATE utf8_bin NOT NULL,
-  `dateinscriptionCli` date DEFAULT NULL
+  `dateinscriptionCli` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -124,11 +163,13 @@ CREATE TABLE `clients` (
 -- Structure de la table `forfaits`
 --
 
-CREATE TABLE `forfaits` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `forfaits`;
+CREATE TABLE IF NOT EXISTS `forfaits` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nomFor` text COLLATE utf8_bin NOT NULL,
   `descFor` text COLLATE utf8_bin NOT NULL,
-  `prixbaseFor` decimal(10,2) NOT NULL
+  `prixbaseFor` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -137,8 +178,9 @@ CREATE TABLE `forfaits` (
 -- Structure de la table `mobiles`
 --
 
-CREATE TABLE `mobiles` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `mobiles`;
+CREATE TABLE IF NOT EXISTS `mobiles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `marqueMo` text COLLATE utf8_bin NOT NULL,
   `modeleMo` text COLLATE utf8_bin NOT NULL,
   `refMo` text COLLATE utf8_bin NOT NULL,
@@ -150,7 +192,8 @@ CREATE TABLE `mobiles` (
   `dimenMo` text COLLATE utf8_bin NOT NULL,
   `optionsMo` text COLLATE utf8_bin NOT NULL,
   `capaciteMo` text COLLATE utf8_bin NOT NULL,
-  `promoMo` tinyint(1) NOT NULL
+  `promoMo` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -159,117 +202,15 @@ CREATE TABLE `mobiles` (
 -- Structure de la table `offres`
 --
 
-CREATE TABLE `offres` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `offres`;
+CREATE TABLE IF NOT EXISTS `offres` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nomOffre` text COLLATE utf8_bin NOT NULL,
   `descOffre` text COLLATE utf8_bin NOT NULL,
   `prixbaseOffre` decimal(10,2) NOT NULL,
-  `dureeOffre` text COLLATE utf8_bin NOT NULL
+  `dureeOffre` text COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `abonner`
---
-ALTER TABLE `abonner`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `ajax_chat_bans`
---
-ALTER TABLE `ajax_chat_bans`
-  ADD PRIMARY KEY (`userID`),
-  ADD KEY `userName` (`userName`),
-  ADD KEY `dateTime` (`dateTime`);
-
---
--- Index pour la table `ajax_chat_invitations`
---
-ALTER TABLE `ajax_chat_invitations`
-  ADD PRIMARY KEY (`userID`,`channel`),
-  ADD KEY `dateTime` (`dateTime`);
-
---
--- Index pour la table `ajax_chat_messages`
---
-ALTER TABLE `ajax_chat_messages`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `message_condition` (`id`,`channel`,`dateTime`),
-  ADD KEY `dateTime` (`dateTime`);
-
---
--- Index pour la table `ajax_chat_online`
---
-ALTER TABLE `ajax_chat_online`
-  ADD PRIMARY KEY (`userID`),
-  ADD KEY `userName` (`userName`);
-
---
--- Index pour la table `clients`
---
-ALTER TABLE `clients`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `forfaits`
---
-ALTER TABLE `forfaits`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `mobiles`
---
-ALTER TABLE `mobiles`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `offres`
---
-ALTER TABLE `offres`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `abonner`
---
-ALTER TABLE `abonner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `ajax_chat_messages`
---
-ALTER TABLE `ajax_chat_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `clients`
---
-ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `forfaits`
---
-ALTER TABLE `forfaits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `mobiles`
---
-ALTER TABLE `mobiles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `offres`
---
-ALTER TABLE `offres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
