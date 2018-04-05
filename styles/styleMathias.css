@@ -1,3 +1,4 @@
+/* BODY */
 
 @font-face {
      font-family: 'Montserrat';
@@ -9,100 +10,32 @@
      src: url('./fonts/Ubuntu/Ubuntu-Bold.ttf');
 }
 
-@font-face {
-     font-family: 'Ubuntu-Light';
-     src: url('./fonts/Ubuntu/Ubuntu-Light.ttf');
-}
 
 @font-face {
      font-family: 'Ubuntu-Medium';
      src: url('./fonts/Ubuntu/Ubuntu-Medium.ttf');
 }
 
+@font-face {
+     font-family: 'Ubuntu-Light';
+     src: url('./fonts/Ubuntu/Ubuntu-Light.ttf');
+}
+
 body {
-	background-image: url("../../img/backgroundtest.png");
-	background-color: #0A1423;
-	background-attachment: fixed;
-	background-size: cover;
+  background-image: url("../../img/backgroundtest.png");
+  background-color: #0A1423;
+  background-attachment: fixed;
+  background-size: cover;
     margin: 0;
-	background-repeat: no-repeat;
-	font-family : 'Montserrat';
-	font-size: 1.2em;
-	color: #ffffff;
-	text-shadow: 2px 2px 4px #ffffff;
+  background-repeat: no-repeat;
+  font-family : 'Montserrat';
+  font-size: 1.2em;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #ffffff;
     margin: 0px;
     padding: 0px;
 }
 
-.element-logo {
-	position: absolute;
-	top: 0;
-	left: 5px;
-	
-}
-
-
-.element-logo2 {
-	position: absolute;
-	top: 0;
-	left: 70px;
-	
-}
-
-.element-bandeau {
-	border: 3px rgba(255,255,255,0.1) solid;
-	border-radius: 10px;
-	padding-bottom: 80px;
-	padding-left: 60px;
-	padding-right: 60px;
-	background-color: rgba(255,255,255,0.2);
-	position: absolute;
-	top: 200px;
-	left: 150px;
-	font-family: 'Ubuntu-Bold';
-	text-shadow: none;
-	font-size: 1.2em;
-}
-
-#menuHaut
-
-{
-    display: flex;
-	margin: auto;
-    flex-wrap: nowrap;
-	justify-content: center;
-	border: 3px #19202b solid;
-	background-image: url(../../img/nav-bg.jpg);
-	box-shadow: 0 4px 2px -2px black;
-    padding: 15px;
-
-}
-
-#bandeau {
-	
-	display: flex;
-	height: 160px;
-	margin-bottom: 110px;
-	flex-direction: column;
-    justify-content: center;
-	padding-top: 130px;
-	background-repeat: no-repeat;
-}
-
-#sousMenuHaut
-
-{
-    display: flex;
-	margin: auto;
-    flex-wrap: nowrap;
-	justify-content: center;
-	border: 3px #19202b solid;
-	background-image: url(../../img/nav-bottom-bg.png);
-	box-shadow: 0 4px 2px -2px black;
-    margin: 0px;
-    padding: 8px;
-
-}
 
 a {
      text-decoration: none;
@@ -110,16 +43,16 @@ a {
 }
 
 a#basLien:hover {
-	 text-decoration: none;
+   text-decoration: none;
      color: #ffffff;
-	 border-bottom: 5px #8acbff solid;
+   border-bottom: 5px #8acbff solid;
 
 }
  a:hover {
      text-decoration: none;
      color: #ffffff;
-	 border-bottom: 5px #354FD3 solid;
-	 
+   border-bottom: 5px #354FD3 solid;
+   
 }
 
  a:visited {
@@ -127,44 +60,804 @@ a#basLien:hover {
      color: #ffffff;
 }
 
-.element-menuHaut {
-		padding: 10px;
-		margin: 0;
+#cadre-page {
+  background-color: rgba(25,32,43,0.3); 
+  border: 3px #3d5af1 solid;
+  border-radius: 0px 0px 10px 10px;
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 6px 6px 12px black;
+  text-shadow: none;
+  margin-bottom: 40px;
+}
+
+#cadre-titre{
+  background-color: rgba(61,90,241,0.7);
+  border: 3px #3d5af1 solid;
+  border-radius: 10px 10px 0px 0px;
+  width: 980px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+
+}
+
+.titre-body {
+  font-size: 1.3em;
+  font-family: 'Ubuntu-Bold';
+  text-shadow: none;
+  text-align: center;
+  border-bottom: 5px #19202b solid;
+  
+}
+
+.texte-body {
+  text-shadow: none;
+  font-size: 0.8em;
+}
+
+.sectionbloc{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Fin BODY */
+
+
+
+
+
+
+/* INDEX */
+
+
+
+#bandeau-bloc-general {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  border: 0.5px #1a3e78 solid;
+  box-shadow: 3px 3px 20px #1a3e78;
+  background-image: url("/img/bg-bandeau.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+.bandeau-bloc {
+  border: 0.5px white solid;
+  margin-top: 100px;
+  box-shadow: 1px 1px 6px white;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 30%;
+  height: 30%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.bandeau-bloc-invisible {
+  margin-left: 530px;
+  width: 30%;
+}
+
+
+#iphoneXimage {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+
+}
+
+.iphoneXtitre {
+  font-family: 'Ubuntu-Bold';
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+
+}
+
+
+#TitreAvConteneur {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  font-family: 'Ubuntu-Bold';
+  text-shadow: none;
+  padding-bottom: 20px;
+}
+
+#conteneur {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.bloc {
+  border: 1px #36527b solid;
+  box-shadow: 6px 6px 12px black;
+  width: 250px;
+  height: 250px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.bloc:hover {
+  background-color: rgba(71, 138, 235, 0.5);
+  font-family: 'Ubuntu-Bold';
+  border: 1px #36527b solid;
+  box-shadow: 18px 18px 18px black;
+  width: 250px;
+  height: 250px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.blocPromo {
+  border: 1px #801744 solid;
+  font-family: 'Ubuntu-Bold';
+  box-shadow: 6px 6px 12px black;
+  width: 250px;
+  height: 250px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.blocPromo:hover {
+  background-color: rgba(214, 37, 112, 0.5);
+  border: 1px #801744 solid;
+  box-shadow: 18px 18px 18px black;
+  width: 250px;
+  height: 250px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.TitreBloc  {
+  color: #52e5fc;
+  font-size: 1em;
+  font-family: 'Ubuntu-Bold';
+  text-shadow: none;
+  display: block;
+    margin-bottom: 20px;
+}
+
+.TitreBlocPromo  {
+  color: #d62570;
+  font-size: 1em;
+  font-family: 'Ubuntu-Bold';
+  text-shadow: none;
+  display: block;
+    margin-bottom: 20px;
+}
+
+.blocTexte  {
+  font-size: 0.9em;
+  font-family: 'Ubuntu-Light';
+  text-shadow: none;
+}
+
+#imgMobileForfait {
+  margin-top: 15px;
+  width: 0;
+  height: 0;
+  margin-left: 100px;
+}
+
+#imgSimcard {
+  margin-top: 30px;
+  width: 0;
+  height: 0;
+  margin-left: 90px;
+}
+
+#imgInternet {
+  margin-top: 55px;
+  width: 0;
+  height: 0;
+  margin-left: 100px;
+}
+
+#imgMobile {
+  margin-top: 45px;
+  width: 0;
+  height: 0;
+  margin-left: 100px;
+}
+
+#imgSpotify {
+  margin-top: 5px;
+  width: 0;
+  height: 0;
+  margin-left: 100px;
+}
+
+#imgNetflix {
+  margin-top: 5px;
+  margin-bottom: 24px;
+  width: 0;
+  height: 0;
+  margin-left: 55px;
+}
+
+#imgItunes {
+  margin-top: 5px;
+  width: 0;
+  height: 0;
+  margin-left: 55px;
+}
+
+.button-Mobiles {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 105px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-Mobiles span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-Mobiles span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-Mobiles:hover span {
+  padding-right: 20px;
+}
+
+.button-Mobiles:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-ForfaitMobile {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 112px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-ForfaitMobile span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-ForfaitMobile span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-ForfaitMobile:hover span {
+  padding-right: 20px;
+}
+
+.button-ForfaitMobile:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-Internet {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 96px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-Internet span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-Internet span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-Internet:hover span {
+  padding-right: 20px;
+}
+
+.button-Internet:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-Forfait {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #31a7de;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 96px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-Forfait span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-Forfait span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-Forfait:hover span {
+  padding-right: 20px;
+}
+
+.button-Forfait:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#bonsPlansTitre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  font-family: 'Ubuntu-Bold';
+  text-shadow: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.button-BonsPlans {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #d62570;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 96px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-BonsPlans span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-BonsPlans span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-BonsPlans:hover span {
+  padding-right: 20px;
+}
+
+.button-BonsPlans:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .iphoneX {
-		padding: 58px;
-		position: absolute;
-		top : 125px;
-		right: 45px;
+    margin-top: 5px;
+    padding: 58px;
+    position: absolute;
+    top : 150px;
+    right: 45px;
 }
 
 
-.iphoneXtexte {
-		text-shadow: none;
-		font-family: 'Ubuntu-Bold';
+.button2 {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #900C3F;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  padding: 3px;
+  width: 300px;
+  height: 50px;
+  margin-top: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
-.iphoneXtexte2 {
-		position: absolute;
-		top : 150px;
-		right: 170px;
-		text-shadow: none;
-		color: #000000;
-		font-family: 'Ubuntu-Bold';
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-#iphoneXlogo{
-		position: absolute;
-		top : 145px;
-		right: 130px;
-		text-shadow: none;
-		color: #000000;
-		font-family: 'Ubuntu-Bold';
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 20px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button3 {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  padding: 3px;
+  width: 200px;
+  height: 50px;
+  margin-top: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button3:hover span {
+  padding-right: 20px;
+}
+
+.button3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* FIN INDEX */
+
+
+
+
+
+
+/* FORMULAIRES */
+
+#section {
+  background-color: rgba(25,32,43,0.3); 
+  border: 3px #3d5af1 solid;
+  border-top: 3px #31a7de solid;
+  border-radius: 0px 0px 10px 10px;
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 6px 6px 12px black;
+  text-shadow: none;
+  margin-bottom: 40px;
+}
+
+#sectionTitre{
+  background-color: rgba(61,90,241,0.7);
+  border: 3px #3d5af1 solid;
+  border-radius: 10px 10px 0px 0px;
+  width: 980px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+
+}
+
+.titreForm {
+  font-size: 1.3em;
+  font-family: 'Ubuntu-Bold';
+  text-shadow: none;
+  text-align: center;
+  border-bottom: 5px #19202b solid;
+  
+}
+
+
+.noGuest {
+  font-size: 0.8em;
+  font-family: 'Ubuntu-Medium';
+  text-shadow: none;
+}
+
+.forgotPass {
+  font-size: 0.8em;
+  font-family: 'Ubuntu-Medium';
+  text-shadow: none;
+}
+
+
+label
+{
+  display: block;
+  width: 600px;
+  float: left;
+}
+
+#label0 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border-top: 3px #000000 solid;
+  background-color: rgba(10, 20, 35, 0.1);
+}
+
+#label1 {
+  padding-top: 5px;
+  padding-left: 5px;
+  border-top: 3px #000000 solid;
+  background-color: rgba(10, 20, 35, 0.5);
+  padding-bottom: 5px;
+}
+
+input {
+  width: 300px;
+}
+
+.form-error {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 900px;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  border: 3px #ff6464 solid;
+  background-color: rgba(235, 7, 7, 0.5);
+}
+
+.form-error-title {
+  display: block;
+    margin-bottom: 2px;
+    line-height: 45px;
+  color: #ffafaf;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-shadow: none;
+}
+
+li {
+  list-style-type: none; 
+  margin: 5px;
+}
+
+.champ-obligatoire {
+  color: #ff1300;
+  text-shadow: none;
+  font-size: 0.8em;
+}
+
+.champ-obligatoire-tip {
+  color: #ff1300;
+  text-shadow: none;
+  font-size: 0.6em;
+  margin-left: 850px;
+}
+
+
+
+
+
+
+
+
+/* FIN FORMULAIRES */
+
+
+
+
+
+
+
+/* MENU CSS */
+
+
+
+.element-logo {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  
+}
+
+
+.element-logo2 {
+  position: absolute;
+  top: 0;
+  left: 47px;
+  
+}
+
+
+#menuHaut
+
+{
+  display: flex;
+  margin: auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border: 3px #19202b solid;
+  background-image: url(../../img/nav-bg.jpg);
+  box-shadow: 0 4px 2px -2px black;
+  padding-bottom: 35px;
+  padding-top: 10px;
+
+}
+
+
+
+#sousMenuHaut
+
+{
+    display: flex;
+  margin: auto;
+    flex-wrap: nowrap;
+  justify-content: center;
+  border: 3px #19202b solid;
+  background-image: url(../../img/nav-bottom-bg.png);
+  box-shadow: 0 4px 2px -2px black;
+    margin: 0px;
+    padding: 8px;
+
+}
+
+.element-menuHaut {
+    padding: 10px;
+    margin: 0;
+}
+
+.element-deconnect {
+    padding: 10px;
+    margin: 0;
 }
 
 .element-sousMenuHaut {
-		padding-right: 15px;
+    padding-right: 15px;
 }
 
 .button {
@@ -208,124 +901,32 @@ a#basLien:hover {
   right: 0;
 }
 
-.button2 {
+.button-deco {
   display: inline-block;
   border-radius: 3px;
-  background-color: #900C3F;
+  background-color: #045585;
   border: none;
   color: #FFFFFF;
   text-align: center;
   font-size: 1em;
   padding: 3px;
   position: absolute;
-  left: 100px;
-  top: 40px;
-  width: 300px;
-  height: 50px;
-  margin-bottom: 40px;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-
-.button2 span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button2 span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -10px;
-  transition: 0.5s;
-}
-
-.button2:hover span {
-  padding-right: 20px;
-}
-
-.button2:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.button3 {
-  display: inline-block;
-  border-radius: 3px;
-  background-color: #000000;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 1em;
-  padding: 3px;
-  position: absolute;
-  top : 400px;
-  right: 80px;
-  width: 200px;
-  height: 50px;
-  margin-bottom: 40px;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-
-.button3 span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button3 span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -10px;
-  transition: 0.5s;
-}
-
-.button3:hover span {
-  padding-right: 20px;
-}
-
-.button3:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-
-
-
-
-
-.boutonEnvoyer {
-  display: block;
-  border-radius: 3px;
-  background-color: #31a7de;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 1em;
-  margin-top: 3px;
-  margin-bottom: 2px;
-  margin-left: 150px;
-  padding: 3px;
+  top: 50px;
+  right: 10px;
   width: 240px;
   transition: all 0.5s;
   cursor: pointer;
+  margin-top: 5px;
 }
 
-.boutonEnvoyer span {
+.button-deco span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.boutonEnvoyer span:after {
+.button-deco span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -334,11 +935,51 @@ a#basLien:hover {
   transition: 0.5s;
 }
 
-.boutonEnvoyer:hover span {
+.button-deco:hover span {
   padding-right: 20px;
 }
 
-.boutonEnvoyer:hover span:after {
+.button-deco:hover span:after {
   opacity: 1;
   right: 0;
 }
+
+.alert-succes{
+  display: flex;
+  margin: auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border: 3px #19202b solid;
+  background-color: #24d019;
+  box-shadow: 0 4px 2px -2px black;
+  margin: 0px;
+  padding: 8px;
+  margin-bottom: 0;
+}
+
+.alert-danger{
+  display: flex;
+  margin: auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border: 3px #19202b solid;
+  background-color: #f12222;
+  box-shadow: 0 4px 2px -2px black;
+  margin: 0px;
+  padding: 8px;
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* END */
