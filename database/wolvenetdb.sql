@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 05 avr. 2018 à 15:04
+-- Généré le :  jeu. 05 avr. 2018 à 15:16
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
@@ -228,8 +228,9 @@ CREATE TABLE `mobiles` (
 --
 
 INSERT INTO `mobiles` (`id`, `marqueMo`, `modeleMo`, `refMo`, `prixbaseMo`, `anneeMo`, `descMo`, `garantieMo`, `poidsMo`, `dimenMo`, `optionsMo`, `capaciteMo`, `promoMo`, `urlimgMo`) VALUES
-(1, 'Apple', 'IphoneXgray', 'iphonexgray', '899.99', 2017, 'L\'iPhone X, c\'est un design tout écran. Face ID, qui fait du visage un mot de passe. Et la puce la plus puissante et intelligente pour un smartphone.', 'Garantie 1 ans tout risques. ', '174g', '143,6 x 70,9 x 7,7mm', '', '64Go', 0, ''),
-(2, 'Apple', 'IphoneXsilver', 'iphonexsilver', '899.99', 2017, 'L\'iPhone X, c\'est un design tout écran. Face ID, qui fait du visage un mot de passe. Et la puce la plus puissante et intelligente pour un smartphone.', 'Garantie 1 ans tout risques. ', '174g', '143,6 x 70,9 x 7,7mm', '', '64Go', 0, '');
+(1, 'Apple', 'IphoneXgray', 'iphonexgray64go', '899.99', 2017, 'L\'iPhone X, c\'est un design tout écran. Face ID, qui fait du visage un mot de passe. Et la puce la plus puissante et intelligente pour un smartphone.', 'Garantie 1 ans tout risques. ', '174g', '143,6 x 70,9 x 7,7mm', '', '64Go', 0, ''),
+(2, 'Apple', 'IphoneXsilver', 'iphonexsilver64go', '899.99', 2017, 'L\'iPhone X, c\'est un design tout écran. Face ID, qui fait du visage un mot de passe. Et la puce la plus puissante et intelligente pour un smartphone.', 'Garantie 1 ans tout risques. ', '174g', '143,6 x 70,9 x 7,7mm', '', '64Go', 0, ''),
+(3, 'Apple', 'IphoneXsilver256Go', 'iphonexsilver256Go', '1099.99', 2017, 'L\'iPhone X, c\'est un design tout écran. Face ID, qui fait du visage un mot de passe. Et la puce la plus puissante et intelligente pour un smartphone.', 'Garantie 1 ans tout risques. ', '174g', '143,6 x 70,9 x 7,7mm', '', '256Go', 0, '');
 
 -- --------------------------------------------------------
 
@@ -342,7 +343,7 @@ ALTER TABLE `forfaits`
 -- AUTO_INCREMENT pour la table `mobiles`
 --
 ALTER TABLE `mobiles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `offres`
