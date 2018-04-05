@@ -38,7 +38,7 @@ if (session_status() == PHP_SESSION_NONE) {
 	<?php else: ?>
 		<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/login.php'"><span>Connexion espace clients </span></button></div>
 
-		<div class="element-sousMenuHaut"><button class="button-deco" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/registerNoam.php'"><span>Inscription </span></button></div>
+		<div class="element-sousMenuHaut"><button class="button-deco" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/register.php'"><span>Inscription </span></button></div>
 
 	<?php endif; ?>
 </div>
