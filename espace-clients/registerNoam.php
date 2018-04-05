@@ -36,3 +36,24 @@ if (isset($_POST['forminscription']));
 }
 
  ?>
+<html>
+	<head>
+	<head/>
+<body>
+	<div align="center">
+		<h2> Inscription </h2>
+		<br /><br />
+		<form method="POST" action="">
+			<table>
+				<tr>
+					<td>
+			<label for="pseudoCli">
+				Identifiant :</label>
+			</td>
+				<input type="text"
+				placeholder="votre Identifiant" id="pseudoCli" name="pseudoCli" />
+		</form>
+	</div>
+
+
+
