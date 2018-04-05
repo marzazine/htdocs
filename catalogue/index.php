@@ -11,7 +11,7 @@
 
 </div>
 
-<div id="section-titre"><span class="titre-body">Catalogue</span></div>
+<div id="section-titre"><span class="titre-section">Catalogue</span></div>
 <div id="section-bloc">
 	<span class="texte-body">
 	Sur cette page retrouvez l'intégralité de notre catalogue spécialement élaboré pour vous.<br />
