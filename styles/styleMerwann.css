@@ -60,6 +60,7 @@ a#basLien:hover {
      color: #ffffff;
 }
 
+
 #cadre-page {
 	background-color: rgba(25,32,43,0.3); 
 	border: 3px #3d5af1 solid;
@@ -732,6 +733,7 @@ a#basLien:hover {
 
 label
 {
+  margin-top: 15px;
 	display: block;
 	width: 600px;
 	float: left;
@@ -753,9 +755,6 @@ label
 	padding-bottom: 5px;
 }
 
-input {
-	width: 300px;
-}
 
 .form-error {
 	display: flex;
@@ -838,8 +837,23 @@ li {
   right: 0;
 }
 
+input{
+  margin-top: 10px;
+  height: 30px;
+  width: 320px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Ubuntu-Light";
+}
 
+input:hover {
+  border-bottom: 3px solid #3358ff;
+  height: 30px;
+  width: 320px;
+  border-radius: 5px;
+  font-family: "Ubuntu-Light";
 
+}
 
 
 
