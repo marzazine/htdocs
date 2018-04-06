@@ -42,16 +42,120 @@ if (isset($_POST['forminscription'])){
 		<form method="POST" action="">
 			<table>
 				<tr>
-					<td>
-			<label for="pseudoCli">
-				Identifiant :</label>
+					<td align="right">
+			 			<label for="pseudoCli"> Identifiant :</label>
 			        </td>
 			        <td>
-				<input type="text"
-				placeholder="votre Identifiant" id="pseudoCli" name="pseudoCli" />
+						<input type="text" placeholder="votre Identifiant" id="pseudoCli" name="pseudoCli" />
 					</td>
 				</tr>
+				<tr>
+					<td align="right">
+						<label for="prenCli"> Prénom :</label>
+			        </td>
+
+			        <td>
+
+						<input type="text" placeholder="votre Prénom" id="prenCli" name="prenCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="nomCli"> Nom :</label>
+			        </td>
+
+			        <td>
+			        
+						<input type="text" placeholder="votre Nom" id="nomCli" name="nomCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="mailCli"> Adresse mail :</label>
+			        </td>
+
+			        <td>
+			        
+						<input type="text" placeholder="votre Adresse mail" id="mailCli" name="mailCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="mdpCli"> Mot de passe :</label>
+			        </td>
+
+			        <td>
+			        
+						<input type="text" placeholder="votre Mot de passe" id="mdpCli" name="mdpCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="telCli"> Telephone :</label>
+			        </td>
+
+			        <td>
+			        
+						<input type="text" placeholder="votre Telephone" id="telCli" name="telCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="fixeCli"> Telephone fixe :</label>
+			        </td>
+
+			        <td>
+			        
+						<input type="text" placeholder="votre Telephone fixe" id="fixeCli" name="fixeCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="villeCli"> Ville :</label>
+			        </td>
+
+			        <td>
+			        
+						<input type="text" placeholder="votre Ville" id="villeCli" name="villeCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="adrsCli"> Adresse Postale :</label>
+			        </td>
+
+			        <td>
+			        
+						<input type="text" placeholder="votre Adresse postale" id="adrsCli" name="adrsCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="cpCli"> Code postal :</label>
+			        </td>
+
+			        <td>
+			        
+						<input type="text" placeholder="votre Code postal" id="cpCli" name="cpCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<label for="mdpCli"> Sexe :</label>
+			        </td>
+
+			        <td>
+			        
+						<SELECT name="sexe" size="1">
+							<OPTION>Homme
+							<OPTION>Femme
+							<OPTION>Autre
+						</SELECT>
+					</td>
+				</tr>
+				
 			</table>
+						<input type="submit" value="Envoyer" />
 		</form>
 	</div>
 

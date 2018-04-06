@@ -60,6 +60,7 @@ a#basLien:hover {
      color: #ffffff;
 }
 
+
 #cadre-page {
 	background-color: rgba(25,32,43,0.3); 
 	border: 3px #3d5af1 solid;
@@ -107,7 +108,8 @@ a#basLien:hover {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  width: 45%;
+  margin-bottom: 30px;
+  width: 55%;
   border: 4px #FFFFFF solid;
   border-radius: 2px;
 
@@ -216,6 +218,7 @@ a#basLien:hover {
 
 .bloc {
 	border: 1px #36527b solid;
+  font-family: 'Ubuntu-Light';
 	box-shadow: 6px 6px 12px black;
 	width: 250px;
 	height: 250px;
@@ -231,26 +234,12 @@ a#basLien:hover {
 }
 
 .bloc:hover {
-	background-color: rgba(71, 138, 235, 0.5);
-	font-family: 'Ubuntu-Bold';
-	border: 1px #36527b solid;
-	box-shadow: 18px 18px 18px black;
-	width: 250px;
-	height: 250px;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 70px;
-	border-radius: 10px;
-	margin-bottom: 40px;
-	margin-left: 20px;
-	margin-top: 20px;
-	margin-right: 20px;
+	background-color: rgba(54, 82, 123, 0.2);
 }
 
 .blocPromo {
 	border: 1px #801744 solid;
-	font-family: 'Ubuntu-Bold';
+	font-family: 'Ubuntu-Light';
 	box-shadow: 6px 6px 12px black;
 	width: 250px;
 	height: 250px;
@@ -266,20 +255,7 @@ a#basLien:hover {
 }
 
 .blocPromo:hover {
-	background-color: rgba(214, 37, 112, 0.5);
-	border: 1px #801744 solid;
-	box-shadow: 18px 18px 18px black;
-	width: 250px;
-	height: 250px;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 70px;
-	border-radius: 10px;
-	margin-bottom: 40px;
-	margin-left: 20px;
-	margin-top: 20px;
-	margin-right: 20px;
+	background-color: rgba(128, 23, 68, 0.2);
 }
 
 .TitreBloc  {
@@ -732,6 +708,7 @@ a#basLien:hover {
 
 label
 {
+  margin-top: 15px;
 	display: block;
 	width: 600px;
 	float: left;
@@ -753,9 +730,6 @@ label
 	padding-bottom: 5px;
 }
 
-input {
-	width: 300px;
-}
 
 .form-error {
 	display: flex;
@@ -838,8 +812,23 @@ li {
   right: 0;
 }
 
+input{
+  margin-top: 10px;
+  height: 30px;
+  width: 320px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Ubuntu-Light";
+}
 
+input:hover {
+  border-bottom: 3px solid #3358ff;
+  height: 30px;
+  width: 320px;
+  border-radius: 5px;
+  font-family: "Ubuntu-Light";
 
+}
 
 
 
@@ -1031,6 +1020,100 @@ li {
 
 
 
+
+
+
+
+/* PAGE CATALOGUE (mobiles, accessoires, téléphones) */ 
+
+.bloc2 {
+  border: 1px #72ff94 solid;
+  box-shadow: 6px 6px 12px black;
+  width: 250px;
+  height: 250px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.bloc2:hover {
+  background-color: rgba(114, 255, 148, 0.2);
+}
+
+.TitreBloc2  {
+  color: #72ff94;
+  font-size: 1em;
+  font-family: 'Ubuntu-Bold';
+  text-shadow: none;
+  display: block;
+    margin-bottom: 20px;
+}
+
+#imgFixe {
+  margin-top: 22px;
+  width: 0;
+  height: 0;
+  margin-left: 90px;
+}
+
+.button-catalogue {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #00ec68;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 105px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-catalogue span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-catalogue span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-catalogue:hover span {
+  padding-right: 20px;
+}
+
+.button-catalogue:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* FIN CATALOGUE */
 
 
 

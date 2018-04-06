@@ -1,6 +1,4 @@
-﻿<?php
-include 'inc/header.php';
-?>
+﻿<?php require 'inc/header.php'; ?>
 
     <body>
 
@@ -79,6 +77,5 @@ include 'inc/header.php';
             </div>
 			
 		</div>
-    </body>
 
-    </html>
+<?php require 'inc/footer.php'; ?>
