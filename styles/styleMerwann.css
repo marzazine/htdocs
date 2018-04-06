@@ -234,7 +234,7 @@ a#basLien:hover {
 }
 
 .bloc:hover {
-	background-color: rgba(71, 138, 235, 0.5);
+	background-color: rgba(54, 82, 123, 0.2);
 }
 
 .blocPromo {
@@ -255,7 +255,7 @@ a#basLien:hover {
 }
 
 .blocPromo:hover {
-	background-color: rgba(214, 37, 112, 0.5);
+	background-color: rgba(128, 23, 68, 0.2);
 }
 
 .TitreBloc  {
