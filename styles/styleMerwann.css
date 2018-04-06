@@ -217,6 +217,7 @@ a#basLien:hover {
 
 .bloc {
 	border: 1px #36527b solid;
+  font-family: 'Ubuntu-Light';
 	box-shadow: 6px 6px 12px black;
 	width: 250px;
 	height: 250px;
@@ -233,25 +234,11 @@ a#basLien:hover {
 
 .bloc:hover {
 	background-color: rgba(71, 138, 235, 0.5);
-	font-family: 'Ubuntu-Bold';
-	border: 1px #36527b solid;
-	box-shadow: 18px 18px 18px black;
-	width: 250px;
-	height: 250px;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 70px;
-	border-radius: 10px;
-	margin-bottom: 40px;
-	margin-left: 20px;
-	margin-top: 20px;
-	margin-right: 20px;
 }
 
 .blocPromo {
 	border: 1px #801744 solid;
-	font-family: 'Ubuntu-Bold';
+	font-family: 'Ubuntu-Light';
 	box-shadow: 6px 6px 12px black;
 	width: 250px;
 	height: 250px;
@@ -268,19 +255,6 @@ a#basLien:hover {
 
 .blocPromo:hover {
 	background-color: rgba(214, 37, 112, 0.5);
-	border: 1px #801744 solid;
-	box-shadow: 18px 18px 18px black;
-	width: 250px;
-	height: 250px;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-bottom: 70px;
-	border-radius: 10px;
-	margin-bottom: 40px;
-	margin-left: 20px;
-	margin-top: 20px;
-	margin-right: 20px;
 }
 
 .TitreBloc  {
@@ -1065,6 +1039,10 @@ input:hover {
   margin-left: 20px;
   margin-top: 20px;
   margin-right: 20px;
+}
+
+.bloc2:hover {
+  background-color: rgba(114, 255, 148, 0.2);
 }
 
 .TitreBloc2  {
