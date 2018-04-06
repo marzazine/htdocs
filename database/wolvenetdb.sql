@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 06 avr. 2018 à 15:50
+-- Généré le :  ven. 06 avr. 2018 à 16:15
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
@@ -254,7 +254,11 @@ INSERT INTO `mobiles` (`id`, `marqueMo`, `modeleMo`, `refMo`, `prixbaseMo`, `ann
 (24, 'Apple', 'iPhone7blackofjais256go', 'iphone7blackofjais256go', '839.99', 2016, 'L’Apple iPhone 7 affiche une diagonale de 4,7 pouces, comme l\'iPhone 6 et 6s avant lui. Mais il bénéficie de la technologie Retina HD qui améliore l\'affichage. Pour la première fois, il embarque également un processeur à quatre cœurs, l\'A10 Fusion. En plus de son capteur photo principal de 12 Mpixels avec stabilisation optique, il intègre un capteur 7 Mpixels en façade.', 'Garantie 1 ans tout risques. ', '138 g ', '138.3 x 67.1 x 7.1 mm ', '', '256Go', 0, ''),
 (25, 'Apple', 'iPhone7gold256go', 'iphone7gold256go', '839.99', 2016, 'L’Apple iPhone 7 affiche une diagonale de 4,7 pouces, comme l\'iPhone 6 et 6s avant lui. Mais il bénéficie de la technologie Retina HD qui améliore l\'affichage. Pour la première fois, il embarque également un processeur à quatre cœurs, l\'A10 Fusion. En plus de son capteur photo principal de 12 Mpixels avec stabilisation optique, il intègre un capteur 7 Mpixels en façade.', 'Garantie 1 ans tout risques. ', '138 g ', '138.3 x 67.1 x 7.1 mm ', '', '256Go', 0, ''),
 (26, 'Apple', 'iPhone7red256go', 'iphone7red256go', '839.99', 2016, 'L’Apple iPhone 7 affiche une diagonale de 4,7 pouces, comme l\'iPhone 6 et 6s avant lui. Mais il bénéficie de la technologie Retina HD qui améliore l\'affichage. Pour la première fois, il embarque également un processeur à quatre cœurs, l\'A10 Fusion. En plus de son capteur photo principal de 12 Mpixels avec stabilisation optique, il intègre un capteur 7 Mpixels en façade.', 'Garantie 1 ans tout risques. ', '138 g ', '138.3 x 67.1 x 7.1 mm ', '', '256Go', 0, ''),
-(27, 'Apple', 'iPhone7silver256go', 'iphone7silver256go', '839.99', 2016, 'L’Apple iPhone 7 affiche une diagonale de 4,7 pouces, comme l\'iPhone 6 et 6s avant lui. Mais il bénéficie de la technologie Retina HD qui améliore l\'affichage. Pour la première fois, il embarque également un processeur à quatre cœurs, l\'A10 Fusion. En plus de son capteur photo principal de 12 Mpixels avec stabilisation optique, il intègre un capteur 7 Mpixels en façade.', 'Garantie 1 ans tout risques. ', '138 g ', '138.3 x 67.1 x 7.1 mm ', '', '256Go', 0, '');
+(27, 'Apple', 'iPhone7silver256go', 'iphone7silver256go', '839.99', 2016, 'L’Apple iPhone 7 affiche une diagonale de 4,7 pouces, comme l\'iPhone 6 et 6s avant lui. Mais il bénéficie de la technologie Retina HD qui améliore l\'affichage. Pour la première fois, il embarque également un processeur à quatre cœurs, l\'A10 Fusion. En plus de son capteur photo principal de 12 Mpixels avec stabilisation optique, il intègre un capteur 7 Mpixels en façade.', 'Garantie 1 ans tout risques. ', '138 g ', '138.3 x 67.1 x 7.1 mm ', '', '256Go', 0, ''),
+(29, 'Huawei', 'Honor6x', 'honor6x', '99.99', 2016, 'Successeur du très réussi smartphone 5X, le Honor 6X affiche un écran Full HD de 5,5 pouces. Tout en métal, il est équipé d\'un capteur d\'empreintes digitales, d\'un capteur photo de 12 mégapixels et d\'une puce Kirin 655 à 2,1 GHz. Il offre un stockage de 32 Go extensible.', 'Garantie 1 ans tout risques. ', '162g', '150,9 x 76,2 x 8,2 mm  ', '', '32Go', 0, ''),
+(30, 'Huawei', 'Honor9black', 'honor9black', '359.99', 2017, 'Le Honor 9 est un smartphone équipé d’un écran Full HD de 5,15 pouces. Il embarque un processeur à 2,4 GHz associé à 4 Go de mémoire vive (64 Go de stockage extensible). A l\'instar du Huawei P10, il bénéficie d’un double capteur photo principal (20 et 12 Mégapixels) et sa batterie atteint 3.200 mAh.', 'Garantie 1 ans tout risques. ', '155g', '147,3 x 70,9 x 7,5 mm', '', '32Go', 0, ''),
+(31, 'Huawei', 'Honor9blue', 'honor9blue', '359.99', 2017, 'Le Honor 9 est un smartphone équipé d’un écran Full HD de 5,15 pouces. Il embarque un processeur à 2,4 GHz associé à 4 Go de mémoire vive (64 Go de stockage extensible). A l\'instar du Huawei P10, il bénéficie d’un double capteur photo principal (20 et 12 Mégapixels) et sa batterie atteint 3.200 mAh.', 'Garantie 1 ans tout risques. ', '155g', '147,3 x 70,9 x 7,5 mm', '', '32Go', 0, ''),
+(32, 'Huawei', 'Honor9silver', 'honor9silver', '359.99', 2017, 'Le Honor 9 est un smartphone équipé d’un écran Full HD de 5,15 pouces. Il embarque un processeur à 2,4 GHz associé à 4 Go de mémoire vive (64 Go de stockage extensible). A l\'instar du Huawei P10, il bénéficie d’un double capteur photo principal (20 et 12 Mégapixels) et sa batterie atteint 3.200 mAh.', 'Garantie 1 ans tout risques. ', '155g', '147,3 x 70,9 x 7,5 mm', '', '32Go', 0, '');
 
 -- --------------------------------------------------------
 
@@ -367,7 +371,7 @@ ALTER TABLE `forfaits`
 -- AUTO_INCREMENT pour la table `mobiles`
 --
 ALTER TABLE `mobiles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT pour la table `offres`
