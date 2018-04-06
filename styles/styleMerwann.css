@@ -1049,6 +1049,96 @@ input:hover {
 
 
 
+/* PAGE CATALOGUE (mobiles, accessoires, téléphones) */ 
+
+.bloc2 {
+  border: 1px #72ff94 solid;
+  box-shadow: 6px 6px 12px black;
+  width: 250px;
+  height: 250px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.TitreBloc2  {
+  color: #72ff94;
+  font-size: 1em;
+  font-family: 'Ubuntu-Bold';
+  text-shadow: none;
+  display: block;
+    margin-bottom: 20px;
+}
+
+#imgFixe {
+  margin-top: 22px;
+  width: 0;
+  height: 0;
+  margin-left: 90px;
+}
+
+.button-catalogue {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #00ec68;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 105px;
+  padding: 3px;
+  width: 240px;
+  height: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.button-catalogue span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-catalogue span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.button-catalogue:hover span {
+  padding-right: 20px;
+}
+
+.button-catalogue:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* FIN CATALOGUE */
+
+
+
+
 
 
 
