@@ -9,7 +9,7 @@ if (isset($_POST['forminscription'])){
 		$pren = htmlspecialchars($_POST['prenCli']);
 		$nom = htmlspecialchars($_POST['nomCli']);
 		$mail = htmlspecialchars($_POST['mailCli']);
-		$mdp = sha1($_POST['mdpCli']);
+		$mdp = password_hash(($_POST['mdpCli']), PASSWORD_BCRYPT);
 		$tel = htmlspecialchars($_POST['telCli']);
 		$fixe = htmlspecialchars($_POST['fixeCli']);
 		$ville = htmlspecialchars($_POST['villeCli']);
