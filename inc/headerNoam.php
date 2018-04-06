@@ -33,10 +33,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
 		<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/account.php'"><span>Mon espace </span></button></div>
 
-		<div class="element-sousMenuHaut"><button class="button-deco" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/logout.php'"><span>Déconnexion </span></button></div>
+		<div class="element-sousMenuHaut"><button class="button-deco" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/logoutNoam.php'"><span>Déconnexion </span></button></div>
 
 	<?php else: ?>
-		<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/login.php'"><span>Connexion espace clients </span></button></div>
+		<div class="element-sousMenuHaut"><button class="button" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/loginNoam.php'"><span>Connexion espace clients </span></button></div>
 
 		<div class="element-sousMenuHaut"><button class="button-deco" style="vertical-align:middle" onclick="javascript:location.href='/espace-clients/registerNoam.php'"><span>Inscription </span></button></div>
 
