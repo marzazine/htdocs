@@ -108,7 +108,8 @@ a#basLien:hover {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  width: 45%;
+  margin-bottom: 30px;
+  width: 55%;
   border: 4px #FFFFFF solid;
   border-radius: 2px;
 
