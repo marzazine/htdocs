@@ -121,6 +121,16 @@ if (isset($_POST['forminscription'])){
 				</tr>
 				<tr>
 					<td align="right">
+						<label for="adrsCli"> Adresse Postale :</label>
+			        </td>
+
+			        <td>
+			        
+						<input type="text" placeholder="votre Adresse postale" id="adrsCli" name="adrsCli" />
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
 						<label for="cpCli"> Code postal :</label>
 			        </td>
 
