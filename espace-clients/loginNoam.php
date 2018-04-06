@@ -1,8 +1,11 @@
 <?php
+require_once('../inc/db.php');
 
-$req = $bdd ->wolvenetdb('SELECT pseudoCli, mdpCli FROM clients WHERE pseudo = :pseudo');
-$req ->execute(array(
-	  'pseudo' => $pseudo));
+$pseudo = $_POST['pseudoCli'];
+$pass = $_POST['mdpCli'];
+
+$req = $pdo->prepare('SELECT pseudoCli, mdpCli FROM clients WHERE pseudo = :pseudo');
+$req->execute(array('pseudoCli' => $pseudo));
 $resultat = $req ->fetch();
 
 
@@ -34,3 +37,5 @@ if (!$resultat)
 			<table>
 				<tr>
 					<td align="center">
+</body>
+</html>
