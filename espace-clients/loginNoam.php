@@ -1,31 +1,28 @@
 <?php
 require_once('../inc/db.php');
 
-$pseudo = $_POST['pseudoCli'];
-$pass = $_POST['mdpCli'];
+if(!empty($_POST) && !empty($_POST['pseudo']) && !empty($_POST['password'])){
 
-$req = $pdo->prepare('SELECT pseudoCli, mdpCli FROM clients WHERE pseudo = :pseudo');
-$req->execute(array('pseudoCli' => $pseudo));
-$resultat = $req ->fetch();
+	$req = $pdo->prepare('SELECT * FROM clients WHERE (pseudoCli = :pseudo)');
+	$req->execute(['pseudoCli' => $_POST['pseudo']]);
+
+	$user = $req->fetch();
 
 
-$mdpcorret = password_verify($_POST['mdpCli'], $resultat['mdpCli']);
+	if(password_verify($_POST['password'], $user->mdpCli)) {
 
-if (!$resultat)
- {
- 	echo "Identifiant ou mot de passe incorrect";
- }
- else
- {
- 	if ($mdpcorret) {
- 		session_start();
- 		$_SESSION['pseudoCli'] = $pseudo;
- 		echo "Vous etes actuellement connecté";
- 	}
- 	else {
- 		echo "Identifiant ou mot de passe incorrect";
- 	}
- }
+		session_start();
+		$_SESSION['auth'] = $user;
+		echo "Vous êtes connecté.";
+		exit();
+
+	} else {
+
+		echo "Erreur dans la saisie de l'identifiant et du mot de passe.";
+
+	}
+}
+
 ?>
 
 <html>
@@ -34,8 +31,16 @@ if (!$resultat)
 		<h2>Connectez vous</h2>
 		<br /><br />
 		<form method="POST" action="">
-			<table>
-				<tr>
-					<td align="center">
+			<label for="pseudo">Votre pseudo : </label>
+    		<input type="text" name="pseudo" placeholder="Pseudo" maxlength="256"/><br /><br />
+
+    		<label for="password">Votre mot de passe : </label>
+    		<input type="password" name="password" placeholder="Mot de passe" maxlength="256"/><br /><br />
+
+    		<button type="submit">Envoyer</button>
+
+    	</form>
+
+
 </body>
 </html>
