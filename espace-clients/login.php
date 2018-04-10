@@ -22,6 +22,7 @@ if(!empty($_POST) && !empty($_POST['mail']) && !empty($_POST['password'])){
 	} else {
 
 		$_SESSION['flash']['danger'] = 'Adresse ou mot de passe incorrect.';
+		header("Location: login.php");
 
 	}
 }
@@ -46,7 +47,9 @@ if(!empty($_POST) && !empty($_POST['mail']) && !empty($_POST['password'])){
     <input type="password" name="password" placeholder="Mot de passe" maxlength="256"/><br /><br />
 	</div>
 
-    <br /><button class="button-submit" type="submit"><span>Envoyer </span></button><br />
+    <br /><button class="button-submit" type="submit"><span>Me connecter </span></button><br /><br />
+
+    <a href="forget.php">>> Mot de passe oublié</a>
     <span class="champ-obligatoire-tip">* : Champs obligatoires</span>
 </form>
 
