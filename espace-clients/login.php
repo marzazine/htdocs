@@ -39,7 +39,7 @@ if(!empty($_POST) && !empty($_POST['mail']) && !empty($_POST['password'])){
 	
     <div id="label1">
     <label for="email">Votre adresse e-mail<span class="champ-obligatoire">*</span> : </label>
-    <input type="text" name="mail" placeholder="Adresse e-mail" maxlength="100" /><br /><br />
+    <input type="email" name="mail" placeholder="Adresse e-mail" maxlength="100" /><br /><br />
 	</div>
 
 	<div id="label0">
