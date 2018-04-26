@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 06 avr. 2018 à 16:15
+-- Généré le :  jeu. 26 avr. 2018 à 14:38
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
@@ -39,6 +39,50 @@ CREATE TABLE `abonner` (
   `idOff` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- RELATIONS POUR LA TABLE `abonner`:
+--   `idCli`
+--       `clients` -> `id`
+--   `idFor`
+--       `forfaits` -> `id`
+--   `idMo`
+--       `mobiles` -> `id`
+--   `idOff`
+--       `offres` -> `id`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `accessoires`
+--
+
+DROP TABLE IF EXISTS `accessoires`;
+CREATE TABLE `accessoires` (
+  `id` int(11) NOT NULL,
+  `marqueAcc` set('Apple','Samsung','JBL') COLLATE utf8_bin NOT NULL,
+  `modelAcc` text COLLATE utf8_bin NOT NULL,
+  `refAcc` text COLLATE utf8_bin NOT NULL,
+  `prixbaseAcc` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- RELATIONS POUR LA TABLE `accessoires`:
+--
+
+--
+-- Déchargement des données de la table `accessoires`
+--
+
+INSERT INTO `accessoires` (`id`, `marqueAcc`, `modelAcc`, `refAcc`, `prixbaseAcc`) VALUES
+(1, 'Apple', 'ChargeurLightning', 'charglight', '14.99'),
+(2, 'Samsung', 'ChargeurUsbC', 'chargusbc', '14.99'),
+(3, 'Samsung', 'ChargeurUsb', 'chargusb', '14.99'),
+(4, 'JBL', 'JBLGO', 'jblgo', '29.99'),
+(5, 'Apple', 'AirPods', 'airpods', '149.99'),
+(6, 'Apple', 'EarPods', 'earpods', '19.99'),
+(7, 'Samsung', 'KitMainsLibre', 'kitsamsung', '9.99');
+
 -- --------------------------------------------------------
 
 --
@@ -53,6 +97,10 @@ CREATE TABLE `ajax_chat_bans` (
   `ip` varbinary(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- RELATIONS POUR LA TABLE `ajax_chat_bans`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -65,6 +113,10 @@ CREATE TABLE `ajax_chat_invitations` (
   `channel` int(10) UNSIGNED NOT NULL,
   `dateTime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- RELATIONS POUR LA TABLE `ajax_chat_invitations`:
+--
 
 -- --------------------------------------------------------
 
@@ -83,6 +135,10 @@ CREATE TABLE `ajax_chat_messages` (
   `ip` varbinary(16) NOT NULL,
   `text` text COLLATE utf8_bin
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- RELATIONS POUR LA TABLE `ajax_chat_messages`:
+--
 
 --
 -- Déchargement des données de la table `ajax_chat_messages`
@@ -121,7 +177,10 @@ INSERT INTO `ajax_chat_messages` (`id`, `userID`, `userName`, `userRole`, `chann
 (30, 2, 'Mathias', 2, 0, '2018-04-05 13:51:44', 0x7f000001, 'ui'),
 (31, 2, 'Mathias', 2, 0, '2018-04-05 13:51:53', 0x7f000001, '[color=red]ROugeeeeeeeeeee[/color]'),
 (32, 2, 'Mathias', 2, 0, '2018-04-05 13:52:02', 0x7f000001, ':favorite:'),
-(33, 2, 'Mathias', 2, 0, '2018-04-05 13:52:28', 0x7f000001, '[quote]Ma bite est la lpus grosee[/quote] Ta mÃ¨re');
+(33, 2, 'Mathias', 2, 0, '2018-04-05 13:52:28', 0x7f000001, '[quote]Ma bite est la lpus grosee[/quote] Ta mÃ¨re'),
+(34, 2147483647, 'WolvenetBot', 4, 0, '2018-04-23 09:44:16', 0x7f000001, '/login (543813)'),
+(35, 2147483647, 'WolvenetBot', 4, 0, '2018-04-23 09:44:18', 0x7f000001, '/logout Mathias Timeout'),
+(36, 483443813, '(543813)', 0, 0, '2018-04-23 09:44:21', 0x7f000001, 'Bonjour');
 
 -- --------------------------------------------------------
 
@@ -140,11 +199,15 @@ CREATE TABLE `ajax_chat_online` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
+-- RELATIONS POUR LA TABLE `ajax_chat_online`:
+--
+
+--
 -- Déchargement des données de la table `ajax_chat_online`
 --
 
 INSERT INTO `ajax_chat_online` (`userID`, `userName`, `userRole`, `channel`, `dateTime`, `ip`) VALUES
-(2, 'Mathias', 2, 0, '2018-04-05 13:52:17', 0x7f000001);
+(483443813, '(543813)', 0, 0, '2018-04-23 09:45:09', 0x7f000001);
 
 -- --------------------------------------------------------
 
@@ -168,9 +231,21 @@ CREATE TABLE `clients` (
   `villeCli` varchar(100) COLLATE utf8_bin NOT NULL,
   `adresseCli` text COLLATE utf8_bin NOT NULL,
   `cpCli` int(11) NOT NULL,
-  `sexeCli` set('homme','femme','inconnu') COLLATE utf8_bin NOT NULL,
+  `sexeCli` set('homme','femme','autre') COLLATE utf8_bin NOT NULL,
   `dateinscriptionCli` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- RELATIONS POUR LA TABLE `clients`:
+--
+
+--
+-- Déchargement des données de la table `clients`
+--
+
+INSERT INTO `clients` (`id`, `pseudoCli`, `prenCli`, `nomCli`, `mailCli`, `mdpCli`, `confirmation_token`, `confirmed_at`, `ipCli`, `telCli`, `fixeCli`, `villeCli`, `adresseCli`, `cpCli`, `sexeCli`, `dateinscriptionCli`) VALUES
+(1, 'masselon.mathias', 'Mathias', 'Masselon', 'mathias.msl@outlook.fr', '$2y$10$0WxK/8SseoHVZQxlQzwvbu49D8.xNaA5Rz3kblnXgFRzJw0z436da', NULL, '2018-04-23', '127.0.0.1', '0668864578', '5458584888', 'Ma bite', 'COucouc', 73739, '', '2018-04-23'),
+(2, 'toto.moi', 'Moi', 'Toto', 'mathias@outlook.fr', '$2y$10$WZEGqR0a/DSX06sCJCMpyermix67toZoRar7Y.c/qInWCRJLdlJd2', '7fzTPAB2UQAQVtiVXdbMhdzVe78aU9ftBbBIoWXUvcrHHBVnJCkVtbnps7pL', NULL, '127.0.0.1', '0668864585', '0479894575', 'jesaispas', '123 ma rue', 64676, 'homme', '2018-04-23');
 
 -- --------------------------------------------------------
 
@@ -185,6 +260,10 @@ CREATE TABLE `forfaits` (
   `descFor` text COLLATE utf8_bin NOT NULL,
   `prixbaseFor` decimal(10,2) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- RELATIONS POUR LA TABLE `forfaits`:
+--
 
 --
 -- Déchargement des données de la table `forfaits`
@@ -222,6 +301,10 @@ CREATE TABLE `mobiles` (
   `promoMo` tinyint(1) NOT NULL,
   `urlimgMo` text COLLATE utf8_bin NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- RELATIONS POUR LA TABLE `mobiles`:
+--
 
 --
 -- Déchargement des données de la table `mobiles`
@@ -276,6 +359,10 @@ CREATE TABLE `offres` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
+-- RELATIONS POUR LA TABLE `offres`:
+--
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -283,6 +370,12 @@ CREATE TABLE `offres` (
 -- Index pour la table `abonner`
 --
 ALTER TABLE `abonner`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `accessoires`
+--
+ALTER TABLE `accessoires`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -350,16 +443,22 @@ ALTER TABLE `abonner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `accessoires`
+--
+ALTER TABLE `accessoires`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT pour la table `ajax_chat_messages`
 --
 ALTER TABLE `ajax_chat_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT pour la table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `forfaits`
