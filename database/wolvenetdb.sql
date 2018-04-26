@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 26 avr. 2018 à 15:12
+-- Généré le :  jeu. 26 avr. 2018 à 15:17
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
@@ -36,11 +36,14 @@ CREATE TABLE `abonner` (
   `idFor` int(11) NOT NULL,
   `idCli` int(11) NOT NULL,
   `idMo` int(11) NOT NULL,
-  `idOff` int(11) NOT NULL
+  `idOff` int(11) NOT NULL,
+  `idBox` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- RELATIONS POUR LA TABLE `abonner`:
+--   `idBox`
+--       `box` -> `id`
 --   `idCli`
 --       `clients` -> `id`
 --   `idFor`
