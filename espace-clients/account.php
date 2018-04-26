@@ -31,7 +31,8 @@ if(!empty($_POST)){
 
 ?>
 
-<h1>Votre espace client, <?= $_SESSION['auth']->prenCli; ?> </h1>
+<h1>Votre espace client, <?= $_SESSION['auth']->prenCli; ?></h1>
+	<h2>Numéro de ligne : <?= $_SESSION['auth']->id; ?></h2>
 
 <div class="section-bloc-general">
 	
@@ -40,11 +41,10 @@ if(!empty($_POST)){
 	</div>
 
 <div class="section-bloc-contenu">
-	N° client : <?= $_SESSION['auth']->id; ?><br />
 	Votre prénom : <?= $_SESSION['auth']->prenCli; ?><br />
 	Votre nom : <?= $_SESSION['auth']->nomCli; ?><br />
-	Votre adresse e-mail : <?= $_SESSION['auth']->mailCli; ?><br />
-	Vous êtes : Un <?= $_SESSION['auth']->typeCli; ?><br />
+	Votre adresse e-mail : <a href="mailto:<?= $_SESSION['auth']->mailCli; ?>"><?= $_SESSION['auth']->mailCli; ?></a><br />
+	Vous êtes : Un <?= $_SESSION['auth']->sexeCli; ?><br />
 	Votre n° de téléphone mobile : <?= $_SESSION['auth']->telCli; ?><br />
 	Votre n° de téléphone fixe : <?= $_SESSION['auth']->fixeCli; ?><br />
 	Votre ville : <?= $_SESSION['auth']->villeCli; ?><br />
