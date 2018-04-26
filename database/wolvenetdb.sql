@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 26 avr. 2018 à 14:38
+-- Généré le :  jeu. 26 avr. 2018 à 15:17
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
@@ -36,11 +36,14 @@ CREATE TABLE `abonner` (
   `idFor` int(11) NOT NULL,
   `idCli` int(11) NOT NULL,
   `idMo` int(11) NOT NULL,
-  `idOff` int(11) NOT NULL
+  `idOff` int(11) NOT NULL,
+  `idBox` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- RELATIONS POUR LA TABLE `abonner`:
+--   `idBox`
+--       `box` -> `id`
 --   `idCli`
 --       `clients` -> `id`
 --   `idFor`
@@ -208,6 +211,31 @@ CREATE TABLE `ajax_chat_online` (
 
 INSERT INTO `ajax_chat_online` (`userID`, `userName`, `userRole`, `channel`, `dateTime`, `ip`) VALUES
 (483443813, '(543813)', 0, 0, '2018-04-23 09:45:09', 0x7f000001);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `box`
+--
+
+DROP TABLE IF EXISTS `box`;
+CREATE TABLE `box` (
+  `id` int(11) NOT NULL,
+  `nomBox` text COLLATE utf8_bin NOT NULL,
+  `descBox` text COLLATE utf8_bin NOT NULL,
+  `prixBox` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- RELATIONS POUR LA TABLE `box`:
+--
+
+--
+-- Déchargement des données de la table `box`
+--
+
+INSERT INTO `box` (`id`, `nomBox`, `descBox`, `prixBox`) VALUES
+(1, 'WolveBox', 'La WolveBox est une Box internet nouvelle génération. Elle est équipé de WolveOS ce qui vous permet de téléchargé toutes vos appli préférer et de les afficher sur votre écran TV !\r\nDe plus elle est capable d\'assuré un débit jusqu\'à 10gb/s en wifi, et jusqu\'à 100gb/s en Ethernet. \r\n', '34.99');
 
 -- --------------------------------------------------------
 
@@ -409,6 +437,12 @@ ALTER TABLE `ajax_chat_online`
   ADD KEY `userName` (`userName`);
 
 --
+-- Index pour la table `box`
+--
+ALTER TABLE `box`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `clients`
 --
 ALTER TABLE `clients`
@@ -453,6 +487,12 @@ ALTER TABLE `accessoires`
 --
 ALTER TABLE `ajax_chat_messages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- AUTO_INCREMENT pour la table `box`
+--
+ALTER TABLE `box`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `clients`
