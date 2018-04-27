@@ -1,4 +1,6 @@
-<?php require '../inc/header.php'; ?>
+<?php 
+require '../inc/header.php';
+ ?>
 
 <div id="sousMenuHaut">
 

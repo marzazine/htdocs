@@ -1,5 +1,6 @@
 <?php 
 require_once '../inc/db.php';
+require_once 'indexNoam.php'
 
 $pdoStat = $pdo->prepare('SELECT * from mobiles');
 
