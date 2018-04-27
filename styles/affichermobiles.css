@@ -11,14 +11,14 @@
      box-shadow: 6px 6px 12px black;
      width: 250px;
      height: 250px;
-     padding-top: 10px;
+     padding-top: 20px;
+     padding-bottom: 80px;
      padding-left: 10px;
      padding-right: 10px;
-     padding-bottom: 10px;
      border-radius: 10px;
      margin-bottom: 10px;
      margin-left: 20px;
-     margin-top: 20px;
+     margin-top: 10px;
      margin-right: 20px;
 }
  .blocMobiles:hover {
@@ -36,6 +36,8 @@
 
 .blocTexteMobiles {
      font-size: 0.9em;
+     display: inline-block;
+     margin-bottom: 10px;
      font-family: 'Ubuntu-Light';
      text-shadow: none;
 }
@@ -48,7 +50,7 @@
      color: #FFFFFF;
      text-align: center;
      font-size: 1em;
-     margin-top: 105px;
+     margin-top: 10px;
      padding: 3px;
      width: 240px;
      height: 60px;
@@ -75,4 +77,9 @@
  .button-Mobiles1:hover span:after {
      opacity: 1;
      right: 0;
+}
+
+ #imgMobile1 {
+     margin-top: 10px;
+     margin-left: 10px;
 }
