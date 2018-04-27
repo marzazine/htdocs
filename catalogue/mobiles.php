@@ -1,4 +1,14 @@
-<?php require '../inc/header.php'; ?>
+<?php
+require '../inc/header.php';
+require '../inc/db.php';
+
+$pdoStat = $pdo->prepare('SELECT * from mobiles');
+
+$executeIsOk = $pdoStat->execute();
+
+$mobiles = $pdoStat->fetchAll();
+
+?>
 
 <div id="sousMenuHaut">
 
@@ -16,3 +26,17 @@
 		<div class="element-sous-sousMenuHaut">Mobiles</div>
 	</div>
 </div>
+
+<ul>
+	<?php foreach ($mobiles as $mobile): ?>
+
+		<li><?= $mobile->marqueMo ?></li>
+		<li><?= $mobile->modeleMo ?></li>
+		<li><?= $mobile->prixbaseMo ?>€</li>
+		<li><?= $mobile->anneeMo ?></li>
+		<li><?= $mobile->descMo ?></li>
+		<br />
+
+	<?php endforeach; ?>
+<ul>
+

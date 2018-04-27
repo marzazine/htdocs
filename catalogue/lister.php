@@ -17,6 +17,7 @@ $mobiles = $pdoStat->fetchAll();
 		<li><?= $mobile->modeleMo ?></li>
 		<li><?= $mobile->prixbaseMo ?></li>
 		<li><?= $mobile->anneeMo ?></li>
+		<li><?= $mobile->descMo ?></li>
 		<br />
 
 	<?php endforeach; ?>
