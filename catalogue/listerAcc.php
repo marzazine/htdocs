@@ -13,7 +13,7 @@ $Acc = $pdoStat->fetchAll();
 	<?php foreach ($Acc as $Acc): ?>
 
 		<li><?= $Acc->MarqueAcc ?></li>
-		<li><?= $Acc->modeleAcc ?></li>
+		<li><?= $Acc->modelAcc ?></li>
 		<li><?= $Acc->prixbaseAcc ?></li>
 		<br />
 

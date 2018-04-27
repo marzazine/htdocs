@@ -1,5 +1,6 @@
 <?php
 include 'inc/headerNoam.php';
+include 'catalogue/listerAcc.php';
 ?>
 
     <body>
