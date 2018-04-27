@@ -27,16 +27,12 @@ $mobiles = $pdoStat->fetchAll();
 	</div>
 </div>
 
-<ul>
-	<?php foreach ($mobiles as $mobile): ?>
-
-		<li><?= $mobile->marqueMo ?></li>
-		<li><?= $mobile->modeleMo ?></li>
-		<li><?= $mobile->prixbaseMo ?>€</li>
-		<li><?= $mobile->anneeMo ?></li>
-		<li><?= $mobile->descMo ?></li>
-		<br />
-
-	<?php endforeach; ?>
-<ul>
-
+	<div id="conteneurMobiles">
+		<?php foreach ($mobiles as $mobile): ?>
+            	<div class="blocMobiles">
+            		<span class="TitreBlocMobiles"><?= $mobile->marqueMo ?></span>
+            		<span class="blocTexteMobiles"><?= $mobile->modeleMo ?></span>
+            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='#'"><span><?= $mobile->prixbaseMo ?>€ </span></button>
+            	</div>
+		<?php endforeach; ?>
+	</div>
