@@ -2,7 +2,7 @@
 require '../inc/header.php';
 require '../inc/db.php';
 
-$pdoStat = $pdo->prepare('SELECT * from mobiles');
+$pdoStat = $pdo->prepare('SELECT * from mobiles ORDER BY prixbaseMo DESC');
 
 $executeIsOk = $pdoStat->execute();
 
@@ -33,7 +33,7 @@ $mobiles = $pdoStat->fetchAll();
             		<span class="TitreBlocMobiles"><?= $mobile->marqueMo ?></span>
             		<span class="blocTexteMobiles"><?= $mobile->modeleMo ?> <strong><?= $mobile->couleurMo ?> <?= $mobile->capaciteMo ?></strong></span>
             		<div id="imgMobile1"><img src="../img/mobiles/<?= $mobile->urlimgminiMo ?>"></div>
-            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='#'"><span>Voir le produit </span></button>
+            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='#'"><span><?= $mobile->prixbaseMo ?>€ </span></button>
             	</div>
 		<?php endforeach; ?>
 	</div>
