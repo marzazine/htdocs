@@ -6,7 +6,7 @@
      text-align: center;
 }
  .blocMobiles {
-     border: 1px #ff6e33 solid;
+     border: 1px #ffffff solid;
      font-family: 'Ubuntu-Light';
      box-shadow: 6px 6px 12px black;
      width: 250px;
@@ -22,11 +22,11 @@
      margin-right: 20px;
 }
  .blocMobiles:hover {
-     background-color: rgba(255, 110, 51, 0.2);
+     background-color: rgba(255, 255, 255, 0.2);
 }
 
  .TitreBlocMobiles {
-     color: #ff6e33;
+     color: #ffffff;
      font-size: 1em;
      font-family: 'Ubuntu-Bold';
      text-shadow: none;
@@ -45,7 +45,7 @@
 .button-Mobiles1{
      display: inline-block;
      border-radius: 3px;
-     background-color: #ff6e33;
+     background-color: #a91ea9;
      border: none;
      color: #FFFFFF;
      text-align: center;
