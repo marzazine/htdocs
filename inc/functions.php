@@ -26,4 +26,3 @@ function logged_only() {
 	}
 
 }
-
