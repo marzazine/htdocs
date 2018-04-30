@@ -34,9 +34,10 @@ if(!empty($_GET) && !empty($_GET['id'])){
 
 <div class="section-bloc-contenu">
 
+	<br />
 	<center><img src="../img/mobiles/<?= $mobile->urlimgMo ?>"></center>
 	<br />
-	<br />
+	
 	<?= $mobile->descMo ?>
 	<br /><br />
 
