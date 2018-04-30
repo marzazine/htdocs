@@ -33,7 +33,7 @@ $mobiles = $pdoStat->fetchAll();
             		<span class="TitreBlocMobiles"><?= $mobile->marqueMo ?></span>
             		<span class="blocTexteMobiles"><?= $mobile->modeleMo ?> <strong><?= $mobile->couleurMo ?> <?= $mobile->capaciteMo ?></strong></span>
             		<div id="imgMobile1"><img src="../img/mobiles/<?= $mobile->urlimgminiMo ?>"></div>
-            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='#'"><span><?= $mobile->prixbaseMo ?>€ </span></button>
+            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='viewmobile.php?id=<?= $mobile->id ?>'"><span><?= $mobile->prixbaseMo ?>€ </span></button>
             	</div>
 		<?php endforeach; ?>
 	</div>
