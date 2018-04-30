@@ -37,18 +37,18 @@ if(!empty($_GET) && !empty($_GET['id'])){
 	<br />
 	<center><img src="../img/mobiles/<?= $mobile->urlimgMo ?>"></center>
 	<br />
-	
-	<?= $mobile->descMo ?>
+
+	<span class="texte-normal"><?= $mobile->descMo ?></span>
 	<br /><br />
 
-	Marque : <?= $mobile->marqueMo ?> <br /><br />
-	Modèle : <?= $mobile->modeleMo ?><br /><br />
-	Couleur : <?= $mobile->couleurMo ?><br /><br />
-	Prix : <?= $mobile->prixbaseMo ?>€<br /><br />
-	Capacité : Jusqu'à <?= $mobile->capaciteMo ?><br /><br />
-	Garantie : <?= $mobile->garantieMo ?> <br /><br />
-	Poids : <?= $mobile->poidsMo ?><br /><br />
-	Dimensions : <?= $mobile->dimenMo ?><br /><br />
+	Marque : <span class="texte-normal"><?= $mobile->marqueMo ?></span><br /><br />
+	Modèle : <span class="texte-normal"><?= $mobile->modeleMo ?></span><br /><br />
+	Couleur : <span class="texte-normal"><?= $mobile->couleurMo ?></span><br /><br />
+	Prix : <span class="texte-normal"><?= $mobile->prixbaseMo ?>€</span><br /><br />
+	Capacité : <span class="texte-normal">Jusqu'à <?= $mobile->capaciteMo ?></span><br /><br />
+	Garantie : <span class="texte-normal"><?= $mobile->garantieMo ?></span><br /><br />
+	Poids : <span class="texte-normal"><?= $mobile->poidsMo ?></span><br /><br />
+	Dimensions : <span class="texte-normal"><?= $mobile->dimenMo ?></span><br /><br />
 
 </div>
 </div>
