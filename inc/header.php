@@ -10,11 +10,12 @@ if (session_status() == PHP_SESSION_NONE) {
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
 	<?php if($_SERVER['PHP_SELF'] == "/catalogue/viewmobile.php" || $_SERVER['PHP_SELF'] == "/e/404.php"): ?>
 	<base href="/">
+	<link rel="stylesheet" type="text/css" href="/styles/slideshow.css">
 	<?php endif; ?>
 	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
 	<link rel="stylesheet" type="text/css" href="../e/e.css">
 	<link rel="stylesheet" type="text/css" href="../styles/affichermobiles.css">
-
+	
 	<link rel="shortcut icon" type="image/x-png" href="../img/favicon.png" />
 	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" /><![endif]-->
 </head>
