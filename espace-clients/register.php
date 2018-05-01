@@ -221,10 +221,10 @@ if(empty(!$_POST)){
     </select>
     </div>
 
-
     <br /><button class="button-submit" type="submit"><span>Envoyer </span></button><br />
     <span class="champ-obligatoire-tip">* : Champs obligatoires</span>
 </form>
+
 
 
 <?php require '../inc/footer.php'; ?>
