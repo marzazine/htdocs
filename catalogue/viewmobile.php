@@ -34,9 +34,38 @@ if(!empty($_GET) && !empty($_GET['id'])){
 
 <div class="section-bloc-contenu">
 
-	<br />
-	<center><img src="../img/mobiles/<?= $mobile->urlimgMo ?>"></center>
-	<br />
+	
+	<br /><br />
+<div class="w3-content w3-display-container">
+  		<img class="mySlides" src="/img/mobiles/<?= $mobile->url1Mo ?>" style="width:65%">
+  		<img class="mySlides" src="/img/mobiles/<?= $mobile->url2Mo ?>" style="width:65%">
+  		<img class="mySlides" src="/img/mobiles/<?= $mobile->url3Mo ?>" style="width:65%">
+  		<img class="mySlides" src="/img/mobiles/<?= $mobile->url4Mo ?>" style="width:65%">
+
+  		<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+
+<br /><br />
+	<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 	<span class="texte-normal"><?= $mobile->descMo ?></span>
 	<br /><br />
@@ -48,6 +77,7 @@ if(!empty($_GET) && !empty($_GET['id'])){
 	Modèle : <span class="texte-normal"><?= $mobile->modeleMo ?></span><br /><br />
 	Couleur : <span class="texte-normal"><?= $mobile->couleurMo ?></span><br /><br />
 	Prix : <span class="texte-normal"><?= $mobile->prixbaseMo ?>€</span><br /><br />
+	Année de sortie : <span class="texte-normal"><?= $mobile->anneeMo ?></span><br /><br />
 	Capacité : <span class="texte-normal">Jusqu'à <?= $mobile->capaciteMo ?></span><br /><br />
 	Garantie : <span class="texte-normal"><?= $mobile->garantieMo ?></span><br /><br />
 	Poids : <span class="texte-normal"><?= $mobile->poidsMo ?></span><br /><br />
@@ -57,3 +87,6 @@ if(!empty($_GET) && !empty($_GET['id'])){
 </div>
 
 <center><a href="/catalogue/mobiles.php"><< Retourner voir les autres mobiles</a></center>
+
+</body>
+</html>
