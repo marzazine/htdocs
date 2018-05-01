@@ -8,6 +8,9 @@ if (session_status() == PHP_SESSION_NONE) {
 <html>
 <head>
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
+	<?php if($_SERVER['PHP_SELF'] == "/catalogue/viewmobile.php" || $_SERVER['PHP_SELF'] == "/e/404.php"): ?>
+	<base href="/">
+	<?php endif; ?>
 	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
 	<link rel="stylesheet" type="text/css" href="../e/e.css">
 	<link rel="stylesheet" type="text/css" href="../styles/affichermobiles.css">

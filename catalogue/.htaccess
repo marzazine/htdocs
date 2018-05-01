@@ -1,0 +1,5 @@
+Options +FollowSymlinks
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !\.css$
+RewriteRule ^mobile/([0-9]+)$ viewmobile.php?id=$1 [L]

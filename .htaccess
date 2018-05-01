@@ -1,3 +1,6 @@
+RewriteEngine On
+RewriteRule ^mobile([^/]*)\.html$ /catalogue/viewmobile.php?id=$1 [L]
+
 ErrorDocument 401 /e/401.php
 ErrorDocument 403 /e/403.php
 ErrorDocument 404 /e/404.php

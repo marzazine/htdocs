@@ -41,6 +41,9 @@ if(!empty($_GET) && !empty($_GET['id'])){
 	<span class="texte-normal"><?= $mobile->descMo ?></span>
 	<br /><br />
 
+	<span class="texte-normal"><?= $mobile->optionsMo ?></span>
+	<br />
+
 	Marque : <span class="texte-normal"><?= $mobile->marqueMo ?></span><br /><br />
 	Modèle : <span class="texte-normal"><?= $mobile->modeleMo ?></span><br /><br />
 	Couleur : <span class="texte-normal"><?= $mobile->couleurMo ?></span><br /><br />
@@ -53,4 +56,4 @@ if(!empty($_GET) && !empty($_GET['id'])){
 </div>
 </div>
 
-<center><a href="mobiles.php"><< Retourner voir les autres mobiles</a></center>
+<center><a href="/catalogue/mobiles.php"><< Retourner voir les autres mobiles</a></center>
