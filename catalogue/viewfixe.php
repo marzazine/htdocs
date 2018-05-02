@@ -72,10 +72,12 @@ function showDivs(n) {
 
 	<div class="caracteristiques-top">Marque : <span class="texte-normal"><?= $fixe->marqueFixe ?></span></div>
 	<div class="caracteristiques2">Modèle : <span class="texte-normal"><?= $fixe->modeleFixe ?></span></div>
-	<div class="caracteristiques2">Prix : <span class="texte-normal"><?= $fixe->prixbaseFixe ?>€</span></div>
-	<div class="caracteristiques">Année de sortie : <span class="texte-normal"><?= $fixe->anneeFixe ?></span></div>
+	<div class="caracteristiques">Type : <span class="texte-normal"><?= $fixe->typeFixe ?></span></div>
+	<div class="caracteristiques2">Couleur : <span class="texte-normal"><?= $fixe->couleurFixe ?></span></div>
+	<div class="caracteristiques">Prix : <span class="texte-normal"><?= $fixe->prixbaseFixe ?>€</span></div>
+	<div class="caracteristiques2">Année de sortie : <span class="texte-normal"><?= $fixe->anneeFixe ?></span></div>
 	<div class="caracteristiques">Garantie : <span class="texte-normal"><?= $fixe->garantieFixe ?></span></div>
-	<div class="caracteristiques2">Poids : <span class="texte-normal"><?= $fixe->poidsFixe ?></span></div>
+	<div class="caracteristiques-bottom">Poids : <span class="texte-normal"><?= $fixe->poidsFixe ?></span></div>
 
 </div>
 </div>
