@@ -8,7 +8,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <html>
 <head>
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
-	<?php if($_SERVER['PHP_SELF'] == "/catalogue/viewmobile.php" || $_SERVER['PHP_SELF'] == "/e/404.php"): ?>
+	<?php if($_SERVER['PHP_SELF'] == "/catalogue/viewmobile.php" || $_SERVER['PHP_SELF'] == "/e/404.php" || $_SERVER['PHP_SELF'] == "/catalogue/viewfixe.php"): ?>
 	<base href="/">
 	<link rel="stylesheet" type="text/css" href="/styles/slideshow.css">
 	<?php endif; ?>
