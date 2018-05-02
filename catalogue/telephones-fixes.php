@@ -32,8 +32,8 @@ $fixes = $pdoStat->fetchAll();
             	<div class="blocMobiles">
             		<span class="TitreBlocMobiles"><?= $fixe->marqueFixe ?></span>
             		<span class="blocTexteMobiles"><?= $fixe->modeleFixe ?></span>
-            		<div id="imgMobile1"><img src="../img/mobiles/<?= $fixe->urlimgminiFixe ?>"></div>
-            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='telephones-fixes/<?= $fixe->fixe ?>'"><span><?= $fixe->prixbaseFixe ?>€ </span></button>
+            		<div id="imgMobile1"><img src="../<?= $fixe->urlimgminiFixe ?>"></div>
+            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='viewfixe.php?id=<?= $fixe->id ?>'"><span><?= $fixe->prixbaseFixe ?>€ </span></button>
             	</div>
 		<?php endforeach; ?>
 	</div>
