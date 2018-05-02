@@ -1,8 +1,12 @@
 <?php require 'inc/header.php'; ?>
 
+<?php
+var_dump();
+?>
     <body>
 
             <div id="bandeau-bloc-general">
+                <?php $products = $DB->query('SELECT * FROM accessoires, box, fixes, forfaits, mobiles, offres');
 
                 <div class="bandeau-bloc">
                     <span class="TitreBlocBandeau">Profitez de nos offres exceptionnelles.</span>
