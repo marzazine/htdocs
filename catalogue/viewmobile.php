@@ -73,15 +73,15 @@ function showDivs(n) {
 	<span class="texte-normal"><?= $mobile->optionsMo ?></span>
 	<br />
 
-	Marque : <span class="texte-normal"><?= $mobile->marqueMo ?></span><br /><br />
-	Modèle : <span class="texte-normal"><?= $mobile->modeleMo ?></span><br /><br />
-	Couleur : <span class="texte-normal"><?= $mobile->couleurMo ?></span><br /><br />
-	Prix : <span class="texte-normal"><?= $mobile->prixbaseMo ?>€</span><br /><br />
-	Année de sortie : <span class="texte-normal"><?= $mobile->anneeMo ?></span><br /><br />
-	Capacité : <span class="texte-normal">Jusqu'à <?= $mobile->capaciteMo ?></span><br /><br />
-	Garantie : <span class="texte-normal"><?= $mobile->garantieMo ?></span><br /><br />
-	Poids : <span class="texte-normal"><?= $mobile->poidsMo ?></span><br /><br />
-	Dimensions : <span class="texte-normal"><?= $mobile->dimenMo ?></span><br /><br />
+	<div class="caracteristiques-top">Marque : <span class="texte-normal"><?= $mobile->marqueMo ?></span></div>
+	<div class="caracteristiques2">Modèle : <span class="texte-normal"><?= $mobile->modeleMo ?></span></div>
+	<div class="caracteristiques">Couleur : <span class="texte-normal"><?= $mobile->couleurMo ?></span></div>
+	<div class="caracteristiques2">Prix : <span class="texte-normal"><?= $mobile->prixbaseMo ?>€</span></div>
+	<div class="caracteristiques">Année de sortie : <span class="texte-normal"><?= $mobile->anneeMo ?></span></div>
+	<div class="caracteristiques2">Capacité : <span class="texte-normal">Jusqu'à <?= $mobile->capaciteMo ?></span></div>
+	<div class="caracteristiques">Garantie : <span class="texte-normal"><?= $mobile->garantieMo ?></span></div>
+	<div class="caracteristiques2">Poids : <span class="texte-normal"><?= $mobile->poidsMo ?></span></div>
+	<div class="caracteristiques-bottom">Dimensions : <span class="texte-normal"><?= $mobile->dimenMo ?></span></div>
 
 </div>
 </div>
