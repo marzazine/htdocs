@@ -1,12 +1,9 @@
 <?php
 require '../inc/header.php';
-require '../inc/db.php';
+require '../inc/_header.php';
 
-$pdoStat = $pdo->prepare('SELECT * from mobiles ORDER BY prixbaseMo DESC');
 
-$executeIsOk = $pdoStat->execute();
-
-$mobiles = $pdoStat->fetchAll();
+$mobiles = $DB->query('SELECT * FROM mobiles');
 
 ?>
 
@@ -30,10 +27,11 @@ $mobiles = $pdoStat->fetchAll();
 	<div id="conteneurMobiles">
 		<?php foreach ($mobiles as $mobile): ?>
             	<div class="blocMobiles">
+            		<span class="addToCart"><a href="addpanier.php?id=<?= $mobile->id ?>"><img src="../img/cart-mini.png"></a></span>
             		<span class="TitreBlocMobiles"><?= $mobile->marqueMo ?></span>
             		<span class="blocTexteMobiles"><?= $mobile->modeleMo ?> <strong><?= $mobile->couleurMo ?> <?= $mobile->capaciteMo ?></strong></span>
-            		<div id="imgMobile1"><img src="../img/mobiles/<?= $mobile->urlimgminiMo ?>"></div>
-            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='mobile/<?= $mobile->id ?>'"><span><?= $mobile->prixbaseMo ?>€ </span></button>
+            		<div id="imgMobile1"><img src="../img/products-mobile/<?= $mobile->id ?>.png"></div>
+            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='mobile/<?= $mobile->id ?>'"><span><?= number_format($mobile->prixbaseMo,2,',',' ')?>€ </span></button>
             	</div>
 		<?php endforeach; ?>
 	</div>

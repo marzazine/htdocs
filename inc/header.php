@@ -1,17 +1,15 @@
 <?php
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
-	<?php if($_SERVER['PHP_SELF'] == "/catalogue/viewmobile.php" || $_SERVER['PHP_SELF'] == "/e/404.php" || $_SERVER['PHP_SELF'] == "/catalogue/viewfixe.php"): ?>
-	<base href="/">
-	<link rel="stylesheet" type="text/css" href="/styles/slideshow.css">
-	<?php endif; ?>
 	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
 	<link rel="stylesheet" type="text/css" href="../e/e.css">
 	<link rel="stylesheet" type="text/css" href="../styles/affichermobiles.css">
@@ -32,6 +30,8 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="element-menuHaut"><a href="/offres-aux-entreprises/">Réseau d'entreprise</a></div>
 
     <div class="element-menuHaut"><a href="/assistance/">Assistance</a></div>
+
+    <div class="element-menuHaut"><a href="/catalogue/panier.php">Panier (<?= array_sum($_SESSION['panier']); ?>)</a></div>
 	
 
 	<?php if(isset($_SESSION['auth'])): ?>

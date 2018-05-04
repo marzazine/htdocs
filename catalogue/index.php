@@ -11,6 +11,14 @@
 
 </div>
 
+<?php if(isset($_SESSION['flash-bloc'])): ?>
+    <?php foreach ($_SESSION['flash-bloc'] as $type => $message): ?>
+        <div class="form-<?= $type; ?>">
+            <span class="form-<?= $type; ?>-title"><?= $message; ?></span>
+        </div>
+    <?php endforeach; ?>
+    <?php unset($_SESSION['flash-bloc']); ?>
+<?php endif; ?>
 
 <div class="section-bloc-general">
 <div class="section-titre"><span class="titre-section">Catalogue | </span><span class="texte-normal">Index</span></div>
