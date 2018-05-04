@@ -210,6 +210,10 @@
 }
  .bloc:hover {
      background-color: rgba(54, 82, 123, 0.2);
+     transition-property: margin-top, box-shadow;
+     box-shadow: -2px 4px 55px rgba(82, 229, 252, 0.8);
+     margin-top: 5px;
+     transition-duration: 450ms;
 }
  .blocPromo {
      border: 1px #801744 solid;
@@ -229,6 +233,9 @@
 }
  .blocPromo:hover {
      background-color: rgba(128, 23, 68, 0.2);
+     box-shadow: -2px 4px 55px rgba(214, 37, 112, 0.9);
+     margin-top: 5px;
+     transition-duration: 450ms;
 }
  .TitreBloc {
      color: #52e5fc;
@@ -970,6 +977,10 @@
 }
  .bloc2:hover {
      background-color: rgba(114, 255, 148, 0.2);
+     transition-property: margin-top, box-shadow;
+     box-shadow: -2px 4px 55px rgba(114, 255, 148, 0.8);
+     margin-top: 5px;
+     transition-duration: 450ms;
 }
  .TitreBloc2 {
      color: #72ff94;
@@ -1068,6 +1079,10 @@
 }
  .blocMobiles:hover {
      background-color: rgba(254, 40, 140, 0.2);
+     transition-property: margin-top, box-shadow;
+     box-shadow: -2px 4px 55px rgba(254, 40, 140, 0.8);
+     margin-top: 5px;
+     transition-duration: 450ms;
 }
 
  .TitreBlocMobiles {
@@ -1175,6 +1190,10 @@
 }
  .blocFixes:hover {
      background-color: rgba(254, 33, 70, 0.2);
+     transition-property: margin-top, box-shadow;
+     box-shadow: -2px 4px 55px rgba(254, 33, 70, 0.8);
+     margin-top: 5px;
+     transition-duration: 450ms;
 }
 
  .TitreBlocFixes {
