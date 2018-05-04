@@ -26,6 +26,23 @@ if(!empty($_GET) && !empty($_GET['id'])){
 
 ?>
 
+<div id="sousMenuHaut">
+
+	<div class="element-sousMenuHaut"><a href="catalogue/mobiles.php" id="basLien">Mobiles</a> </div>
+
+    <div class="element-sousMenuHaut"><a href="catalogue/telephones-fixes.php" id="basLien">Téléphones fixes</a> </div>
+
+    <div class="element-sousMenuHaut"><a href="catalogue/accessoires.php" id="basLien">Accessoires</a> </div>
+	
+
+</div>
+
+<div class="conteneur-sous-sous-MenuHaut">
+	<div id="sous-sousMenuHaut">
+		<div class="element-sous-sousMenuHaut"><?= $mobile->marqueMo ?> <?= $mobile->modeleMo ?></div>
+	</div>
+</div>
+
 <div class="section-bloc-general">
 	
 	<div class="section-titre">
