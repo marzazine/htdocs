@@ -8,6 +8,7 @@ $executeIsOk = $pdoStat->execute();
 
 $fixes = $pdoStat->fetchAll();
 
+
 ?>
 
 <div id="sousMenuHaut">
