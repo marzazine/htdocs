@@ -29,11 +29,11 @@ $fixes = $pdoStat->fetchAll();
 
 	<div id="conteneurMobiles">
 		<?php foreach ($fixes as $fixe): ?>
-            	<div class="blocMobiles">
-            		<span class="TitreBlocMobiles"><?= $fixe->marqueFixe ?></span>
-            		<span class="blocTexteMobiles"><?= $fixe->modeleFixe ?></span>
+            	<div class="blocFixes">
+            		<span class="TitreBlocFixes"><?= $fixe->marqueFixe ?></span>
+            		<span class="blocTexteFixes"><?= $fixe->modeleFixe ?></span>
             		<div id="imgMobile1"><img src="../<?= $fixe->urlimgminiFixe ?>"></div>
-            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='telephones-fixes/<?= $fixe->id ?>'"><span><?= $fixe->prixbaseFixe ?>€ </span></button>
+            		<button class="button-Fixes1" style="vertical-align:middle" onclick="javascript:location.href='telephones-fixes/<?= $fixe->id ?>'"><span><?= $fixe->prixbaseFixe ?>€ </span></button>
             	</div>
 		<?php endforeach; ?>
 	</div>
