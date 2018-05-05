@@ -11,8 +11,8 @@ if (session_status() == PHP_SESSION_NONE) {
 <head>
 	<title>Wolvenet France || Internet, Téléphonie, Mobiles, Forfaits</title>
 	<link rel="stylesheet" type="text/css" href="../styles/styleMerwann.css">
+	<link rel="stylesheet" type="text/css" href="../styles/slideshow.css">
 	<link rel="stylesheet" type="text/css" href="../e/e.css">
-	<link rel="stylesheet" type="text/css" href="../styles/affichermobiles.css">
 	
 	<link rel="shortcut icon" type="image/x-png" href="../img/favicon.png" />
 	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" /><![endif]-->
@@ -23,15 +23,17 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="element-logo"><a href="/"><img src="/img/wolf-mini.png"></a></div>
 	<div class="element-logo2"><img src="/img/logoecrit-mini.png"></div>
 	
-	<div class="element-menuHaut"><a href="/catalogue/">Catalogue</a></div>
+	<div class="element-menuHaut"><a id="styled" href="/catalogue/">Catalogue</a></div>
 
-    <div class="element-menuHaut"><a href="/offres-aux-particuliers/">Offres aux particuliers</a></div>
+    <div class="element-menuHaut"><a id="styled" href="/offres-aux-particuliers/">Offres aux particuliers</a></div>
 
-    <div class="element-menuHaut"><a href="/offres-aux-entreprises/">Réseau d'entreprise</a></div>
+    <div class="element-menuHaut"><a id="styled" href="/offres-aux-entreprises/">Réseau d'entreprise</a></div>
 
-    <div class="element-menuHaut"><a href="/assistance/">Assistance</a></div>
+    <div class="element-menuHaut"><a id="styled" href="/assistance/">Assistance</a></div>
 
-    <div class="element-menuHaut"><a href="/catalogue/panier.php">Panier (<?= array_sum($_SESSION['panier']); ?>)</a></div>
+    <div class="element-menuHaut"><a id="styled" href="/about.html">À propos</a></div>
+
+    <div class="element-menuHaut"><a id="styled" href="/catalogue/panier.php">Panier</a></div>
 	
 
 	<?php if(isset($_SESSION['auth'])): ?>

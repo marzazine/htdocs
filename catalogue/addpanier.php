@@ -3,7 +3,7 @@ require '../inc/_header.php';
 
 if(isset($_GET['id'])){
 
-	$product = $DB->query('SELECT id FROM mobiles WHERE id = :id', array('id' => $_GET['id']));
+	$product = $DB->query('SELECT id FROM catalogue WHERE id = :id', array('id' => $_GET['id']));
 
 	if(empty($product)){
 
@@ -14,7 +14,7 @@ if(isset($_GET['id'])){
 	}
 
 	$panier->add($product[0]->id);
-	$_SESSION['flash-bloc']['success'] = "Produit ajouté au panier !";
+	$_SESSION['flash-bloc']['success'] = "Votre produit a bien été ajouté à votre panier.";
 	header("Location: /catalogue/");
 	exit();
 

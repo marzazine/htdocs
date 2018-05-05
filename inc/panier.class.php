@@ -29,6 +29,7 @@ class panier{
 	}
 
 	public function count() {
+		
 
 		return array_sum($_SESSION['panier']);
 
@@ -46,12 +47,12 @@ class panier{
 
 		}else {
 
-			$products = $this->DB->query('SELECT id, prixbaseMo FROM mobiles WHERE id IN ('.implode(',', $ids).')');
+			$products = $this->DB->query('SELECT id, prixbase FROM catalogue WHERE id IN ('.implode(',', $ids).')');
 		}
 
 		foreach ($products as $product) {
 
-			$total += $product->prixbaseMo * $_SESSION['panier'][$product->id];
+			$total += $product->prixbase * $_SESSION['panier'][$product->id];
 
 		}
 

@@ -8,19 +8,8 @@ require_once '../inc/db.class.php';
 
 <div id="sousMenuHaut">
 
-	<div class="element-sousMenuHaut"><a href="mobiles.php" id="basLien">Mobiles</a> </div>
+	<div class="element-sousMenuHaut">Votre panier</div>	
 
-    <div class="element-sousMenuHaut"><a href="telephones-fixes.php" id="basLien">Téléphones fixes</a> </div>
-
-    <div class="element-sousMenuHaut"><a href="accessoires.php" id="basLien">Accessoires</a> </div>
-	
-
-</div>
-
-<div class="conteneur-sous-sous-MenuHaut">
-	<div id="sous-sousMenuHaut">
-		<div class="element-sous-sousMenuHaut">Mon panier</div>
-	</div>
 </div>
 
 <div class="section-bloc-general">
@@ -45,18 +34,23 @@ require_once '../inc/db.class.php';
 
 		}else {
 
-			$products = $DB->query('SELECT * FROM mobiles WHERE id IN ('.implode(',', $ids).')');
+			$products = $DB->query('SELECT * FROM catalogue WHERE id IN ('.implode(',', $ids).')');
 		}
 
 		foreach ($products as $product):
 		?>
-			<img src="../img/products-mobile/<?= $product->id ?>.png" height="55">
-			<span class="texte-normal"><?= $product->marqueMo ?> <?= $product->modeleMo ?> <?= $product->couleurMo ?> <?= $product->capaciteMo ?><br />Qté : <?= $_SESSION['panier'][$product->id]; ?> </span>
+			<img src="../img/products/<?= $product->id ?>.png" height="55">
+			<span class="texte-normal"><?= $product->marque ?> <?= $product->modele ?> <?= $product->couleur ?> <?= $product->capacite ?><br />Qté : <?= $_SESSION['panier'][$product->id]; ?><br>
+				Prix unitaire : <?= number_format($product->prixbase, 2,',', ' '); ?>€</span>
 
-			<div id="delete"><a href="panier.php?delPanier=<?= $product->id ?>"><img src="../img/delete-icon.png"></a></div><br />
+			<div id="delete"><a id="noCSS" href="panier.php?delPanier=<?= $product->id ?>"><img src="../img/delete-icon.png"></a></div><br />
 
 		<?php endforeach; ?>
 		<span class="texte-normal">Total : <?= number_format($panier->total(), 2,',',' '); ?>€</span>
+
+		<?php if(array_sum($_SESSION['panier']) > 0): ?>
+			<br /><br /><center><button>Paiement</button></center>
+		<?php endif; ?>
 
 
 	</div>

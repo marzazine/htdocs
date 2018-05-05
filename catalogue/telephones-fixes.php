@@ -1,13 +1,9 @@
 <?php
 require '../inc/header.php';
-require '../inc/db.php';
+require '../inc/_header.php';
 
-$pdoStat = $pdo->prepare('SELECT * from fixes ORDER BY prixbaseFixe DESC');
 
-$executeIsOk = $pdoStat->execute();
-
-$fixes = $pdoStat->fetchAll();
-
+$fixes = $DB->query('SELECT * FROM catalogue WHERE type = "Fixe"');
 
 ?>
 
@@ -31,10 +27,11 @@ $fixes = $pdoStat->fetchAll();
 	<div id="conteneurMobiles">
 		<?php foreach ($fixes as $fixe): ?>
             	<div class="blocFixes">
-            		<span class="TitreBlocFixes"><?= $fixe->marqueFixe ?></span>
-            		<span class="blocTexteFixes"><?= $fixe->modeleFixe ?></span>
-            		<div id="imgMobile1"><img src="../<?= $fixe->urlimgminiFixe ?>"></div>
-            		<button class="button-Fixes1" style="vertical-align:middle" onclick="javascript:location.href='telephones-fixes/<?= $fixe->id ?>'"><span><?= $fixe->prixbaseFixe ?>€ </span></button>
+            		<span class="addToCart"><a id="noCSS" href="addpanier.php?id=<?= $fixe->id ?>"><img src="../img/cart-mini.png"></a></span>
+            		<span class="TitreBlocFixes"><?= $fixe->marque ?></span>
+            		<span class="blocTexteFixes"><?= $fixe->modele ?> <stronaccessoireg><?= $fixe->couleur ?></strong></span>
+            		<div id="imgFixse"><img src="../img/products/<?= $fixe->id ?>.png"></div>
+            		<button class="button-Fixes1" style="vertical-align:middle" onclick="javascript:location.href='viewproduct.php?id=<?= $fixe->id ?>'"><span><?= number_format($fixe->prixbase,2,',',' ')?>€ </span></button>
             	</div>
 		<?php endforeach; ?>
 	</div>

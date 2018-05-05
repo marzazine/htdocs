@@ -43,20 +43,29 @@
      text-decoration: none;
      color: #ffffff;
 }
+
+a#noCSS:hover {
+	text-decoration: none;
+	border: none;
+}
+
  a#basLien:hover {
      text-decoration: none;
      color: #ffffff;
      border-bottom: 5px #8acbff solid;
 }
- a:hover {
+
+ a#styled:hover {
      text-decoration: none;
      color: #ffffff;
      border-bottom: 5px #354FD3 solid;
 }
+
  a:visited {
      text-decoration: none;
      color: #ffffff;
 }
+
  #cadre-page {
      background-color: rgba(25,32,43,0.3);
      border: 3px #3d5af1 solid;
@@ -96,7 +105,7 @@
  .section-bloc-general{
      margin-left: auto;
      margin-right: auto;
-     margin-top: 50px;
+     margin-top: 15px;
      margin-bottom: 30px;
      width: 55%;
      border: 4px #FFFFFF solid;
@@ -211,7 +220,7 @@
      margin-right: 20px;
 }
  .bloc:hover {
-     background-color: rgba(54, 82, 123, 0.2);
+     background-color: rgba(54, 82, 123, 0.5);
      transition-property: margin-top, box-shadow;
      box-shadow: -2px 4px 55px rgba(82, 229, 252, 0.8);
      margin-top: 5px;
@@ -234,7 +243,7 @@
      margin-right: 20px;
 }
  .blocPromo:hover {
-     background-color: rgba(128, 23, 68, 0.2);
+     background-color: rgba(128, 23, 68, 0.7);
      box-shadow: -2px 4px 55px rgba(214, 37, 112, 0.9);
      margin-top: 5px;
      transition-duration: 450ms;
@@ -665,6 +674,8 @@
      align-items: center;
      justify-content: center;
      vertical-align: center;
+     padding: 15px;
+     border-radius: 3px;
      border: 3px #ff6464 solid;
      background-color: rgba(235, 7, 7, 0.5);
 }
@@ -688,6 +699,8 @@
      align-items: center;
      justify-content: center;
      vertical-align: center;
+     padding: 15px;
+     border-radius: 3px;
      border: 3px #4dff48 solid;
      background-color: rgba(77, 255, 72, 0.5);
 }
@@ -810,7 +823,7 @@
  #menuHaut {
      display: flex;
      margin: auto;
-     flex-wrap: nowrap;
+     flex-wrap: wrap;
      justify-content: center;
      border: 3px #19202b solid;
      background-image: url(../../img/nav-bg.jpg);
@@ -821,7 +834,7 @@
  #sousMenuHaut {
      display: flex;
      margin: auto;
-     flex-wrap: nowrap;
+     flex-wrap: wrap;
      justify-content: center;
      border: 3px #19202b solid;
      background-image: url(../../img/nav-bottom-bg.png);
@@ -1008,7 +1021,7 @@
      margin-right: 20px;
 }
  .bloc2:hover {
-     background-color: rgba(114, 255, 148, 0.2);
+     background-color: rgba(114, 255, 148, 0.5);
      transition-property: margin-top, box-shadow;
      box-shadow: -2px 4px 55px rgba(114, 255, 148, 0.8);
      margin-top: 5px;
@@ -1110,7 +1123,7 @@
      margin-right: 20px;
 }
  .blocMobiles:hover {
-     background-color: rgba(254, 40, 140, 0.2);
+     background-color: rgba(254, 40, 140, 0.5);
      transition-property: margin-top, box-shadow;
      box-shadow: -2px 4px 55px rgba(254, 40, 140, 0.8);
      margin-top: 5px;
@@ -1118,7 +1131,7 @@
 }
 
  .TitreBlocMobiles {
-     color: #ffffff;
+     color: #fe288c;
      font-size: 1em;
      font-family: 'Ubuntu-Bold';
      text-shadow: none;
@@ -1211,7 +1224,7 @@
      width: 250px;
      height: 250px;
      padding-top: 20px;
-     padding-bottom: 80px;
+     padding-bottom: 130px;
      padding-left: 10px;
      padding-right: 10px;
      border-radius: 10px;
@@ -1221,7 +1234,7 @@
      margin-right: 20px;
 }
  .blocFixes:hover {
-     background-color: rgba(254, 33, 70, 0.2);
+     background-color: rgba(254, 33, 70, 0.5);
      transition-property: margin-top, box-shadow;
      box-shadow: -2px 4px 55px rgba(254, 33, 70, 0.8);
      margin-top: 5px;
@@ -1229,7 +1242,7 @@
 }
 
  .TitreBlocFixes {
-     color: #ffffff;
+     color: #fe2146;
      font-size: 1em;
      font-family: 'Ubuntu-Bold';
      text-shadow: none;
@@ -1309,3 +1322,258 @@ Fixes1
      margin-left: 700px;
      margin-top: -25px;
 }
+
+
+/* END PANIER CSS */
+
+
+
+
+
+
+
+
+
+
+/* CSS PAGE ACCESSOIRES */
+
+
+
+
+
+
+
+
+
+
+
+
+.blocAccessoires {
+     border: 1px #ff5733 solid;
+     font-family: 'Ubuntu-Light';
+     box-shadow: 6px 6px 12px black;
+     width: 250px;
+     height: 250px;
+     padding-top: 20px;
+     padding-bottom: 130px;
+     padding-left: 10px;
+     padding-right: 10px;
+     border-radius: 10px;
+     margin-bottom: 10px;
+     margin-left: 20px;
+     margin-top: 10px;
+     margin-right: 20px;
+}
+ .blocAccessoires:hover {
+     background-color: rgba(255, 87, 51, 0.5);
+     transition-property: margin-top, box-shadow;
+     box-shadow: -2px 4px 55px rgba(255, 87, 51, 0.8);
+     margin-top: 5px;
+     transition-duration: 450ms;
+}
+
+ .TitreBlocAccessoires {
+     color: #ff5733;
+     font-size: 1em;
+     font-family: 'Ubuntu-Bold';
+     text-shadow: none;
+     display: block;
+     margin-bottom: 20px;
+}
+
+.blocTexteAccessoires {
+     font-size: 0.9em;
+     display: inline-block;
+     margin-bottom: 10px;
+     font-family: 'Ubuntu-Light';
+     text-shadow: none;
+}
+
+.button-Accessoires{
+     display: inline-block;
+     border-radius: 3px;
+     background-color: #ff5733;
+     border: none;
+     color: #FFFFFF;
+     text-align: center;
+     font-size: 1em;
+     margin-top: 10px;
+     padding: 3px;
+     width: 240px;
+     height: 60px;
+     transition: all 0.5s;
+     cursor: pointer;
+}
+ .button-Accessoires span {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: 0.5s;
+}
+ .button-Accessoires span:after {
+     content: '\00bb';
+     position: absolute;
+     opacity: 0;
+     top: 0;
+     right: -10px;
+     transition: 0.5s;
+}
+ .button-Accessoires:hover span {
+     padding-right: 20px;
+}
+ .button-Accessoires:hover span:after {
+     opacity: 1;
+     right: 0;
+}
+
+ #imgAccessoires {
+     margin-top: 10px;
+     margin-left: 10px;
+}
+
+
+
+
+/* FIN CSS PAGE ACCESSOIRES */
+
+
+
+
+
+
+
+
+
+/* CSS PAGE FIXES */
+
+
+
+
+
+
+
+
+
+
+.blocFixes {
+     border: 1px #fe2146 solid;
+     font-family: 'Ubuntu-Light';
+     box-shadow: 6px 6px 12px black;
+     width: 250px;
+     height: 250px;
+     padding-top: 20px;
+     padding-bottom: 80px;
+     padding-left: 10px;
+     padding-right: 10px;
+     border-radius: 10px;
+     margin-bottom: 10px;
+     margin-left: 20px;
+     margin-top: 10px;
+     margin-right: 20px;
+}
+ .blocFixes:hover {
+     background-color: rgba(254, 33, 70, 0.5);
+}
+
+ .TitreBlocFixes {
+     color: #fe2146;
+     font-size: 1em;
+     font-family: 'Ubuntu-Bold';
+     text-shadow: none;
+     display: block;
+     margin-bottom: 20px;
+}
+
+.blocTexteFixes {
+     font-size: 0.9em;
+     display: inline-block;
+     margin-bottom: 10px;
+     font-family: 'Ubuntu-Light';
+     text-shadow: none;
+}
+
+.button-Fixes1{
+     display: inline-block;
+     border-radius: 3px;
+     background-color: #fe2146;
+     border: none;
+     color: #FFFFFF;
+     text-align: center;
+     font-size: 1em;
+     margin-top: 10px;
+     padding: 3px;
+     width: 240px;
+     height: 60px;
+     transition: all 0.5s;
+     cursor: pointer;
+}
+ .button-Fixes1 span {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: 0.5s;
+}
+ .button-Fixes1 span:after {
+     content: '\00bb';
+     position: absolute;
+     opacity: 0;
+     top: 0;
+     right: -10px;
+     transition: 0.5s;
+}
+ .button-Fixes1:hover span {
+     padding-riFixes1ght: 20px;
+}
+ .button-Fixes1:hover span:after {
+     opacity: 1;
+     right: 0;
+}
+
+ #imgFixe1 {
+     margin-top: 10px;
+     margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+/* END */
+
+
+
+
+
+
+
+
+
+/* VIEWPRODUCT.PHP */
+
+.caracteristiques-top{
+     background-color: #19a2e3;
+     box-shadow: 0 -5px 5px -5px black;
+     padding: 6px;
+}
+
+.caracteristiques{
+     background-color: #19a2e3;
+     padding: 6px;
+}
+
+.caracteristiques2{
+     background-color: #0f668f;
+     padding: 6px;
+}
+
+.caracteristiques-bottom{
+     background-color: #0f668f;
+     box-shadow: 0px 6px 12px black;
+     padding: 6px;
+     margin-bottom: 15px;
+}
+
+/* END VIEWPRODUCT.PHP */

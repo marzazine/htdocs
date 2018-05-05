@@ -3,7 +3,7 @@ require '../inc/header.php';
 require '../inc/_header.php';
 
 
-$mobiles = $DB->query('SELECT * FROM mobiles');
+$mobiles = $DB->query('SELECT * FROM catalogue WHERE type = "Mobile"');
 
 ?>
 
@@ -27,11 +27,11 @@ $mobiles = $DB->query('SELECT * FROM mobiles');
 	<div id="conteneurMobiles">
 		<?php foreach ($mobiles as $mobile): ?>
             	<div class="blocMobiles">
-            		<span class="addToCart"><a href="addpanier.php?id=<?= $mobile->id ?>"><img src="../img/cart-mini.png"></a></span>
-            		<span class="TitreBlocMobiles"><?= $mobile->marqueMo ?></span>
-            		<span class="blocTexteMobiles"><?= $mobile->modeleMo ?> <strong><?= $mobile->couleurMo ?> <?= $mobile->capaciteMo ?></strong></span>
-            		<div id="imgMobile1"><img src="../img/products-mobile/<?= $mobile->id ?>.png"></div>
-            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='mobile/<?= $mobile->id ?>'"><span><?= number_format($mobile->prixbaseMo,2,',',' ')?>€ </span></button>
+            		<span class="addToCart"><a id="noCSS" href="addpanier.php?id=<?= $mobile->id ?>"><img src="../img/cart-mini.png"></a></span>
+            		<span class="TitreBlocMobiles"><?= $mobile->marque ?></span>
+            		<span class="blocTexteMobiles"><?= $mobile->modele ?> <strong><?= $mobile->couleur ?> <?= $mobile->capacite ?></strong></span>
+            		<div id="imgMobile1"><img src="../img/products/<?= $mobile->id ?>.png"></div>
+            		<button class="button-Mobiles1" style="vertical-align:middle" onclick="javascript:location.href='viewproduct.php?id=<?= $mobile->id ?>'"><span><?= number_format($mobile->prixbase,2,',',' ')?>€ </span></button>
             	</div>
 		<?php endforeach; ?>
 	</div>

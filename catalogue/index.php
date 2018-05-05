@@ -39,7 +39,6 @@
                 <button class="button-catalogue" style="vertical-align:middle" onclick="javascript:location.href='mobiles.php'"><span>Voir les mobiles </span></button>
             </div>
 
-            <div id="conteneur">
 
             <div class="bloc2">
                 <span class="TitreBloc2">Téléphones fixes</span>
@@ -58,6 +57,4 @@
 </div>
 
 
-
-
-<?php require '../inc/footer.php'; ?>
+<?php require_once '../inc/footer.php'; ?>
